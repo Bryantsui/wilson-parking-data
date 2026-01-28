@@ -1,0 +1,186 @@
+id,name_en,name_zh,address_en,address_zh,district_id,latitude,longitude,height_limit,has_ev
+00000000-0000-0000-000000000001,EDGE,EDGE,"30-34 Kwai Wing Road, Kwai Chung",葵涌葵榮路30-34號,49,22.366886300596498,114.13419708518984,,0
+00000000-0000-0000-000000000007,Tin Hau Car Park,天后停車場,"Lau Sin Street & Electric Road, Tin Hau",天后留仙街與電氣道,20,22.2830233,114.1916625,,0
+00000000-0000-0000-000000000008,Tsuen Wan Car Park,荃灣停車場,"174-208 Castle Peak Road, Tsuen Wan",荃灣青山公路174-208號,62,22.373,114.1187254,,0
+00000000-0000-0000-00000000000d,Centre Parc,常悅道11號,"11 Sheung Yuet Road, Kowloon Bay",九龍灣常悅道11號,27,22.3221934,114.208289,,0
+00000000-0000-0000-00000000000e,Chelsea Heights Phase I,卓爾居1期,"1 Shek Pai Tau Path, Tuen Mun",屯門石排頭徑1號,63,22.40159915915589,113.9746859322521,,0
+00000000-0000-0000-00000000000f,Mei Foo Sun Chuen Stage 4,美孚新邨4期,"Stage 4 Mei Foo Sun Chuen, Lai Chi Kok",荔枝角美孚新邨4期,30,22.336438791241047,114.14241927504361,1.9,0
+00000000-0000-0000-000000000010,Mei Foo Sun Chuen Stage 7,美孚新邨7期,"Stage 7, Mei Foo Sun Chuen, Lai Chi Kok",荔枝角美孚新邨7期,30,22.338036519078337,114.13804593324483,,0
+00000000-0000-0000-000000000011,Nan Fung Commercial Centre,南豐商業中心,"18 Lam Lok Street, Kowloon Bay",九龍灣臨樂街18號,27,22.3232263,114.2075936,,0
+00000000-0000-0000-00000000001b,New Town Mansion,新都大廈,"2 Tuen Lee Street, Tuen Mun",屯門屯利街2號,63,22.39116869524617,113.97817432789805,,0
+00000000-0000-0000-00000000001e,No. 8 Observatory Road,天文臺道8號,"8 Observatory Road, Tsim Sha Tsui",尖沙咀天文臺道8號,40,22.301007008324667,114.17574852614405,,0
+00000000-0000-0000-00000000001f,Wang Kwong Road,宏光道,"Wang Kwong Road, Kowloon Bay",九龍灣宏光道,27,22.3285047,114.2056663,,0
+00000000-0000-0000-000000000020,KC100,KC100,"100 Kwai Cheong Road, Kwai Chung",葵涌葵昌路100號,49,22.3611551,114.1325205,,0
+00000000-0000-0000-000000000024,Brighton Place,海晴軒," 23 Shiu Wo Street, Tsuen Wan",荃灣兆和街23號,62,22.37215336437068,114.11748692302706,,0
+00000000-0000-0000-000000000029,Wing Lung Street,永隆街,"13-19 Wing Lung Street, Cheung Sha Wan",長沙灣永隆街13-19號,22,22.338117,114.1586217,,0
+00000000-0000-0000-00000000002a,Tsuen King Circuit,荃景圍,"Tsuen King Circuit, Tsuen Wan",荃灣荃景圍,62,22.379982281127624,114.10600170402529,,0
+00000000-0000-0000-00000000002c,Wu Shan Road,湖山路,"Wu Shan Road, Tuen Mun",屯門湖山路,63,22.375145840907408,113.96926268844607,,0
+00000000-0000-0000-00000000002e,The ONE,The ONE,"100 Nathan Road, Tsim Sha Tsui",尖沙咀彌敦道100號,40,22.299714,114.17282,,1
+00000000-0000-0000-000000000063,Tsan Yung Mansion,曾榕大廈,"70 Waterloo Road, Mongkok",旺角窩打老道70號,32,22.317073424825356,114.17488396167755,,0
+00000000-0000-0000-000000000064,Hoi Wah Road,海華路,"Hoi Wah Road, Tuen Mun",屯門海華路,63,22.379739522297108,113.97052645683289,,0
+00000000-0000-0000-000000000065,Capital Building,金必多大廈,"85-95 Un Chau Street, Sham Shui Po",深水埗元州街85-95號,37,22.33274817268661,114.16266515851021,,0
+00000000-0000-0000-000000000068,South Lane,南里,"11-17A South Lane, Western District",西區南里11-17A,15,22.285364362921268,114.134711176157,,0
+00000000-0000-0000-000000000069,Venice Garden,威尼斯花園,"1 Po Wing Road, Sheung Shui",上水保榮路1號,56,22.497959387168255,114.127416908741,,0
+00000000-0000-0000-00000000006b,Ho Fai Garden,豪輝花園,"218-224 Sai Lau Kok Road, Tsuen Wan",荃灣西樓角路218-224號,62,22.370744,114.1211364,,0
+00000000-0000-0000-00000000006c,Bellagio,碧堤半島,"Level 1, Bellagio, 33 Castle Peak Road, Sham Tseng",深井青山公路33號碧堤半島L1,54,22.367320672030896,114.06098127365112,,0
+00000000-0000-0000-00000000006d,East Town Building,東城大廈,"41 Lockhart Road, Wan Chai",灣仔駱克道41號,21,22.278627796530348,114.17063400149345,,0
+00000000-0000-0000-00000000006f,AEON Lai Chi Kok Store,AEON 荔枝角店,"1/F & 2/F AquaMarine, 8 Sham Shing Road, Lai Chi Kok",荔枝角深盛路8號碧海藍天1樓及2樓,30,22.33315878150711,114.14855539798737,2.4,0
+00000000-0000-0000-000000000074,Two Sky Parc,Two Sky Parc,"51 Hung To Road, Kwun Tong",觀塘鴻圖道51號,29,22.31126209352486,114.22173544764519,,0
+00000000-0000-0000-000000000077,Kailey Industrial Centre,啓力工業中心,"12 Fung Yip Street, Chai Wan",柴灣豐業街12號,6,22.267033962619596,114.24442291259766,,0
+00000000-0000-0000-000000000079,Eightland Gardens,八號花園,"2 On Chee Road, Tai Po",大埔安慈路2號,57,22.45240054452185,114.16687555611134,,0
+00000000-0000-0000-00000000007a,Chelsea Heights Phase II,卓爾居2期,"1 Shek Pai Tau Path, Tuen Mun",屯門石排頭徑1號,63,22.400442582486733,113.97438883781433,,0
+00000000-0000-0000-00000000007d,Chi Fu Landmark,置富南區廣場,"Chi Fu Road, Pok Fu Lam",薄扶林置富道,10,22.25798484266325,114.13907378911972,,0
+00000000-0000-0000-000000000080,Western Wholesale Food Market ,西區副食品批發市場,"8 Fung Mat Road, Sai Ying Pun",西營盤豐物道8號,13,22.288411440385598,114.13667857646942,,0
+00000000-0000-0000-0000000000a4,Kwai Fong Terrace,葵芳閣,"15 Kwai Yi Road, Kwai Chung",葵涌葵義路15號,50,22.356216681708382,114.12838652729988,,1
+00000000-0000-0000-0000000000a5,Grand Waterfront,翔龍灣,"38 San Ma Tau Street, To Kwa Wan",土瓜灣新碼頭街38號,39,22.318730925021367,114.19393301010132,,0
+00000000-0000-0000-0000000000a6,Shanghai Industrial Investment Building,上海實業大廈,"48-66 Hennessy Road, Wan Chai",灣仔軒尼詩道48-66號,21,22.2773973468939,114.17102627456188,,0
+00000000-0000-0000-0000000000a7,Hong Kong Plaza,香港商業中心,"188 Connaught Road West, Sai Ying Pun",西營盤干諾道西188號,13,22.2871060013613,114.1363513469696,,0
+00000000-0000-0000-0000000000a8,Wonderland Villas (Eastern),華景山莊 (東),"9 Wah King Hill Road, Lai King",荔景華景山道9號,51,22.3554904,114.1369974,,0
+00000000-0000-0000-0000000000a9,Blossom Garden,寶怡花園,"11 Leung Tak Street, Tuen Mun",屯門良德街11號,63,22.407666104057675,113.96863549947739,,1
+00000000-0000-0000-0000000000ac,HSBC Centre,滙豐中心,"1 Shum Mong Road, Tai Kok Tsui",大角咀深旺道1號,38,22.319356204413115,114.16067898273468,,0
+00000000-0000-0000-0000000000ad,Chinachem Century Tower,華懋世紀廣場,"178 Gloucester Road, Wan Chai",灣仔告士打道178號,21,22.279996604736798,114.17858138680458,,0
+00000000-0000-0000-0000000000ae,Hilton Plaza,希爾頓中心,"3-9 Sha Tin Central Street, Shatin",沙田正街3-9號,55,22.3801619,114.187066,,0
+00000000-0000-0000-0000000000af,Wealthy Garden,富麗花園,"1-27 Tsuen Kwai Street, Tsuen Wan",荃灣荃貴街1-27號,62,22.369315526095523,114.12235625088215,,0
+00000000-0000-0000-0000000000b0,Lun Fung Court,龍豐閣,"363 Des Voeux Road West, Sai Ying Pun",西營盤德輔道西363號,13,22.28698687323877,114.1364049911499,,0
+00000000-0000-0000-0000000000b2,Tsuen Kam Centre,荃錦中心,"328-338 Castle Peak Road, Tsuen Wan",荃灣青山公路328-338 號,62,22.37426006133371,114.11600477993488,,0
+00000000-0000-0000-0000000000b3,Tsuen Wan Centre ,荃灣中心,"87-105 Tsuen King Circuit, Tsuen Wan",荃灣荃景圍 87-105 號,62,22.378498183176056,114.10899147391319,,0
+00000000-0000-0000-0000000000b4,Botania Villa,綠怡居 ,"138 Fuk Hang Tsuen Road, Tuen Mun",屯門福亨村道138號,63,22.4184139,113.9852332,,0
+00000000-0000-0000-0000000000b6,Wah Ming Centre,華明中心,"421 Queen's Road West, Sai Ying Pun",西營盤皇后大道西421號,13,22.2860658,114.1374439,,0
+00000000-0000-0000-0000000000b7,K-Point,錦薈坊,"1 Tuen Lung Street, Tuen Mun",屯門屯隆街1號,63,22.393529918482365,113.97544629871845,,1
+00000000-0000-0000-0000000000b9,Castello,帝堡城,"Siu Lek Yuen Road, Shatin",沙田小瀝源路,55,22.38278267844513,114.21604245901108,,0
+00000000-0000-0000-0000000000ba,Millennium Trade Centre,貿易之都,"56 Kwai Cheong Road, Kwai Chung",葵涌葵昌路56號,49,22.3633317,114.1327831,,0
+00000000-0000-0000-0000000000bb,Grand City Plaza,新領域廣場,"1 Sai Lau Kok Road, Tsuen Wan",荃灣西樓角路1號,62,22.3747279,114.1145175,,0
+00000000-0000-0000-0000000000bc,Peninsula Tower,半島大廈,"538 Castle Peak Road, Cheung Sha Wan",長沙灣青山道538號,22,22.339777976203138,114.15080308914185,3.6,1
+00000000-0000-0000-0000000000bd,Millennium City 1 ,創紀之城1期,"388 Kwun Tong Road, Kwun Tong",觀塘觀塘道388號,29,22.313257129489088,114.22114670276642,,0
+00000000-0000-0000-0000000000be,Millennium City 2 & 3,創紀之城2及3期,"370-378 Kwun Tong Road, Kwun Tong",觀塘觀塘道370-378號,29,22.314162826705722,114.21998530626297,,1
+00000000-0000-0000-0000000000bf,Millennium City 6,創紀之城6期,"392 Kwun Tong Road, Kwun Tong",觀塘觀塘道392號,29,22.312870035187796,114.22213912010193,,0
+00000000-0000-0000-0000000000c0,Fung Nam Road,鳳南路,"Fung Nam Road, Sheung Shui",上水鳳南路,56,22.507611150843626,114.1281022131443,,0
+00000000-0000-0000-0000000000c1,San Shing Avenue,新成路,"San Shing Avenue, Sheung Shui",上水新成路,56,22.506141747365298,114.12774950265884,,0
+00000000-0000-0000-0000000000c2,Sun Kwai Hing Plaza,新葵興廣場,"166-174 Hing Fong Road, Kwai Chung",葵涌興芳路166-174號,49,22.36402913134557,114.13142681121826,,0
+00000000-0000-0000-0000000000c3,Metropolis Plaza,新都廣場,"8 Lung Wan Street, Sheung Shui",上水龍運街8號,56,22.50250410126431,114.1293078660965,,0
+00000000-0000-0000-0000000000c4,Yuen Long Plaza,元朗廣場,"251 Castle Peak Road, Yuen Long",元朗青山公路251號,65,22.445176251488796,114.0238930284977,,0
+00000000-0000-0000-0000000000c5,Thriving Industrial Centre,匯力工業中心,"26-28 Sha Tsui Road, Tsuen Wan",荃灣沙咀道26-38號,62,22.37384895354824,114.10882115364075,,0
+00000000-0000-0000-0000000000c6,The Chelsea ,The Chelsea 蘇杭街69號,"69 Jervois Street, Sheung Wan",上環蘇杭街69號,16,22.28527935899353,114.15122151374817,,0
+00000000-0000-0000-0000000000c8,Admiralty Car Park,金鐘停車場,"Rodney Street, Queensway, Admiralty",金鐘樂禮街,2,22.27841186364058,114.16585832834244,,1
+00000000-0000-0000-0000000000c9,New Tech Plaza,新科技廣場,"34 Tai Yau Street, San Po Kong",新蒲崗大有街34號,35,22.33685792791796,114.19677078723907,,1
+00000000-0000-0000-0000000000cb,Evergreen Court,翠林閣,"9 Chui Lok Street, Tai Po",大埔翠樂街9號,57,22.45376826527015,114.16434824466705,,0
+00000000-0000-0000-0000000000cc,Fanling Town Centre,粉嶺名都,"18 Fanling Station Road, Fanling",粉嶺火車站路18號,47,22.492383607039063,114.13885116577148,,0
+00000000-0000-0000-0000000000cd,Shatin Park Stage 1,花園城第一期,"8-12 Sha Kok Street, Shatin",沙田沙角街8-12號,55,22.379526226053223,114.19780880212784,,0
+00000000-0000-0000-0000000000cf,Shatin Park Stage 3,花園城第三期,"13-15 Kong Pui Street, Shatin",沙田崗背街13-15號,55,22.379749443044684,114.1976498812437,,0
+00000000-0000-0000-0000000000d0,Sheung Shui Town Centre,上水名都,"9 Chi Cheong Road, Sheung Shui",上水智昌路9號,56,22.50126757715597,114.13195252418518,,0
+00000000-0000-0000-0000000000d7,Tak Bo Garden,得寶花園,"3 Ngau Tau Kok Road, Ngau Tau Kok",牛頭角牛頭角道3號,33,22.327474657093255,114.21437948942184,,0
+00000000-0000-0000-0000000000d8,8 Commercial Tower,八號商業廣場,"8 Sun Yip Street, Chai Wan",柴灣新業街8號,6,22.267064990004062,114.24690261483192,,0
+00000000-0000-0000-0000000000db,Austin Tower,好兆年行,"22-26A Austin Avenue, Tsim Sha Tsui",尖沙咀柯士甸路22-26A號,40,22.302892061110796,114.17506635189056,,0
+00000000-0000-0000-0000000000dc,Concord Square,協和廣場,"B1-B2, 1 Tai Uk Street, Tsuen Wan",荃灣大屋街1號B1-B2,62,22.3701470685721,114.11505192518234,,0
+00000000-0000-0000-0000000000dd,Grandway Garden,富嘉花園,"16 Mei Tin Road / 15 & 35 Tsuen Nam Road, Shatin",沙田美田路16號/ 15 & 35 村南道,58,22.373975448380783,114.17786121368408,,0
+00000000-0000-0000-0000000000de,Wai Wah Centre,偉華中心,"11-17 Sha Tin Centre Street, Shatin",沙田正街11-17號,55,22.381337993625298,114.18779745697975,,0
+00000000-0000-0000-0000000000e5,Cheung Sha Wan Wholesale Food Market,長沙灣副食品批發市場,"36 Yen Chow Street West, Cheung Sha Wan",長沙灣欽州街西36號,22,22.323584210592408,114.15307760238647,,0
+00000000-0000-0000-0000000000e9,South Wave Court,南濤閣,"3 Shum Wan Road, Aberdeen",香港仔深灣道3號,1,22.24512939520358,114.16603535413742,,0
+00000000-0000-0000-0000000000eb,Sai Kung Garden,西貢花園,"16 Chan Man Street, Sai Kung",西貢親民街16號,53,22.38262394985941,114.27147567272186,,0
+00000000-0000-0000-0000000000ec,Harbour Pinnacle,凱譽,"2-20A Minden Avenue, Tsim Sha Tsui",尖沙咀棉登徑2-20A,40,22.296742633785076,114.17451247572899,,0
+00000000-0000-0000-0000000000ee,Bedford Road,必發道,"59-65 Bedford Road, Tai Kok Tsui",大角咀必發道59-65號,38,22.322869626994255,114.16388288140297,,0
+00000000-0000-0000-0000000000f2,CCT Telecom Building,中建電訊大廈,"11 Wo Shing Street, Fo Tan",火炭禾盛街11號,48,22.39745684977921,114.19789731502533,,1
+00000000-0000-0000-0000000000f4,Two Chinachem Exchange Square,華懋交易廣場二期,"338 King's Road, North Point",北角英皇道338號,9,22.29039563471761,114.19721268117428,,0
+00000000-0000-0000-0000000000f5,Hop Yick Plaza,合益廣場,"19-27 Tai Tong Road, Yuen Long",元朗大棠道19-27號,65,22.443066291109822,114.0293884268284,,0
+00000000-0000-0000-0000000000f7,Southmark,南匯廣場,"11 Yip Hing Street / Yip Kan Street, Aberdeen",香港仔業興街11號/業勤街,1,22.249312479048204,114.16477739810944,,0
+00000000-0000-0000-0000000000f8,Chinachem Tsuen Wan Plaza,華懋荃灣廣場,"455 Castle Peak Road, Tsuen Wan",荃灣青山道455號,62,22.375247831184765,114.11142826080322,,0
+00000000-0000-0000-0000000000fc,Cheong Shing Court,昌盛閣,"5-7 San Lau Street, To Kwa Wan",土瓜灣新柳街5至7號,39,22.312345222930762,114.18699949979782,,0
+00000000-0000-0000-0000000000fe,Siu On Centre,兆安中心,"188 Lockhart Road, Wan Chai",灣仔洛克道188號,21,22.27818476144854,114.17418256402016,,0
+00000000-0000-0000-0000000000ff,New Mandarin Plaza,新文華中心,"14 Science Museum Road, Tsim Sha Tsui",尖沙咀科學館道14號,40,22.300563102825183,114.17892470955849,,0
+00000000-0000-0000-000000000101,Sai Kung Town Centre,西貢苑,"22-40 Fuk Man Road & Chan Man Street, Sai Kung",西貢福民路22-40號及親民街,53,22.38253962522458,114.27171170711517,,0
+00000000-0000-0000-000000000102,Peninsula Square,半島廣場,"18 Sung On Street, Hunghom",紅磡祟安街18號,25,22.311401052177374,114.1894268989563,,0
+00000000-0000-0000-000000000103,Sunway Gardens,新威園,"989 King's Road, Quarry Bay",鰂魚涌英皇道989號,11,22.286157937241942,114.21238660812378,,0
+00000000-0000-0000-000000000104,Kam Tao Building,金都洋樓,"16 Glass Street / 4 Whifield Road, North Point",北角玻璃街16號/威菲路道4號,9,22.28652276895992,114.1905078291893,,0
+00000000-0000-0000-000000000105,Eldo Court,雅都花園,"126 Heung Sze Wui Road, Tuen Mun",屯門鄉事會路126號,63,22.397947863384296,113.97588148713112,,0
+00000000-0000-0000-000000000107,HK Sanatorium & Hospital,養和醫院,"2-4 Village Road, Happy Valley",跑馬地山村道2至4號,7,22.2691673,114.1835988,,0
+00000000-0000-0000-000000000108,Dragon Centre (Sham Shui Po),西九龍中心,"37K Yen Chow Street, Sham Shui Po",深水埗欽州街37K,37,22.330536942772227,114.15978111326694,,0
+00000000-0000-0000-000000000109,Lai Bo Garden,麗寶花園,"38 Cheung Wah Street, Cheung Sha Wan",長沙灣昌華街38號,22,22.34004777367011,114.15527768433094,2,0
+00000000-0000-0000-00000000010a,Fortune Plaza,昌運中心,"4 On Chee Road, Tai Po",大埔安慈路4號,57,22.452263585788028,114.16741669178009,,0
+00000000-0000-0000-00000000010b,Tsuen Wan Plaza,荃灣廣場,"4-30 Tai Pa Street, Tsuen Wan",荃灣大壩街4至30號,62,22.3711416,114.1118007,3.2,0
+00000000-0000-0000-00000000010c,Easy Tower,永義廣場,"609-611 Tai Nan West Street, Cheung Sha Wan",長沙灣大南西街609-611號,22,22.339060994650318,114.14868280291557,,0
+00000000-0000-0000-00000000010f,Harbour Heights O/A,海峰園 (露天),"Electric Road, North Point",北角電器道,9,22.2878873,114.190003,,0
+00000000-0000-0000-000000000117,Hong Lai Gardens,康麗花園,"Heung Sze Wui Road, Tuen Mun",屯門鄉事會路,63,22.398776134929424,113.97460341453552,,0
+00000000-0000-0000-000000000118,YOHO PLUS,加點,"2-6 Fung Cheung Road, Yuen Long",元朗鳳翔路2-6號,65,22.443904508897525,114.03154268860817,,0
+00000000-0000-0000-000000000119,The Sun Arcade,新太陽廣場,"Kowloon Park Drive, Tsim Sha Tsui",尖沙咀九龍公園徑,40,22.2967958,114.1700694,,0
+00000000-0000-0000-00000000011b,Onbury,安百利,"3 Peace Avenue, Mongkok",旺角太平道3號,32,22.317959246989606,114.17405247688293,,0
+00000000-0000-0000-00000000011c,Chinachem Golden Plaza,華懋廣場,"77 Mody Road, Tsim Sha Tsui East",尖沙咀東麼地道77號,40,22.30021195657189,114.17872220277786,,0
+00000000-0000-0000-00000000011d,Ho Shun Tai Building,好順泰大廈,"423 Sai Ching Street, Yuen Long",元朗西菁街423號,65,22.442069386097817,114.02766220271587,,0
+00000000-0000-0000-00000000011e,Shun Fook Barn Car Park,順福糧倉停車場,"60 Sau Fu Street, Yuen Long",元朗壽富街60號,65,22.44540927908164,114.02659803628922,,0
+00000000-0000-0000-000000000120,The Park Lane,柏寧酒店,"310 Gloucester Road, Causeway Bay",銅鑼灣告士打道310號,4,22.28066797358348,114.18625250458717,,1
+00000000-0000-0000-000000000121,Fu Shing Building,富盛大廈,"9 Sai Ching Street, Yuen Long",元朗西菁街9號,65,22.442183423480422,114.02753680944443,,0
+00000000-0000-0000-000000000122,Viking Gardens,維景花園,"40-42 Hing Fat Street, Tin Hau",天后興發街40至42號,20,22.283915566283856,114.19170677661896,,0
+00000000-0000-0000-000000000123,Po Sing Centre,寶星中心,"Lower G/F Po Sing Centre, 1-25 Ta Chuen Ping Street, Kwai Chung",葵涌打磚坪街1-25號寶星中心地下,49,22.366670803546118,114.13594365119934,,0
+00000000-0000-0000-000000000124,Kwai Sing Centre,葵星中心,"367 Castle Peak Road, Kwai Chung",葵涌青山道367號,49,22.36540082279022,114.13595169782639,,0
+00000000-0000-0000-000000000126,Victoria Centre,維多利中心,"15 Watson Road, North Point",北角屈臣道15號,9,22.287395134819835,114.19047832489014,,0
+00000000-0000-0000-000000000127,Kwai Fong Car Park,葵芳停車場,"19 Kwai Yi Road, Kwai Fong",葵芳葵義路19號,50,22.355622575294774,114.12790238857269,,0
+00000000-0000-0000-000000000128,City Hall Car Park,大會堂停車場,"1 Edinburgh Place, Central",中環愛丁堡廣場1號,5,22.281969,114.16172504425049,,0
+00000000-0000-0000-000000000129,Star Ferry Car Park,天星停車場,"9 Edinburgh Place, Central",中環愛丁堡廣場9號,5,22.2831833,114.160275,,0
+00000000-0000-0000-00000000012a,World Trade Centre,世界貿易中心,"280 Gloucester Road, Causeway Bay",銅鑼灣告士打道280號,4,22.2820783,114.1837498,,0
+00000000-0000-0000-00000000012e,Verbena Heights,茵怡花園,"8 Mau Tai Road, Tseung Kwan O",將軍澳貿泰路8號,60,22.3219316,114.2565317,,0
+00000000-0000-0000-000000000130,The Pinnacle,叠翠軒,"8 Wan Hang Road, Tsueng Kwan O",將軍澳運享路8號,60,22.3211662,114.2584566,,0
+00000000-0000-0000-00000000013b,Lancashire Centre,利嘉中心,"361 Shau Kei Wan Road, Shau Kei Wan",筲箕灣筲箕灣道361號,14,22.2773942,114.2275115,,0
+00000000-0000-0000-00000000013d,Port 33,Port 33,"No. 33, Tseuk Luk Street, San Po Kong",新蒲崗爵祿街33號,35,22.335393,114.197652,,0
+00000000-0000-0000-000000000149,Hyatt Centric,凱悅尚萃酒店,"B1/F, 1 North Point Estate Lane, North Point",北角北角邨里一號地下低層,9,22.2924714,114.1992249,,0
+00000000-0000-0000-00000000014a,HKIA Car Park 1,香港國際機場1號停車場,"Hong Kong International Airport, Chek Lap Kok, Lantau Island    ",大嶼山赤鱲角香港國際機場,96,22.3124376,113.9361457,,0
+00000000-0000-0000-00000000014c,HKIA Car Park 4,香港國際機場4號停車場,"Hong Kong International Airport, Chek Lap Kok, Lantau Island ",大嶼山赤鱲角香港國際機場,96,22.3182403,113.9337519,,0
+00000000-0000-0000-00000000014f,HKIA Loading Dock 1,香港國際機場1號卸貨區,"Hong Kong International Airport, Chek Lap Kok, Lantau Island ",大嶼山赤鱲角香港國際機場,96,22.312712,113.9360561,,0
+00000000-0000-0000-000000000152,Coda Plaza,科達中心,"Basement Level 1 - 4, 51 Garden Road, Central",中環花園道51號地庫1至4層,5,22.2763392,114.1563178,,0
+00000000-0000-0000-000000000154,"Car Park 1, HZMB Hong Kong Port ",港珠澳大橋香港口岸1號停車場,"Car Park 1, Hong Kong-Zhuhai-Macao Bridge Hong Kong Port Artificial Island, Chek Lap Kok, Lantau Island",大嶼山赤鱲角港珠澳大橋香港口岸人工島1號停車場,96,22.31671,113.952456,,0
+00000000-0000-0000-000000000155,"Car Park 2, HZMB Hong Kong Port ",港珠澳大橋香港口岸2號停車場,"Car Park 2, Hong Kong-Zhuhai-Macao Bridge Hong Kong Port Artificial Island, Chek Lap Kok, Lantau Island",大嶼山赤鱲角港珠澳大橋香港口岸人工島2號停車場,96,22.315912,113.952561,,0
+00000000-0000-0000-000000000156,"Car Park 3, HZMB Hong Kong Port ",港珠澳大橋香港口岸3號停車場,"Car Park 3, Hong Kong-Zhuhai-Macao Bridge Hong Kong Port Artificial Island, Chek Lap Kok, Lantau Island",大嶼山赤鱲角港珠澳大橋香港口岸人工島3號停車場,96,22.314997,113.953208,,0
+00000000-0000-0000-000000000157,"Car Park 4, HZMB Hong Kong Port ",港珠澳大橋香港口岸4號停車場,"Car Park 4, Hong Kong-Zhuhai-Macao Bridge Hong Kong Port Artificial Island, Chek Lap Kok, Lantau Island",大嶼山赤鱲角港珠澳大橋香港口岸人工島4號停車場,96,22.314,113.952404,,0
+00000000-0000-0000-000000000158,"Car Park 5, HZMB Hong Kong Port ",港珠澳大橋香港口岸5號停車場,"Car Park 5, Hong Kong-Zhuhai-Macao Bridge Hong Kong Port Artificial Island, Chek Lap Kok, Lantau Island",大嶼山赤鱲角港珠澳大橋香港口岸人工島5號停車場,96,22.314056,113.952879,,0
+00000000-0000-0000-000000000159,Tsuen Wan West Station,荃灣西站,"Level B1 & B2 of Ocean Supreme, 100 Tai Ho Road, Tsuen Wan",荃灣大河道100號海之戀．愛炫美B1及B2層,62,22.3699094,114.1083287,,0
+00000000-0000-0000-00000000015b,One Sky Parc,One Sky Parc,"53 Hung To Road, Kwun Tong",觀塘鴻圖道53號,29,22.3111392,114.2223215,,0
+00000000-0000-0000-000000000170,HKIA Prebooked Taxi Pick-up Zone/ LGV/ Taxi Long Term Parking Area,香港國際機場預約的士上客區/ 輕型貨車/ 的士長期停放區,"Hong Kong International Airport, Chek Lap Kok, Lantau Island",大嶼山赤鱲角香港國際機場,96,22.3121688,113.9362772,,0
+00000000-0000-0000-000000000171,HKIA LGV (Hourly) Parking Area, 香港國際機場輕型貨車 (時租) 停放區,"Hong Kong International Airport, Chek Lap Kok, Lantau Island",大嶼山赤鱲角香港國際機場,96,22.3145835,113.9378033,,0
+00000000-0000-0000-000000000174,Clague Garden Estate,祈德尊新邨,"26 Hoi Shing Road, Tsuen Wan",荃灣海盛路26號,62,22.3697724,114.1111485,,0
+00000000-0000-0000-00000000018d,909 Cheung Sha Wan Road,長沙灣道909號,"909 Cheung Sha Wan Road, Cheung Sha Wan, Kowloon",九龍長沙灣長沙灣道909號,22,22.336350338383234,114.1461728096285,,0
+00000000-0000-0000-00000000018f,Cayman Rise,加惠臺,"29 Ka Wai Man Road, Kennedy Town",堅尼地城加惠民道29號,8,22.2812806,114.1248239,,0
+00000000-0000-0000-000000000190,Yue Kwong Chuen,漁光村,"26 Aberdeen Reservoir Road, Aberdeen",香港仔水塘道26號,1,22.2516167,114.1567901,,0
+00000000-0000-0000-000000000191,Marina 8,Marina 8,"8 Heung Yip Road, Wong Chuk Hang",黃竹坑香葉道8號,75,22.24861357325216,114.16769237094246,,0
+00000000-0000-0000-000000000193,Mei Foo Sun Chuen Stage 8,美孚新邨8期,"Stage 8 Mei Foo Sun Chuen, Lai Chi Kok",荔枝角美孚新邨8期,30,22.3351346,114.1411088,,0
+00000000-0000-0000-000000000194,Yuk Yat Street ,旭日街,"17 Yuk Yat Street, To Kwa Wan, Kowloon",九龍土瓜灣旭日街17號,39,22.3163442,114.1920077,,0
+00000000-0000-0000-000000000196,International Trade Centre,達貿中心,"11-19 Sha Tsui Road, Tsuen Wan",荃灣沙咀道11-19號,62,22.3745266,114.108041,,1
+00000000-0000-0000-000000000197,Wetland Public Vehicle Park,Wetland Public Vehicle Park,"1 Wetland Park Road, Tin Shui Wai",天水圍濕地公園路1號,59,22.4680994,114.0033711,,1
+00000000-0000-0000-000000000199,Lucky Plaza,好運中心,"1-15 Wang Pok Street, Shatin",沙田橫壆街1-15號,55,22.3831662,114.1900592,,0
+00000000-0000-0000-00000000019a,Tai Po Mega Mall Multi-Storey Car Park,大埔超級城多層停車場,"On Pong Road, Tai Po",大埔安邦路2號,57,22.4534163,114.1711666,,0
+00000000-0000-0000-00000000019d,Honour Industrial Centre,安力工業中心,"6 Sun Yip Street, Chai Wan",柴灣新業街6號,6,22.2666837,114.2472343,,0
+00000000-0000-0000-00000000019e,New Commerce Centre,滙貿中心,"19 On Sum Street, Shek Mun, Shatin",沙田石門安心街19號,55,22.3892415,114.2075157,,0
+00000000-0000-0000-00000000019f,New Trade Plaza,新貿中心,"6 On Ping Street, Shek Mun, Shatin",沙田石門安平街6號,55,22.3909887,114.2071565,,0
+00000000-0000-0000-0000000001a0,"West Gate Open Car Park, West Kowloon Cultural District",西九文化區西閘露天停車場,"Museum Drive, West Kowloon, Tsim Sha Tsui",尖沙咀西九龍博物館道,40,22.3021314,114.1567398,,0
+00000000-0000-0000-0000000001a1,"Hong Kong Palace Museum Car Park, West Kowloon Cultural District",西九文化區香港故宮文化博物館停車場,"Museum Drive, West Kowloon, Tsim Sha Tsui",尖沙咀西九龍博物館道,40,22.3008014,114.1565887,,0
+00000000-0000-0000-0000000001a2,"Art Park Car Park, West Kowloon Cultural District",西九文化區藝術公園停車場,"Museum Drive, West Kowloon, Tsim Sha Tsui",尖沙咀西九龍博物館道,40,22.3013584,114.1577688,,0
+00000000-0000-0000-0000000001a3,"M+ Car Park, West Kowloon Cultural District ",西九文化區M+停車場,"M+, Museum Drive, West Kowloon, Tsim Sha Tsui",尖沙咀西九龍博物館道M+,40,22.3017597,114.158423,,0
+00000000-0000-0000-0000000001a4,Brill Plaza,環凱廣場,"No.84 To Kwa Wan Road, To Kwa Wan, Kowloon",九龍土瓜灣土瓜灣道84號,39,22.3180475,114.1911688,,0
+00000000-0000-0000-0000000001a5,Scramble Hill,三布目,"98 How Ming Street, Kwun Tong",觀塘巧明街98號,29,22.3131996,114.2205472,,1
+00000000-0000-0000-0000000001a6,Hi-Tech Industrial Centre,嘉力工業中心,"5-21 Pak Tin Par Street, Tsuen Wan",荃灣白田壩街5-21號,62,22.3744861,114.1090743,,0
+00000000-0000-0000-0000000001a7,Valiant Industrial Centre,威力工業中心,"2-12 Au Pui Wan Street, Fo Tan, Shatin",沙田火炭坳背灣街2-12號,48,22.3976461,114.196326,,0
+00000000-0000-0000-0000000001a8,The Burrow,The Burrow,"15-17 Ng Fong Street, San Po Kong, Kowloon",九龍新蒲崗五芳街15-17號 ,35,22.3382348,114.1998195,,0
+00000000-0000-0000-0000000001a9,Mega Trade Centre,時貿中心,"1-6 Mei Wan Street, Tsuen Wan",荃灣美環街1-6號 ,62,22.3752084,114.1146948,,0
+00000000-0000-0000-0000000001ab,Beauty Court,麗珊園,"3 Hung Tai Road, Hung Shui Kiu, Yuen Long",元朗洪水橋洪堤路3號,65,22.4338844,113.9968783,,1
+00000000-0000-0000-0000000001ac,Aster Court,雅珊園,"8 Hung Tai Road, Hung Shui Kiu, Yuen Long",元朗洪水橋洪堤路8號,65,22.4341531,113.9961923,,0
+00000000-0000-0000-0000000001ad,Tonic Industrial Centre,同力工業中心,"19 Lam Hing Street, Kowloon Bay",九龍灣臨興街19號,27,22.3246324,114.2103418,,0
+00000000-0000-0000-0000000001ae,Eight Regency,珀御,"8 Leung Tak Street, Tuen Mun",屯門良德街8號,63,22.4078489,113.9677669,,0
+00000000-0000-0000-0000000001af,SOHO West,SOHO West,"10 Lai Ying Street, Cheung Sha Wan",長沙灣荔盈街10號,22,22.3270562,114.1495751,,1
+00000000-0000-0000-0000000001b0,Mayfair Gardens,美景花園,"2-16 Sai Shan Road, Tsing Yi",青衣細山路2-16號,61,22.343804,114.1062832,,1
+00000000-0000-0000-0000000001b1,Kodak House II,柯達大廈二座,"39 Healthy Street East, North Point",北角健康東街39號,9,22.2927647,114.2075017,,0
+00000000-0000-0000-0000000001b2,Hoi Wah Road (II),海華路(II),"Hoi Wah Road,Tuen Mun",屯門海華路,63,22.3811704,113.9739579,,0
+00000000-0000-0000-0000000001b3,V Walk,V Walk,"Level 3, 28 Sham Mong Road, Sham Shui Po",深水埗深旺道28號3樓,37,22.3263735,114.1549457,,0
+00000000-0000-0000-0000000001b4,GO PARK Sai Sha,西沙GO PARK,"No.9 Hoi Ying Road, Ma On Shan",馬鞍山海映路9號,52,22.4267274,114.265343,,0
+00000000-0000-0000-0000000001b5,Harbour North Phase 2-3,北角匯 二至三期,"123 Java Road, North Point (Phase 2) ; 133 Java Road, North Point (Phase 3)",北角渣華道123號 (二期)；北角渣華道133號 (三期),9,22.2936005,114.2026298,,0
+00000000-0000-0000-0000000001b6,Ka Fu Fong Public Car Park,嘉富坊公眾停車場,"San Wan Road, Sheung Shui Town Lot No. 301",上水市地段第301號新運路,56,22.5060105,114.1241301,,0
+00000000-0000-0000-0000000001b7,Technology Plaza,科匯中心,"No. 651 King's Road, North Point",香港北角英皇道651號,9,22.2921486,114.2075769,,0
+00000000-0000-0000-0000000001b8,S22,S22,"22 Heung Yip Road, Wong Chuk Hang",香港黃竹坑香葉道22號,75,22.2478227,114.1659994,,0
+00000000-0000-0000-0000000001bf,GO PARK Aqua Public Car Park,GO PARK Aqua 公眾停車場,"Tai Po Town Lot No. 254, New Territories",新界大埔市地段254號,52,22.4291265,114.2679965,,0
+00000000-0000-0000-0000000001c0,Yue Ying Lau,漁映樓,"33 Shek Pai Wan Road, Aberdeen",香港仔石排灣道33號,1,22.2499706,114.1471207,,0
+00000000-0000-0000-0000000001c1,One Causeway Bay,港島壹號中心,"281 Gloucester Road, Causeway Bay",銅鑼灣告士打道281號,4,22.2823001,114.1842903,,0
+00000000-0000-0000-0000000001c2,Wonderland Villas (Southern),華景山莊 (南),"9 Wah King Hill Road, Lai King",荔景華景山道9號,51,22.3532988,114.1361182,,0
+00000000-0000-0000-0000000001c3,Wonderland Villas (Northern),華景山莊 (北),"9 Wah King Hill Road, Lai King",荔景華景山道9號,51,22.3536605,114.1361915,,0
+00000000-0000-0000-0000000001c4,GO PARK 2,GO PARK 2,"8 Hoi Ying Road, Sai Sha, New Territories",新界西沙海映路8號,52,22.4281994,114.266353,,0
+00000000-0000-0000-0000000001c5,Pak Shing Kok Road Public Car Park,百勝角路公眾停車場,"1 Pak Shing Kok Road, Tseung Kwan O, New Territories",新界將軍澳百勝角路1號,60,22.30445,114.272749,,0
+00000000-0000-0000-0000000001c6,Heung Yuen Wai Boundary Control Point Public Car Park,香園圍邊境管制站公眾停車場,"Ta Kwu Ling, Northern District, New Territories",新界北區打鼓嶺,97,22.5519941,114.1511779,,0
+00000000-0000-0000-0000000001c7,Cullinan Sky Mall,天璽•天Mall ,"10 Concorde Road, Kai Tak, Kowloon",九龍啟德協調道10號,98,22.3312456,114.1999202,,0
+00000000-0000-0000-0000000001c8,Tseung Kwan O Government Offices Public Car Park,將軍澳政府合署公眾停車場,"30 Tong Yin Street, Tseung Kwan O, New Territories",新界將軍澳唐賢街30號,60,22.3033773,114.2574771,,0
+00000000-0000-0000-0000000001c9,International Gateway Centre (IGC) ,International Gateway Centre (IGC) ,"1 Wui Man Road, Tsim Sha Tsui, West Kowloon",尖沙咀西九龍匯民道一號,40,22.3048993,114.1644995,,0
+00000000-0000-0000-0000000001cb,HKIA Loading Dock 2,香港國際機場2號卸貨區," Hong Kong International Airport, Chek Lap Kok, Lantau Island", 大嶼山赤鱲角香港國際機場,96,22.3150281,113.9386746,,0
