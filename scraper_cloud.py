@@ -1,140 +1,169 @@
 #!/usr/bin/env python3
 """
-Wilson Parking Cloud Scraper - CSV Storage
-Stores data as CSV files (one per day)
+HK Carpark Vacancy Scraper (Cloud Version)
+==========================================
+Uses the official HK Government Open Data API.
+Runs on GitHub Actions every 30 minutes.
 """
 
-import json
-import csv
+import requests
+import pandas as pd
+from datetime import datetime, timezone, timedelta
 import os
-import urllib.request
-from datetime import datetime, timezone
-from pathlib import Path
 
-API_URL = "https://mobile-prod.wilsonparkingapp.com/"
-DATA_DIR = Path(__file__).parent / "data"
+# HK Government Open Data API
+INFO_API = "https://api.data.gov.hk/v1/carpark-info-vacancy?data=info&lang=en_US"
+VACANCY_API = "https://api.data.gov.hk/v1/carpark-info-vacancy?data=vacancy&lang=en_US"
+
+DATA_DIR = "data"
+CARPARKS_FILE = os.path.join(DATA_DIR, "carparks.csv")
+HKT = timezone(timedelta(hours=8))
 
 
-def api_call(action: str, args: dict = None) -> dict:
-    """Make API call to Wilson Parking"""
-    payload = {
-        "action": action,
-        "args": {"request": args or {}}
-    }
+def fetch_carpark_info():
+    """Fetch carpark metadata"""
+    print("Fetching carpark info from DATA.GOV.HK...")
+    response = requests.get(INFO_API, timeout=30)
+    response.raise_for_status()
+    data = response.json()
+    results = data.get('results', [])
+    print(f"Got {len(results)} carparks")
+    return {r['park_Id']: r for r in results}
+
+
+def fetch_and_save_carparks():
+    """Save carpark metadata to CSV"""
+    carparks = fetch_carpark_info()
     
-    req = urllib.request.Request(
-        API_URL,
-        data=json.dumps(payload).encode('utf-8'),
-        headers={
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-            'User-Agent': 'WilsonParkingScraper/1.0'
-        },
-        method='POST'
-    )
+    rows = []
+    for pid, cp in carparks.items():
+        height = ''
+        if cp.get('heightLimits'):
+            h = cp['heightLimits'][0]
+            height = h.get('height', '')
+        
+        rows.append({
+            'park_id': pid,
+            'name_en': cp.get('name', ''),
+            'address_en': cp.get('displayAddress', ''),
+            'district': cp.get('district', ''),
+            'latitude': cp.get('latitude', ''),
+            'longitude': cp.get('longitude', ''),
+            'height_limit': height,
+            'opening_status': cp.get('opening_status', ''),
+            'website': cp.get('website', ''),
+            'phone': cp.get('contactNo', '')
+        })
     
-    with urllib.request.urlopen(req, timeout=30) as response:
-        return json.loads(response.read().decode('utf-8'))
+    df = pd.DataFrame(rows)
+    df.to_csv(CARPARKS_FILE, index=False)
+    print(f"Saved {len(rows)} carparks to {CARPARKS_FILE}")
+    return carparks
 
 
-def scrape_and_store():
-    """Scrape availability and append to daily CSV"""
-    now = datetime.now(timezone.utc)
-    scraped_at = now.isoformat()
-    date_str = now.strftime('%Y-%m-%d')
-    
+def load_carparks():
+    """Load carparks from CSV"""
+    carparks = {}
+    if os.path.exists(CARPARKS_FILE):
+        df = pd.read_csv(CARPARKS_FILE)
+        for _, row in df.iterrows():
+            carparks[str(row['park_id'])] = row.to_dict()
+    return carparks
+
+
+def scrape_availability():
+    """Scrape real-time vacancy data"""
+    now_hkt = datetime.now(HKT)
+    scraped_at = now_hkt.isoformat()
     print(f"Scraping at {scraped_at}...")
     
-    # Ensure data directory exists
-    DATA_DIR.mkdir(exist_ok=True)
+    # Fetch vacancy
+    response = requests.get(VACANCY_API, timeout=30)
+    response.raise_for_status()
+    data = response.json()
+    vacancy_data = data.get('results', [])
+    print(f"Got {len(vacancy_data)} vacancy records")
     
-    # Fetch availability
-    data = api_call("carpark:available-bays")
-    bays = data.get('result', {}).get('bays', [])
-    print(f"Got {len(bays)} carparks")
+    # Load carpark names
+    carparks = load_carparks()
     
-    # Daily CSV file
-    csv_file = DATA_DIR / f"availability_{date_str}.csv"
-    file_exists = csv_file.exists()
+    # Process data
+    rows = []
+    stats = {'total': 0, 'full': 0, 'low': 0}
     
-    # Write to CSV
-    with open(csv_file, 'a', newline='') as f:
-        writer = csv.writer(f)
+    for v in vacancy_data:
+        park_id = v.get('park_Id', '')
+        cp_info = carparks.get(str(park_id), {})
         
-        # Header for new files
-        if not file_exists:
-            writer.writerow([
-                'scraped_at', 'carpark_id', 'guest_available', 'guest_display',
-                'guest_total', 'is_capped', 'monthly_available', 'monthly_total',
-                'total_available', 'total_capacity', 'last_update'
-            ])
+        # Get private car vacancy
+        private_car = v.get('privateCar', [{}])
+        if isinstance(private_car, list) and private_car:
+            pc = private_car[0]
+        else:
+            pc = private_car if isinstance(private_car, dict) else {}
         
-        # Data rows
-        for bay in bays:
-            guest_display = bay.get('guest_available_display', '')
-            is_capped = 1 if guest_display.endswith('+') else 0
-            
-            writer.writerow([
-                scraped_at,
-                bay.get('carpark_id'),
-                bay.get('guest_available'),
-                guest_display,
-                bay.get('guest_total'),
-                is_capped,
-                bay.get('monthly_available'),
-                bay.get('monthly_total'),
-                bay.get('total_available'),
-                bay.get('total'),
-                bay.get('last_update')
-            ])
-    
-    # Stats
-    capped = sum(1 for b in bays if str(b.get('guest_available_display', '')).endswith('+'))
-    full = sum(1 for b in bays if b.get('guest_available') == 0)
-    print(f"Stats: {len(bays)} carparks, {capped} at 10+, {full} full")
-    print(f"Saved to {csv_file}")
-
-
-def init_carparks():
-    """Save carpark metadata once"""
-    print("Fetching carpark metadata...")
-    
-    DATA_DIR.mkdir(exist_ok=True)
-    
-    data = api_call("carpark:query")
-    carparks = data.get('result', {}).get('carparks', [])
-    
-    csv_file = DATA_DIR / "carparks.csv"
-    with open(csv_file, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.writer(f)
-        writer.writerow([
-            'id', 'name_en', 'name_zh', 'address_en', 'address_zh',
-            'district_id', 'latitude', 'longitude', 'height_limit', 'has_ev'
-        ])
+        vacancy = pc.get('vacancy')
+        last_update = pc.get('lastupdate', '')
         
-        for cp in carparks:
-            name = cp.get('name', {})
-            address = cp.get('address', {})
-            writer.writerow([
-                cp.get('id'),
-                name.get('en_us'),
-                name.get('zh_hant'),
-                address.get('en_us'),
-                address.get('zh_hant'),
-                cp.get('district_id'),
-                cp.get('latitude'),
-                cp.get('longitude'),
-                cp.get('height_limit'),
-                1 if cp.get('ev_charging') else 0
-            ])
+        # Get motorcycle vacancy
+        motorcycle = v.get('motorCycle', [{}])
+        if isinstance(motorcycle, list) and motorcycle:
+            mc = motorcycle[0]
+        else:
+            mc = motorcycle if isinstance(motorcycle, dict) else {}
+        mc_vacancy = mc.get('vacancy')
+        
+        # Get LGV vacancy
+        lgv = v.get('LGV', [{}])
+        if isinstance(lgv, list) and lgv:
+            lgv_data = lgv[0]
+        else:
+            lgv_data = lgv if isinstance(lgv, dict) else {}
+        lgv_vacancy = lgv_data.get('vacancy')
+        
+        if vacancy is not None:
+            stats['total'] += 1
+            if vacancy == 0:
+                stats['full'] += 1
+            elif vacancy <= 5:
+                stats['low'] += 1
+        
+        rows.append({
+            'scraped_at': scraped_at,
+            'park_id': park_id,
+            'name': cp_info.get('name_en', ''),
+            'district': cp_info.get('district', ''),
+            'private_car_vacancy': vacancy if vacancy is not None else '',
+            'motorcycle_vacancy': mc_vacancy if mc_vacancy is not None else '',
+            'lgv_vacancy': lgv_vacancy if lgv_vacancy is not None else '',
+            'last_update': last_update,
+            'opening_status': cp_info.get('opening_status', '')
+        })
     
-    print(f"Saved {len(carparks)} carparks to {csv_file}")
+    df = pd.DataFrame(rows)
+    
+    # Save to daily CSV
+    today = now_hkt.strftime('%Y-%m-%d')
+    today_file = os.path.join(DATA_DIR, f"vacancy_{today}.csv")
+    
+    if not os.path.exists(today_file):
+        df.to_csv(today_file, index=False)
+    else:
+        df.to_csv(today_file, mode='a', header=False, index=False)
+    
+    print(f"\n📊 Scrape Results:")
+    print(f"   Total: {stats['total']} carparks")
+    print(f"   Full (0): {stats['full']}")
+    print(f"   Low (1-5): {stats['low']}")
+    print(f"   Saved to: {today_file}")
 
 
-if __name__ == '__main__':
-    import sys
+if __name__ == "__main__":
+    os.makedirs(DATA_DIR, exist_ok=True)
     
-    if '--init' in sys.argv:
-        init_carparks()
+    # Refresh carpark metadata if not exists or if it's Monday (weekly refresh)
+    now = datetime.now(HKT)
+    if not os.path.exists(CARPARKS_FILE) or now.weekday() == 0:
+        fetch_and_save_carparks()
     
-    scrape_and_store()
+    scrape_availability()

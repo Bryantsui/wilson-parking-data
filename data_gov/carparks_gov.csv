@@ -1,0 +1,544 @@
+park_id,name,address,district,latitude,longitude,height_limit,opening_status,website,phone
+27,Yau Lai Shopping Centre Carpark,"LG1 & LG2, Yau Lai Shopping Centre, 9 Yau Tong, Yau Tong, Kowloon, Yau Tong, KLN",Kwun Tong District,22.29851205,114.23740089,2,OPEN,,23530667
+30,Telford Plaza D Carpark,"33 Wai Yip Street, Kowloon Bay, KLN",Kwun Tong District,22.32228903,114.21204329,1.75,OPEN,http://www.telford-plaza.com/tch/tp/about_us/parking_info.jsp,2997 2262
+31,Telford Plaza I Carpark,"33 Wai Yip Street, Kowloon Bay, KLN",Kwun Tong District,22.32268602,114.21353459,3.6,OPEN,http://www.telford-plaza.com/tch/tp/about_us/parking_info.jsp,2997 2262
+32,Telford Plaza II Carpark,"33 Wai Yip Street, Kowloon Bay, KLN",Kwun Tong District,22.32135609,114.21326637,2,OPEN,http://www.telford-plaza.com/tch/tp/about_us/parking_info.jsp,2997 2262
+38,Domain Carpark,"LG1, Domain, 38 Ko Chiu Road, Yau Tong, KLN",Kwun Tong District,22.29598076,114.23869371,2.1,OPEN,http://www.domain-mall.hk/index.php/about-domain,28702992
+75,Landmark East Carpark,"Landmark East, 100 How Ming Street, Kwun Tong, KLN",Kwun Tong District,22.31267152,114.22228396,,OPEN,http://www.landmarkeast.com.hk,3971 0203
+77,Kingston International Center,"19 Wang Chiu Road, Kowloon Bay, KLN",Kwun Tong District,22.32361547,114.20924917,,OPEN,,35895162
+78,Stelux House,"Stelux House, 698 Prince Edward Road East, San Po Kong, KLN",Wong Tai Sin District,22.33448116,114.1981709,3.8,OPEN,,2350 4501
+81,Manulife Place,"348 Kwun Tong Road, Kwun Tong, KLN",Kwun Tong District,22.3149246,114.21706438,4.7,OPEN,https://itt-hk.com/en/index.php,21543090
+88,"Public Vehicle Parking, 8 Yan Yue Wai, Yau Tong","Public Vehicle Parking, 8 Yan Yue Wai, Yau Tong, KLN",Kwun Tong District,22.292238,114.236683,2.4,OPEN,,2366 2823
+93,Hong Ning Road Park Car Park,"Junction of Hong Ning Road and Wo Hong Path, Kwun Tong, KLN",Kwun Tong District,22.32070104,114.22477841,2.45,OPEN,,
+100,Prosperity Place Car Park,"Prosperity Place Car Park, 6 Shing Yip Street, Kwun Tong, KLN",Kwun Tong District,22.31060791,114.2257385,4.1,OPEN,,67961400
+101,Prosperity Center Car Park,"Prosperity Centre Car Park, 25 Chong Yip Street, Kwun Tong, KLN",Kwun Tong District,22.31414153,114.2195567,4.1,OPEN,,67961393
+102,Scramble Hill,"98 How Ming Street, Kwun Tong, KLN",Kwun Tong District,22.3131996,114.2205472,,OPEN,https://www.wilsonparking.com.hk/zh/car_parks/detail/421,9853-1924
+103,One Sky Parc (Wilson Parking),"53 Hung To Road, Kwun Tong, KLN",Kwun Tong District,22.3111392,114.2223215,,OPEN,https://www.wilsonparking.com.hk/zh/car_parks/detail/347,9229-6642
+104,AIRSIDE,"AIRSIDE, 2 Concorde Road, Kai Tak, San Po Kong, KLN",Wong Tai Sin District,22.33124094,114.198246,2.4,OPEN,https://www.airside.com.hk/en,26860333
+117,Kai Ching Estate Car Park,"12 Muk Hung Street, Kowloon City, KLN",Kowloon City District,22.3315089,114.2027843,2.4,OPEN,,
+118,Tak Long Estate Carpark A,"Shing Kai Road, Kowloon City, KLN",Kowloon City District,22.32879957,114.20429707,2,OPEN,,
+119,Tak Long Estate Carpark B,"Muk Chui Street, Kowloon City, KLN",Kowloon City District,22.3308936,114.20424879,4.7,OPEN,,
+123,KTR350 Car Park,"KWUN TONG ROAD 350, Kwun Tong, KLN",Kwun Tong District,22.3150437,114.2179817,,OPEN,,21168259
+124,Stadium Carpark,"Kai Tak Sport Park, 38-39 Shing Kai Road, Kowloon, Hong Kong, Kowloon City, KLN",Kowloon City District,22.32216993,114.1980958,,OPEN,https://www.kaitaksportspark.com.hk/car-park/2,
+125,Arena Carpark,"Kai Tak Sport Park, 38-39 Shing Kai Road, Kowloon, Hong Kong, Kowloon City, KLN",Kowloon City District,22.32545005,114.19669569,,OPEN,https://www.kaitaksportspark.com.hk/car-park/1,
+128,The Burrow (Wilson Parking),"15-17 Ng Fong Street, San Po Kong, KLN",Wong Tai Sin District,22.3381653,114.199945,,OPEN,https://www.wilsonparking.com.hk/zh/car_parks/detail/424,9737-0932
+tdc166p1,Phase 1 Carpark of Tin Ching Estate,"Tin Ching Estate (Phase 1 Carpark), Yuen Long, New Territories",Yuen Long,22.463276765818,114.00184446738,0,CLOSED,,34018578
+tdc6p11,Cheung Shan Estate Carpark,"Cheung Shan Estate Road West, Tsuen Wan, N.T.",Tsuen Wan,22.378225291103,114.12981855349,1.7,OPEN,,
+tdc245p1,Hong Wah Court Car Park,"No.2 Lin Tak Road, Lam Tin, Kowloon",Kwun Tong,22.313958857871,114.24008778165,0,CLOSED,,
+tdc6p8,Kwai Shing West Shopping Centre Car Park,"Kwai Luen Road, Kwai Chung, N.T.",Kwai Tsing,22.360948600865,114.12163200072,1.8,OPEN,,98553566
+tdc6p9,Lai King Estate Car Park C,"Lai King Hill Road, Kwai Chung, N.T.",Kwai Tsing,22.349594568342,114.126365945,0,OPEN,,
+tdc8p3,MTR Hong Kong Station Car Park,"FINANCE STREET, Central & Western District, Hong Kong",Central & Western,22.285922464,114.157505851,2.1,OPEN,https://www.mtr.com.hk/en/customer/services/aestations_carpark.html,28818888
+tdcp10,Aberdeen Car Park,"18 Aberdeen Reservoir Road, Aberdeen, Hong Kong",Southern,22.25027272,114.15661803,0,OPEN,http://www.mackcarpark.com.hk/eng/carpark_info.php?id=32,
+tdcp11,Tin Hau Car Park,"Lau Sin Street & Electric Road, Tin Hau",Wan Chai,22.28288221,114.19166511,0,OPEN,https://www.wilsonparking.com.hk/en-us/car_parks/detail/7,
+tdcp12,Sheung Fung Street Car Park,"Sheung Fung Street, Wong Tai Sin, Kowloon",Wong Tai Sin,22.34395897,114.19705899,0,OPEN,http://www.mackcarpark.com.hk/eng/carpark_info.php?id=33,
+tdcp2,Rumsey Street Car Park,"2 Rumsey Street, Sheung Wan, Hong Kong",Central & Western,22.28740848,114.15322694,0,OPEN,http://www.mackcarpark.com.hk/eng/carpark_info.php?id=31,
+tdcp3,Tsuen Wan Car Park,"174-208 Castle Peak Road, Tsuen Wan, New Territories",Tsuen Wan,22.37284735,114.11860252,0,OPEN,https://www.wilsonparking.com.hk/en-us/car_parks/detail/8,
+tdcp5,City Hall Car Park,"1 Edinburgh Place, Central, Hong Kong",Central & Western,22.28191055,114.16213972,0,OPEN,https://www.wilsonparking.com.hk/en-us/car_parks/detail/296,
+tdcp6,Kwai Fong Car Park,"19 Kwai Yi Road, Kwai Fong",Kwai Tsing,22.35548531,114.1273145,0,OPEN,https://www.wilsonparking.com.hk/en-us/car_parks/detail/295,
+tdcp7,Kennedy Town Car Park,"12 Rock Hill Street, Kennedy Town, Hong Kong",Central & Western,22.281789590964,114.1289777931,0,OPEN,http://www.mackcarpark.com.hk/eng/carpark_info.php?id=27,
+tdcp8,Star Ferry Car Park,"9 Edinburgh Place, Central, Hong Kong",Central & Western,22.28275461,114.16043975,0,OPEN,https://www.wilsonparking.com.hk/en-us/car_parks/detail/297,
+tdcp9,Shau Kei Wan Car Park,"1 Po Man Street, Shau Kei Wan, Hong Kong",Eastern,22.278806935348,114.22929555525,0,OPEN,http://www.mackcarpark.com.hk/eng/carpark_info.php?id=21,
+tdstt2p2,Value Parking Shan Mei Street,"Junction of Shan Mei Street & Sui Wo Road, Fo Tan",Sha Tin,22.397891278542,114.19250685444,0,OPEN,,
+tdc5p1,Hopewell Centre,"183 Queen’s Road East, Wan Chai, Hong Kong (Entrance on Kennedy Road)",Wan Chai,22.2745918,114.17167341,2,OPEN,https://www.hopewellcentre.com/eng/hc_parking.htm,2527 7292
+tdc5p3,Wu Chung House,"213 Queen's Road East, Wan Chai District, Hong Kong",Wan Chai,22.27437133,114.17247315,1.9,OPEN,,2893 9369
+tdc5p4,Panda Place,"3 Tsuen Wah Street, Tsuen Wan, Hong Kong",Tsuen Wan,22.36891824,114.12042744,0,OPEN,https://pandaplace.com.hk/parking/,
+tdc17p1,Xiqu Centre Car Park,"88 Austin Road West, Tsim Sha Tsui, Kowloon",Yau Tsim Mong,22.301651259456,114.16682582649,2.45,OPEN,https://www.westk.hk/en/visit/parking,
+tdstt30,Hoi Ting Road,"Hoi Ting Road, Yau Ma Tei, Kowloon",Yau Tsim Mong,22.31401294,114.16276657,0,OPEN,,
+tdc1p5,Lee Garden Three Car Park,"1 Sunning Road, Causeway Bay, Hong Kong",Wan Chai,22.277647169,114.185359006,2.4,OPEN,https://www.leegardens.com.hk/car-park-promotion?lang=en-US#car-info-1,
+tdc1p4,Hysan Place Car Park,"500 Hennessy Road, Wan Chai District, Hong Kong",Wan Chai,22.279907691,114.183409552,3.5,OPEN,https://www.leegardens.com.hk/car-park-promotion?lang=en-US#car-info-1,
+tdc1p3,Leighton Centre Car Park,"77 LEIGHTON ROAD, Wan Chai District, Hong Kong",Wan Chai,22.27776811,114.18310035,1.9,CLOSED,https://www.leegardens.com.hk/car-park-promotion?lang=en-US#car-info-1,
+tdc1p2,LEE GARDEN TWO CAR PARK,"28 YUN PING ROAD, Wan Chai District, Hong Kong",Wan Chai,22.278447785015,114.18588410894,2.1,CLOSED,https://www.leegardens.com.hk/car-park-promotion?lang=en-US#car-info-1,
+tdc1p1,LEE GARDEN ONE CAR PARK,"33 HYSAN AVENUE, Wan Chai District, Hong Kong",Wan Chai,22.278552057575,114.18465013653,2,CLOSED,https://www.leegardens.com.hk/car-park-promotion?lang=en-US#car-info-1,
+tdc17p3,West Gate Open Car Park,"Project Site Office, WKCD, Kowloon, Hong Kong",Yau Tsim Mong,22.30314788228,114.15550327635,2.45,OPEN,https://www.westk.hk/en/visit/parking,22000367
+tdstt3p1,Skye Parking Ho Tin Street,"Ho Tin Street, Area 9, Tuen Mun, N.T.",Tuen Mun,22.398162646437,113.97067221328,0,OPEN,,
+tdc17p2,Art Park Car Park,"West Kowloon Cultural District, No.36 Museum Drive, Kowloon, Hong Kong",Yau Tsim Mong,22.301091853725,114.15789183876,2.1,OPEN,https://www.westk.hk/en/visit/parking,22000367
+tdstt5p1,Skye Parking Ma Wo Road,"Ma Wo Road, Area 6, Tai Po, N.T.",Tai Po,22.4421,114.1635,0,OPEN,,
+tdc14p1004,Choi Ming Car Park 1,"Choi Ming Shopping Centre, 1 Choi Ming Street, Tiu Keng Leng, Tseung Kwan O, New Territories",Sai Kung,22.30666,114.252446,2.2,OPEN,https://www.linkhk.com/en/parking/1004,5487 7944
+tdc14p1005,Choi Ming Car Park 2,"Choi Ming Shopping Centre, 1 Choi Ming Street, Tiu Keng Leng, Tseung Kwan O, New Territories",Sai Kung,22.308972,114.255308,2.1,OPEN,https://www.linkhk.com/en/parking/1005,5487 7944
+tdc14p1006,Kin Ming Car Park A,"Kin Ming Estate Car Park, 1 Choi Ming Street, Tiu Keng Leng, Tseung Kwan O, New Territories",Sai Kung,22.306028,114.251108,2.4,OPEN,https://www.linkhk.com/en/parking/1006,5487 7944
+tdc14p1007,Tong Ming Car Park,"Tong Ming Court Retail and Car Park, 15 Tong Ming Street, Tseung Kwan O, New Territories",Sai Kung,22.308863973266,114.25621654471,2,OPEN,https://www.linkhk.com/en/parking/1007,5487 7944
+tdc14p1008,TKO Spot Car Park A,"TKO Spot, 2 Tong Ming Street, Tseung Kwan O, New Territories",Sai Kung,22.311604612928,114.26019419462,2.1,OPEN,https://www.linkhk.com/en/parking/1008,5487 7944
+tdc14p1012,TKO Spot Car Park B,"TKO Spot, 2 Tong Ming Street, Tseung Kwan O, New Territories",Sai Kung,22.310691104262,114.25764225173,2.3,OPEN,https://www.linkhk.com/en/parking/1012,5487 7944
+tdc14p1015,Oi Tung Car Park,"Oi Tung Shopping Centre, 18 Oi Yin Street, Shau Kei Wan, Hong Kong",Eastern,22.280511,114.22719,2.4,OPEN,https://www.linkhk.com/en/parking/1015,2117 7076
+tdc14p1016,Yiu Tung Car Park 1,"Yiu Tung Shopping Centre, 12 Yiu Hing Road, Shau Kei Wan, Hong Kong",Eastern,22.278217902704,114.22241415939,2.2,OPEN,https://www.linkhk.com/en/parking/1016,2117 7076
+tdc14p1017,Hing Tung Car Park,"Hing Tung Shopping Centre, 55 Yiu Hing Road, Shau Kei Wan, Hong Kong",Eastern,22.2804899,114.2200719,2,OPEN,https://www.linkhk.com/en/parking/1017,2117 7076
+tdstt38,Man Lai Road,"Man Lai Road, Sha Tin",Sha Tin,22.37662315,114.18343353,0,OPEN,,
+tdc268p1,Shek Kip Mei Park Sports Centre,"Nam Shan Chuen Road, Sham Shui Po",Sham Shui Po,22.336934266832,114.17009230965,2.45,CLOSED,,
+tdc14p1030,Siu Sai Wan Phase 3 Car Park,"Siu Sai Wan Plaza, 10 Siu Sai Wan Road, Siu Sai Wan, Hong Kong",Eastern,22.261,114.251273,1.9,OPEN,https://www.linkhk.com/en/parking/1030,2117 7076
+tdc14p1031,Siu Sai Wan Phase 1 Car Park,"Siu Sai Wan Plaza, 10 Siu Sai Wan Road, Siu Sai Wan, Hong Kong",Eastern,22.262853,114.248621,1.9,OPEN,https://www.linkhk.com/en/parking/1060,2117 7076
+tdc14p1032,Tsui Wan Car Park,"Tsui Wan Estate Retail and Car Park, 3 Tsui Wan Street, Chai Wan, Hong Kong",Eastern,22.26733,114.24,1.8,OPEN,https://www.linkhk.com/en/parking/1032,2117 7076
+tdc14p1033,Wan Tsui Car Park,"Wan Tsui Commercial Complex, 2 Wah Ha Street, Chai Wan, Hong Kong",Eastern,22.261888,114.236826,2,OPEN,https://www.linkhk.com/en/parking/1033,2117 7076
+tdc14p1034,Hing Wah Car Park B,"Hing Wah Plaza, 11 Wan Tsui Road, Chai Wan, Hong Kong",Eastern,22.26303,114.2351,2.4,OPEN,https://www.linkhk.com/en/parking/1034,2117 7076
+tdc14p1037,Yiu Tung Car Park 2,"Yiu Tung Shopping Centre, 12 Yiu Hing Road, Shau Kei Wan, Hong Kong",Eastern,22.277303,114.225057,2,OPEN,https://www.linkhk.com/en/parking/1037,2117 7076
+tdc25p42,Cornell Centre,"50 Wing Tai Road, Chai Wan, Hong Kong",Eastern,22.26745987,114.24284363,4.42,OPEN,https://www.sino-propertyservices.com/en/parking-services/portfolio,25562898
+tdc14p2101,Chung On Car Park,"Chung On Shopping Centre, 632 Sai Sha Road, Ma On Shan, Sha Tin, New Territories",Sha Tin,22.42166,114.226755,2,OPEN,https://www.linkhk.com/en/parking/2141,5487 7944
+tdc14p2104,Heng On Car Park,"Heng On Commercial Centre, 1 Hang Kam Street, Ma On Shan, Sha Tin, New Territories",Sha Tin,22.416621,114.228137,1.9,OPEN,https://www.linkhk.com/en/parking/2104,5487 7944
+tdc14p2106,Yiu On Car Park,"Yiu On Shopping Centre, 2 Hang Hong Street, Ma On Shan, Sha Tin, New Territories",Sha Tin,22.420482,114.230566,2,OPEN,https://www.linkhk.com/en/parking/2146,5487 7944
+tdc25p41,Chai Wan Industrial City Phase II,"70 Wing Tai Road, Chai Wan, Hong Kong",Eastern,22.26823807,114.24238586,3.8,OPEN,https://www.sino-propertyservices.com/en/parking-services/portfolio,25574849
+tdc25p40,Chai Wan Industrial City Phase I,"60 Wing Tai Road, Chai Wan, Hong Kong",Eastern,22.2678318,114.24260712,3.5,OPEN,https://www.sino-propertyservices.com/en/parking-services/portfolio,28972906
+tdc14p2116,Cheung Wah Car Park A,"Cheung Wah Shopping Centre, 38 San Wan Road, Fanling, New Territories",North,22.493288,114.142545,1.9,OPEN,https://www.linkhk.com/en/parking/2116,5487 7944
+tdc14p2117,Cheung Wah Car Park B,"Cheung Wah Shopping Centre, 38 San Wan Road, Fanling, New Territories",North,22.49308806298,114.14018591669,1.9,OPEN,https://www.linkhk.com/en/parking/2117,5487 7944
+tdc14p2118,Choi Yuen Car Park A,"Choi Yuen Plaza, 8 Choi Yuen Road, Sheung Shui, New Territories",North,22.500856,114.126642,2,OPEN,https://www.linkhk.com/en/parking/2118,5487 7944
+tdc14p2119,Choi Yuen Car Park B,"Choi Yuen Plaza, 8 Choi Yuen Road, Sheung Shui, New Territories",North,22.500256,114.127127,0,OPEN,https://www.linkhk.com/en/parking/2119,5487 7944
+tdc14p2120,Choi Yuen Car Park C,"Choi Yuen Plaza, 8 Choi Yuen Road, Sheung Shui, New Territories",North,22.500147,114.126765,2.2,OPEN,https://www.linkhk.com/en/parking/2120,5487 7944
+tdc14p2121,Choi Yuen Car Park D,"Choi Yuen Plaza, 8 Choi Yuen Road, Sheung Shui, New Territories",North,22.50026577973,114.12856319308,0,OPEN,https://www.linkhk.com/en/parking/2121,5487 7944
+tdc284p1,Shun Chi Court Car Park,"8 Shun Chi Street, Kwun Tong, Kowloon",Kwun Tong,22.332337058373,114.227103451,2,CLOSED,,90762891
+tdc14p3201,Hin Keng Car Park,"Hin Keng Shopping Centre, 69 Che Kung Miu Road, Tai Wai, Sha Tin, New Territories",Sha Tin,22.364076,114.172507,1.9,OPEN,https://www.linkhk.com/en/parking/3201,5487 7944
+tdc14p3204,Lung Hang A Car Park,"Lung Hang Commercial Centre, 1 Tin Sam Street, Tai Wai, Sha Tin, New Territories",Sha Tin,22.368072436212,114.17928156201,1.9,OPEN,https://www.linkhk.com/en/parking/3204,5487 7944
+tdc14p3206,Sun Chui Car Park B,"Sun Chui Shopping Centre, 2 Chui Tin Street, Tai Wai, Sha Tin, New Territories",Sha Tin,22.370134937043,114.18217401718,2.1,OPEN,https://www.linkhk.com/en/parking/3206,5487 7944
+tdc269p1,Shek Kip Mei Park Stage Three,"Nam Shan Chuen Road, Sham Shui Po",Sham Shui Po,22.335154884067,114.17029621633,2.45,CLOSED,,
+tdc14p3216,Mei Lam Car Park,"Mei Lam Commercial Centre, 30 Mei Tin Road, Tai Wai, Sha Tin, New Territories",Sha Tin,22.37805,114.175472,1.9,OPEN,https://www.linkhk.com/en/parking/3216,5487 7944
+tdc264p1,Siu Tsui Court,"26 Hang Fu Street, Tuen Mun",Tuen Mun,22.383052922484,113.97083297776,2.45,CLOSED,,
+tdc14p3303,Tin Wah Car Park,"Tin Wah Estate Retail and Car Park, 21 Tin Tan Street, Tin Shui Wai, Yuen Long, New Territories",Yuen Long,22.461330014415,113.99616103036,0,OPEN,https://www.linkhk.com/en/parking/3303,2117 7076
+tdc14p3304,T Town South Car Park,"T Town, 30 & 33 Tin Wah Road, Tin Shui Wai, Yuen Long, New Territories",Yuen Long,22.461279941764,113.99726911063,2,OPEN,https://www.linkhk.com/en/parking/3304,2117 7076
+tdc14p3306,T Town North Car Park,"Tin Yuet Estate Car Park, 33 & 39 Tin Wah Road, Tin Shui Wai, Yuen Long, New Territories",Yuen Long,22.462297124394,113.9993792822,2,OPEN,https://www.linkhk.com/en/parking/3306,2117 7076
+tdc247p1,King Shan Court Car Park,32 Fung Shing St,Wong Tai Sin,22.34173165248,114.20980781505,1.9,CLOSED,,
+tdc14p3309,Tin Chak Car Park,"Tin Chak Shopping Centre, 71, 73, 75 & 77 Tin Shui Road, Tin Shui Wai, Yuen Long, New Territories",Yuen Long,22.46684,113.997449,0,OPEN,https://www.linkhk.com/en/parking/3309,2117 7076
+tdc14p3311,Tin Yat Car Park,"Tin Yat Estate Retail and Car Park, 76 Tin Shui Road, Tin Shui Wai, Yuen Long, New Territories",Yuen Long,22.467847,113.999802,2.1,OPEN,https://www.linkhk.com/en/parking/3311,2117 7076
+tdc14p3431,Hong Pak Car Park,"Hong Pak Court Retail and Car Park, 139 Pik Wan Road, Lam Tin, Kwun Tong, Kowloon",Kwun Tong,22.302487,114.239156,2.1,OPEN,https://www.linkhk.com/en/parking/3431,5487 7944
+tdc14p3432,Hong Shui Car Park,"Hong Shui Court Retail and Car Park, 133 Pik Wan Road, Lam Tin, Kwun Tong, Kowloon",Kwun Tong,22.301579,114.24035,2.2,OPEN,https://www.linkhk.com/en/parking/3432,5487 7944
+tdc14p3433,Ko Chun Car Park,"Ko Chun Court Retail and Car Park, 23 Ko Chiu Road, Yau Tong, Kwun Tong, Kowloon",Kwun Tong,22.298017942545,114.24223128341,2.1,OPEN,https://www.linkhk.com/en/parking/3433,5487 7944
+tdc14p3434,Ko Yee Car Park,"Ko Yee Estate Retail and Car Park, 28 Ko Chiu Road, Yau Tong, Kwun Tong, Kowloon",Kwun Tong,22.2964,114.2416,4.1,OPEN,https://www.linkhk.com/en/parking/3434,5487 7944
+tdc14p3435,Tak Tin Car Park A,"Tak Tin Plaza, 223 Pik Wan Road, Lam Tin, Kwun Tong, Kowloon",Kwun Tong,22.309386133021,114.23859366229,2,OPEN,https://www.linkhk.com/en/parking/3435,5487 7944
+tdc14p3436,Tak Tin Car Park B,"Tak Tin Plaza, 223 Pik Wan Road, Lam Tin, Kwun Tong, Kowloon",Kwun Tong,22.306549206966,114.23858711124,2,OPEN,https://www.linkhk.com/en/parking/3436,5487 7944
+tdc14p3441,Kai Tin Car Park A,"Kai Tin Shopping Centre, 50 Kai Tin Road, Lam Tin, Kwun Tong, Kowloon",Kwun Tong,22.307253749268,114.23542396654,2.4,OPEN,https://www.linkhk.com/en/parking/3441,5487 7944
+tdc14p3443,Ping Tin Phase 2 Car Park,"Ping Tin Shopping Centre, 23 On Tin Street, Lam Tin, Kwun Tong, Kowloon",Kwun Tong,22.305854633748,114.23734299224,2,OPEN,https://www.linkhk.com/en/parking/3443,5487 7944
+tdc14p3444,Ping Tin Phase 4 Car Park,"Ping Tin Shopping Centre, 23 On Tin Street, Lam Tin, Kwun Tong, Kowloon",Kwun Tong,22.308318222936,114.23644958514,2.2,OPEN,https://www.linkhk.com/en/parking/3444,5487 7944
+tdc14p3445,Hong Yat Car Park,"Hong Yat Court Retail and Car Park, 1 Tak Tin Street, Lam Tin, Kwun Tong, Kowloon",Kwun Tong,22.310441,114.23449,2,OPEN,https://www.linkhk.com/en/parking/3445,5487 7944
+tdc25p37,Sunshine Plaza,"17 Sung On Street, Hung Hom, Kowloon",Kowloon City,22.31189919,114.18917084,0,OPEN,https://www.sino-propertyservices.com/en/parking-services/portfolio,23561309
+tdc14p3512,Leung King Car Park,"Leung King Plaza, 31 Tin King Road, Tuen Mun, New Territories",Tuen Mun,22.406017,113.962654,1.9,OPEN,https://www.linkhk.com/en/parking/3512,2117 7076
+tdc14p3519,Kin Sang Car Park,"Kin Sang Shopping Centre, 3 Leung Wan Street, Tuen Mun, New Territories",Tuen Mun,22.407139,113.969919,2,OPEN,https://www.linkhk.com/en/parking/3519,2117 7076
+tdc14p3520,Tai Hing - Car Park H,"Tai Hing Commercial Centre, 1 Tai Hing Street, Tuen Mun, New Territories",Tuen Mun,22.402548269537,113.9707544434,0,OPEN,https://www.linkhk.com/en/parking/3520,2117 7076
+tdc14p3521,Tai Hing - Car Park D,"Tai Hing Commercial Centre, 1 Tai Hing Street, Tuen Mun, New Territories",Tuen Mun,22.403886085608,113.97128348062,0,OPEN,https://www.linkhk.com/en/parking/3521,2117 7076
+tdc14p3522,Tai Hing - Car Park C,"Tai Hing Commercial Centre, 1 Tai Hing Street, Tuen Mun, New Territories",Tuen Mun,22.401447011523,113.97017550068,0,OPEN,https://www.linkhk.com/en/parking/3522,2117 7076
+tdc25p36,Technology Plaza,"29-35 Sha Tsui Road, Tsuen Wan, New Territories",Tsuen Wan,22.37427726,114.10905315,0,OPEN,https://www.sino-propertyservices.com/en/parking-services/portfolio,24171280
+tdc14p3527,Fu Tai Car Park,"Fu Tai Shopping Centre, 9 Tuen Kwai Road, Tuen Mun, New Territories",Tuen Mun,22.413938004315,113.98371505855,2.1,OPEN,https://www.linkhk.com/en/parking/3577,2117 7076
+tdc14p3554,Kai Tin Car Park B,"Kai Tin Shopping Centre, 50 Kai Tin Road, Lam Tin, Kwun Tong, Kowloon",Kwun Tong,22.308986119146,114.23436817143,2.1,OPEN,https://www.linkhk.com/en/parking/3554,5487 7944
+tdc166p2,Phase 2 Carpark of Tin Ching Estate,"Tin Ching Estate (Phase 2 Carpark), Yuen Long, New Territories",Yuen Long,22.462626949961,114.00375166409,0,CLOSED,,34018578
+tdc14p4219,Yu Chui Car Park A,"Yu Chui Shopping Centre, 2 Ngau Pei Sha Street, Siu Lek Yuen, Sha Tin, New Territories",Sha Tin,22.381515,114.205714,2.2,OPEN,https://www.linkhk.com/en/parking/4269,5487 7944
+tdc14p4220,Yu Chui Car Park B,"Yu Chui Shopping Centre, 2 Ngau Pei Sha Street, Siu Lek Yuen, Sha Tin, New Territories",Sha Tin,22.379993368411,114.20526289073,2.2,OPEN,https://www.linkhk.com/en/parking/4220,5487 7944
+tdc14p4222,Kwong Yuen Car Park A,"Kwong Yuen Shopping Centre, 68 Siu Lek Yuen Road, Sha Tin, New Territories",Sha Tin,22.381504,114.215424,2,OPEN,https://www.linkhk.com/en/parking/4222,5487 7944
+tdc14p4223,Lek Yuen Car Park,"Lek Yuen Plaza, 6 Lek Yuen Street, Sha Tin, New Territories",Sha Tin,22.385562,114.191191,2,OPEN,https://www.linkhk.com/en/parking/4223,5487 7944
+tdc14p4225,Wo Che Car Park S,"Wo Che Plaza, 3 Tak Hau Street, Sha Tin, New Territories",Sha Tin,22.388753418815,114.19659527058,2,OPEN,https://www.linkhk.com/en/parking/4425,5487 7944
+tdc14p4227,Wo Che Car Park F,"Wo Che Plaza, 3 Tak Hau Street, Sha Tin, New Territories",Sha Tin,22.385941434995,114.19366214476,3.5,OPEN,https://www.linkhk.com/en/parking/4227,5487 7944
+tdc14p4235,Long Ping Car Park B,"Long Ping Commercial Centre, 1 Long Ping Road, Yuen Long, New Territories",Yuen Long,22.450374,114.023061,2,OPEN,https://www.linkhk.com/en/parking/4235,2117 7076
+tdc14p4237,Long Ping Car Park D,"Long Ping Commercial Centre, 1 Long Ping Road, Yuen Long, New Territories",Yuen Long,22.448501266018,114.02331108725,2,OPEN,https://www.linkhk.com/en/parking/4237,2117 7076
+tdc14p4239,Tin Shing Car Park A,"Tin Shing Shopping Centre, 3 Tin Ching Street, Tin Shui Wai, Yuen Long, New Territories",Yuen Long,22.448487937928,114.00317045676,2.4,OPEN,https://www.linkhk.com/en/parking/4239,2117 7076
+tdc14p4243,Tin Yiu Car Park,"Tin Yiu Plaza, 2 Tin Wu Road, Tin Shui Wai, Yuen Long, New Territories",Yuen Long,22.451349605191,114.00275254317,2,OPEN,https://www.linkhk.com/en/parking/4243,2117 7076
+tdc14p4246,Tin Tsz Car Park,"Tin Tsz Shopping Centre, 9 Tin Hei Street, Tin Shui Wai, Yuen Long, New Territories",Yuen Long,22.453857,114.008088,0,OPEN,https://www.linkhk.com/en/parking/4246,2117 7076
+tdc14p4312,Kwong Fuk Car Park,"Kwong Fuk Commercial Centre, 28 Plover Cove Road, Tai Po, New Territories",Tai Po,22.448533,114.173875,2,OPEN,https://www.linkhk.com/en/parking/4312,5487 7944
+tdc14p4320,Tai Wo Car Park A,"Tai Wo Plaza, 12 Tai Wo Road, Tai Po, New Territories",Tai Po,22.451409,114.162171,1.8,OPEN,https://www.linkhk.com/en/parking/4320,5487 7944
+tdc14p4321,Tai Wo Car Park B,"Tai Wo Plaza, 12 Tai Wo Road, Tai Po, New Territories",Tai Po,22.450499,114.16076,2,OPEN,https://www.linkhk.com/en/parking/4321,5487 7944
+tdc14p4322,Fu Shin Car Park,"Fu Shin Shopping Centre, 12 On Po Road, Tai Po, New Territories",Tai Po,22.453548,114.174143,2,OPEN,https://www.linkhk.com/en/parking/4322,5487 7944
+tdc14p4327,Tai Yuen Car Park A,"Tai Yuen Commercial Centre, 10 Ting Kok Road, Tai Po, New Territories",Tai Po,22.455049,114.169807,2,OPEN,https://www.linkhk.com/en/parking/4327,5487 7944
+tdc14p4328,Tai Yuen Car Park B,"Tai Yuen Commercial Centre, 10 Ting Kok Road, Tai Po, New Territories",Tai Po,22.454338,114.16771,1.9,OPEN,https://www.linkhk.com/en/parking/4328,5487 7944
+tdc14p4330,Fu Heng Car Park A,"Fu Heng Shopping Centre, 6 Chung Nga Road, Tai Po, New Territories",Tai Po,22.458730272099,114.1710925464,2,OPEN,https://www.linkhk.com/en/parking/4330,5487 7944
+tdc14p4332,Lok Fu UNY Car Park,"Lok Fu Place, 198 Junction Road, Wang Tau Hom, Kowloon",Wong Tai Sin,22.338481891299,114.18587229419,2,OPEN,https://www.linkhk.com/en/parking/4332,5487 7944
+tdc14p4334,Lok Fu Market Car Park,"Lok Fu Place, 198 Junction Road, Wang Tau Hom, Kowloon",Wong Tai Sin,22.339306900503,114.18701076273,2,OPEN,https://www.linkhk.com/en/parking/4334,5487 7944
+tdc14p4335,Lok Fu Zone B Car Park,"Lok Fu Place, 198 Junction Road, Wang Tau Hom, Kowloon",Wong Tai Sin,22.337152869384,114.18751143473,2,OPEN,https://www.linkhk.com/en/parking/4335,5487 7944
+tdc14p4337,Tung Tau II Car Park A,"Tung Tau Estate Retail and Car Park, 183 Tung Tau Tsuen Road, Wong Tai Sin, Kowloon",Wong Tai Sin,22.335231,114.192711,2,OPEN,https://www.linkhk.com/en/parking/4337,5487 7944
+tdc25p35,Technology Park,"18 On Lai Street, Shatin, New Territories",Sha Tin,22.3886776,114.20758057,4.1,OPEN,https://www.sino-propertyservices.com/en/parking-services/portfolio,26465386
+tdc14p4352,Lok Fu Estate Car Park,"Lok Fu Place, 198 Junction Road, Wang Tau Hom, Kowloon",Wong Tai Sin,22.335231585602,114.18696064343,2,OPEN,https://www.linkhk.com/en/parking/4352,5487 7944
+tdc14p5128,TKO Gateway Car Park West,"TKO Gateway, 2 Sheung Ning Street, Tseung Kwan O, New Territories",Sai Kung,22.317634,114.264292,2.1,OPEN,https://www.linkhk.com/en/parking/5143,5487 7944
+tdc14p5129,TKO Gateway Car Park East,"TKO Gateway, 2 Sheung Ning Street, Tseung Kwan O, New Territories",Sai Kung,22.317261168636,114.26642156516,2.1,OPEN,https://www.linkhk.com/en/parking/5142,5487 7944
+tdc43p2,Castle Peak Beach,"Castle Peak Beach, Castle Peak Road-Castle Peak Bay, Tuen Mun",Tuen Mun,22.38051224,113.97942352,0,OPEN,,
+tdc14p5132,TKO Gateway Car Park South,"TKO Gateway South, 8 Ngan O Road, Tseung Kwan O, New Territories",Sai Kung,22.315847,114.266501,2,OPEN,https://www.linkhk.com/en/parking/5132,5487 7944
+tdc43p1,Shun Lee Tsuen Park,Shun Lee Tsuen Park,Kwun Tong,22.329178092709,114.2250832345,0,OPEN,,
+tdc14p5135,Yan Ming Court Car Park,"Yan Ming Court Retail and Car Park, 100 Po Lam Road North, Tseung Kwan O, New Territories",Sai Kung,22.324448,114.259057,2,OPEN,https://www.linkhk.com/en/parking/5135,5487 7944
+tdc14p5136,Ying Ming Court Car Park,"Ying Ming Court Car Park, 20 Po Lam Road North, Tseung Kwan O, New Territories",Sai Kung,22.325824,114.25679,2,OPEN,https://www.linkhk.com/en/parking/5136,5487 7944
+tdc14p5137,Po Lam Car Park,"Po Lam Shopping Centre, 18 Po Lam Road North, Tseung Kwan O, New Territories",Sai Kung,22.326221,114.25467,2,OPEN,https://www.linkhk.com/en/parking/5137,5487 7944
+tdc14p5419,Nam Cheong Place Car Park,"Nam Cheong Place, 19 Sai Chuen Road, Sham Shui Po, Kowloon",Sham Shui Po,22.328976570126,114.1532886976,2.4,OPEN,https://www.linkhk.com/en/parking/5419,5487 7944
+tdc14p5421,Nam Cheong Car Park,"Nam Cheong Estate Retail and Car Park, 3 Cheong San Lane, Sham Shui Po, Kowloon",Sham Shui Po,22.326358,114.157698,2.3,OPEN,https://www.linkhk.com/en/parking/5421,5487 7944
+tdc14p5528,Chuk Yuen (S) Car Park,"Chuk Yuen Plaza, 15 Chuk Yuen Road, Wong Tai Sin, Kowloon",Wong Tai Sin,22.343953486396,114.19416481732,2,OPEN,https://www.linkhk.com/en/parking/5528,5487 7944
+tdc14p5532,Temple Mall North Car Park,"Temple Mall North, 136 Lung Cheung Road, Wong Tai Sin, Kowloon",Wong Tai Sin,22.342304845377,114.19066436837,2.4,OPEN,https://www.linkhk.com/en/parking/5532,5487 7944
+tdc14p5534,Temple Mall South Car Park A,"Temple Mall South, 103 Ching Tak Street, Wong Tai Sin, Kowloon",Wong Tai Sin,22.340977450695,114.19529245145,2,OPEN,https://www.linkhk.com/en/parking/5534,5487 7944
+tdc14p5535,Temple Mall South Car Park B,"Temple Mall South, 103 Ching Tak Street, Wong Tai Sin, Kowloon",Wong Tai Sin,22.341282,114.19403,1.9,OPEN,https://www.linkhk.com/en/parking/5535,5487 7944
+tdc14p5727,Yin Lai Car Park,"Yin Lai Court Shopping Centre, 180 Lai King Hill Road, Kwai Chung, New Territories",Kwai Tsing,22.348750887622,114.12631360606,2,OPEN,https://www.linkhk.com/en/parking/5727,2117 7076
+tdc14p5904,Ying Fuk Car Park,"Ying Fuk Court Retail and Car Park, 17 Wing Chuk Street, Wong Tai Sin, Kowloon",Wong Tai Sin,22.346504109294,114.19550638361,2.4,OPEN,https://www.linkhk.com/en/parking/5904,5487 7944
+tdc14p6401,Stanley Plaza Car Park,"Stanley Plaza, 23 Carmel Road, Stanley, Hong Kong",Southern,22.220116196596,114.20920645248,2.2,OPEN,https://www.linkhk.com/en/parking/6401,2117 7076
+tdc14p6601,Sau Mau Ping Shopping Centre Car Park,"Sau Mau Ping Shopping Centre, 101 Sau Ming Road, Sau Mau Ping, Kwun Tong, Kowloon",Kwun Tong,22.320031,114.232278,2.4,OPEN,https://www.linkhk.com/en/parking/6601,5487 7944
+tdc14p6602,Sau Mau Ping Phase 15 Car Park,"Sau Mau Ping Shopping Centre, 101 Sau Ming Road, Sau Mau Ping, Kwun Tong, Kowloon",Kwun Tong,22.317989406755,114.23477094293,2.2,OPEN,https://www.linkhk.com/en/parking/6602,5487 7944
+tdc14p6604,Sau Mau Ping Phase 3 Car Park,"Sau Mau Ping (III) Estate Retail and Car Park, Sau Ming Road, Sau Mau Ping, Kwun Tong, Kowloon",Kwun Tong,22.322115517104,114.2306351066,2.2,OPEN,https://www.linkhk.com/en/parking/6604,5487 7944
+tdc14p6605,Po Tat Car Park A,"Po Tat Shopping Centre, 2 Po Lam Road, Sau Mau Ping, Kwun Tong, Kowloon",Kwun Tong,22.317872,114.236143,2.4,OPEN,https://www.linkhk.com/en/parking/6605,5487 7944
+tdc14p6606,Po Tat Car Park B and C,"Po Tat Shopping Centre, 2 Po Lam Road, Sau Mau Ping, Kwun Tong, Kowloon",Kwun Tong,22.316662271225,114.23770010117,2.4,OPEN,https://www.linkhk.com/en/parking/6606,5487 7944
+tdc14p6607,Hiu Lai Car Park,"Hiu Lai Shopping Centre, 21 Hiu Kwong Street, Kwun Tong, Kowloon",Kwun Tong,22.320839540717,114.22945125948,2.2,OPEN,https://www.linkhk.com/en/parking/6607,5487 7944
+tdc14p6608,Cheung Fat Car Park,"Cheung Fat Plaza, 6 Tam Kon Shan Road, Tsing Yi, New Territories",Kwai Tsing,22.362480587724,114.10329164544,1.9,OPEN,https://www.linkhk.com/en/parking/6608,2117 7076
+tdc14p6610,Cheung On Phase 1 Car Park,"Cheung On Estate Retail and Car Park, 1 Tam Kon Shan Road, Tsing Yi, New Territories",Kwai Tsing,22.361,114.101831,2.25,OPEN,https://www.linkhk.com/en/parking/6610,2117 7076
+tdc14p6611,Cheung On Phase 2 Car Park,"Cheung On Estate Retail and Car Park, 1 Tam Kon Shan Road, Tsing Yi, New Territories",Kwai Tsing,22.360484,114.104416,1.9,OPEN,https://www.linkhk.com/en/parking/6611,2117 7076
+tdc14p6620,Ching Wah Car Park,"Ching Wah Court Retail and Car Park, 22 Tsing Chin Street, Tsing Yi, New Territories",Kwai Tsing,22.349081,114.099421,2,OPEN,https://www.linkhk.com/en/parking/6620,2117 7076
+tdc14p6639,Lok Wah South Car Park,"Lok Wah (South) Estate Retail and Car Park, 70 Chun Wah Road, Ngau Tau Kwok, Kwun Tong, Kowloon",Kwun Tong,22.320472785448,114.22074394572,2,OPEN,https://www.linkhk.com/en/parking/6639,5487 7944
+tdc14p6640,Lok Wah North Car Park A,"Lok Wah Commercial Centre, 70 Chun Wah Road, Ngau Tau Kwok, Kwun Tong, Kowloon",Kwun Tong,22.321666438091,114.2198968135,2,OPEN,https://www.linkhk.com/en/parking/6640,5487 7944
+tdc14p6641,Lok Wah North Car Park B,"Lok Wah Commercial Centre, 70 Chun Wah Road, Ngau Tau Kwok, Kwun Tong, Kowloon",Kwun Tong,22.322172634147,114.21993174565,2,OPEN,https://www.linkhk.com/en/parking/6641,5487 7944
+tdc14p6645,Cheung Wang Car Park,"Cheung Wang Estate Retail and Car Park, 9 Liu To Road, Tsing Yi, New Territories",Kwai Tsing,22.357145795244,114.09564217616,2.4,OPEN,https://www.linkhk.com/en/parking/6645,
+tdc14p6728,Yat Tung Car Park 2 & 3 (Sin Yat),"Yat Tung Shopping Centre, 8 Yat Tung Street, Tung Chung, New Territories",Islands,22.28116,113.935776,2.2,OPEN,https://www.linkhk.com/en/parking/6728,2117 7076
+tdc14p6729,Yat Tung Car Park 1,"Yat Tung Shopping Centre, 8 Yat Tung Street, Tung Chung, New Territories",Islands,22.281096,113.938628,2.4,OPEN,https://www.linkhk.com/en/parking/6729,2117 7076
+tdc14p6730,Fu Tung Car Park A,"Fu Tung Plaza, 6 Fu Tung Street, Tung Chung, New Territories",Islands,22.286571,113.942254,2,OPEN,https://www.linkhk.com/en/parking/6730,2117 7076
+tdc14p7542,Tsui Ping North Car Park 1,"Tsui Ping North Shopping Circuit, 18 Tsui Ping Road, Kwun Tong, Kowloon",Kwun Tong,22.313235586052,114.22910608772,2,OPEN,https://www.linkhk.com/en/parking/7542,5487 7944
+tdc14p7622,Tsz Wan Shan SC Car Park A,"Tsz Wan Shan Shopping Centre, 23 Yuk Wah Street, Tsz Wan Shan, Kowloon",Wong Tai Sin,22.347704234253,114.20094965397,2,OPEN,https://www.linkhk.com/en/parking/7622,5487 7944
+tdc14p7623,Tsz Oi Car Park,"Tsz Oi Court Retail and Car Park, 2 Wan Wah Street, Tsz Wan Shan, Kowloon",Wong Tai Sin,22.34940056639,114.19961551833,2.2,OPEN,https://www.linkhk.com/en/parking/7624,5487 7944
+tdc14p7629,Fung Tak Car Park A,"Fung Tak Shopping Centre, 111 Fung Tak Road, Diamond Hill, Kowloon",Wong Tai Sin,22.344290245857,114.20117303884,2,OPEN,https://www.linkhk.com/en/parking/7629,5487 7944
+tdc14p7632,Tsz Wan Shan SC Car Park B,"Tsz Wan Shan Shopping Centre, 23 Yuk Wah Street, Tsz Wan Shan, Kowloon",Wong Tai Sin,22.348862523889,114.19928590156,2.4,OPEN,https://www.linkhk.com/en/parking/7632,5487 7944
+tdc14p7633,Tsz Wan Shan SC Car Park C,"Tsz Wan Shan Shopping Centre, 23 Yuk Wah Street, Tsz Wan Shan, Kowloon",Wong Tai Sin,22.346818699656,114.19917174993,2.4,OPEN,https://www.linkhk.com/en/parking/7633,5487 7944
+tdc14p7636,Tsz Wan Shan SC Car Park D,"Tsz Wan Shan Shopping Centre, 23 Yuk Wah Street, Tsz Wan Shan, Kowloon",Wong Tai Sin,22.346301650534,114.19975263704,2.1,OPEN,https://www.linkhk.com/en/parking/7636,5487 7944
+tdc14p7732,Choi Wan Car Park A,"Choi Wan Commercial Complex, 45 Clear Water Bay Road, Ngau Chi Wan, Kowloon",Wong Tai Sin,22.332826093154,114.21453752991,2,OPEN,https://www.linkhk.com/en/parking/7732,5487 7944
+tdc14p7733,Choi Wan Car Park B & C,"Choi Wan Commercial Complex, 45 Clear Water Bay Road, Ngau Chi Wan, Kowloon",Wong Tai Sin,22.334345251646,114.21422287487,2,OPEN,https://www.linkhk.com/en/parking/7733,5487 7944
+tdc14p7737,Shun Lee (Jordan Valley Park) Car Park,"Shun Lee Commercial Centre, 15 Lee On Road, Kwun Tong, Kowloon",Kwun Tong,22.333161497117,114.22462598533,1.8,OPEN,https://www.linkhk.com/en/parking/7737,5487 7944
+tdc14p7739,Shun Lee Fresh Market Car Park,"Shun Lee Commercial Centre, 15 Lee On Road, Kwun Tong, Kowloon",Kwun Tong,22.331751217321,114.22535541757,1.9,OPEN,https://www.linkhk.com/en/parking/7739,5487 7944
+tdc14p7740,Shun Lee (Shopping Centre) Car Park,"Shun Lee Commercial Centre, 15 Lee On Road, Kwun Tong, Kowloon",Kwun Tong,22.33008,114.226715,1.9,OPEN,https://www.linkhk.com/en/parking/7740,5487 7944
+tdc14p7742,Shun On Car Park,"Shun On Commercial Centre, 1 Lee On Road, Kwun Tong, Kowloon",Kwun Tong,22.328343314704,114.22651950149,2,OPEN,https://www.linkhk.com/en/parking/7742,5487 7944
+tdc14p8423,Oi Man Car Park,"Oi Man Plaza, 60 Chung Hau Street, Ho Man Tin, Kowloon",Kowloon City,22.3112762,114.1792853,2,OPEN,https://www.linkhk.com/en/parking/8423,5487 7944
+tdc14p8424,Homantin Car Park,"Homantin Plaza, 80 Fat Kwong Street, Ho Man Tin, Kowloon",Kowloon City,22.315203320007,114.18184573958,1.8,OPEN,https://www.linkhk.com/en/parking/8424,5487 7944
+tdc14p8426,Hung Hom Car Park,"Hung Hom Estate Retail and Car Park, 9 Dyer Avenue, Hung Hom, Kowloon",Kowloon City,22.307413462336,114.18864048575,2.2,OPEN,https://www.linkhk.com/en/parking/8426,5487 7944
+tdc14p8428,Hoi Fu Car Park,"Hoi Fu Shopping Centre, 2 Hoi Ting Road, Mong Kok, Kowloon",Yau Tsim Mong,22.31575,114.165453,0,OPEN,https://www.linkhk.com/en/parking/8428,5487 7944
+tdc14p8502,Butterfly Car Park,"Butterfly Plaza, 1 Wu Chui Road, Tuen Mun, New Territories",Tuen Mun,22.375679703367,113.96319299585,1.8,OPEN,https://www.linkhk.com/en/parking/8502,2117 7076
+tdc14p8511,Sam Shing Car Park,"Sam Shing Commercial Centre, 6 Sam Shing Street, Tuen Mun,  New Territories",Tuen Mun,22.380657,113.978527,1.7,OPEN,https://www.linkhk.com/en/parking/8511,2117 7076
+tdc44p2,Aberdeen Tennis and Squash Centre,"No. 1 Aberdeen Praya Road, Aberdeen, Hong Kong",Southern,22.2469737712,114.15973424717,2.45,OPEN,,
+tdstt7p1,Treasure Top Carpark (Tai Po Yee Nga Court),"Adjacent to Yee Nga Court , Area 17, Tai Po, NT",Tai Po,22.454676806224,114.17279075893,0,OPEN,,
+tdc21p1,Peak Galleria,118 Peak Road,Central & Western,22.27025414,114.14987946,0,OPEN,,2849 8053
+tdc2p8,Airport Car Park - Urban & Lantau Taxi (HOURLY),"Sky Plaza Road Central, Hong Kong International Airport, Lantau",Islands,22.31267043,113.9367046,0,OPEN,http://www.hongkongairport.com/en/transport/parking/parking-charges.page#content3,2183 4360
+tdc28p3,Heung Yuen Wai BCP Public Car Park-Light Goods Vehicle,"Ground (outside Passenger Terminal Building), Heung Yuen Wai Boundary Control Point, New Territories, Hong Kong",North,22.551505046,114.153431458,0,OPEN,https://www.hywparking.com.hk/car-park/carParkInfo?lang=en,3590 6150 / 3586 9513
+tdc2p1,AIRPORT CAR PARK 1 (HOURLY),"CHEONG SHUN ROAD, Islands District, New Territories",Islands,22.31322343,113.9366562,0,CLOSED,http://www.hongkongairport.com/eng/transport/parking.html,2183 4360
+tdc2p11,Airport Car Park - Light Goods Vehicle (LONG-TERM),"Sky Plaza Road Central, Hong Kong International Airport, Lantau",Islands,22.31220107,113.936833,0,OPEN,http://www.hongkongairport.com/en/transport/parking/parking-charges.page#content3,2183 4360
+tdc2p10,Airport Car Park - Light Goods Vehicle (HOURLY),"Sky Plaza Road Central, Hong Kong International Airport, Lantau",Islands,22.314164,113.9374,0,OPEN,http://www.hongkongairport.com/en/transport/parking/parking-charges.page#content3,2183 4360
+tdc2p9,Airport Car Park - Urban & Lantau Taxi (LONG-TERM),"Sky Plaza Road Central, Hong Kong International Airport, Lantau",Islands,22.31249673,113.937091,0,OPEN,http://www.hongkongairport.com/en/transport/parking/parking-charges.page#content3,2183 4360
+tdstt71,Fung Yip Street Car Park,"Fung Yip Street, Chai Wan, Hong Kong",Eastern,22.26695036,114.2448234,0,OPEN,,
+tdc28p1,Heung Yuen Wai BCP Public Car Park-Private Car & Motorcycle,"Mezzanine Floor of Passenger Terminal Building, Heung Yuen Wai Boundary Control Point, New Territories, Hong Kong",North,22.55267812,114.1536266,2.4,OPEN,https://www.hywparking.com.hk/car-park/carParkInfo?lang=en,31044656
+tdc2p4,AIRPORT CAR PARK 4,"GF-L5, 11 CHEONG TAT ROAD, Hong Kong International Airport, Islands District, New Territories",Islands,22.317513287529,113.93449828751,2,CLOSED,http://www.hongkongairport.com/eng/transport/parking.html,2183 4360
+tdc22p1,Hong Kong Disneyland Car Park,"Hong Kong Disneyland Resort, Lautau Island, Hong Kong",Tsuen Wan,22.316644,114.047746,0,OPEN,https://www.hongkongdisneyland.com/guest-services/parking/,3550-3388
+tdstt4p1,Ngau Pei Sha Street,"Ngau Pei Sha Street, Sha Tin, New Territories",Sha Tin,22.38232836,114.2058283,0,OPEN,,
+tdstt11,On Chun Street,"On Chun Street, Ma On Shan, New Territories",Sha Tin,22.42554166,114.2267528,0,OPEN,,
+tdstt9p1,Shing Hong Lane,"Shing Hong Lane Open Space Carpark, Heng Fa Chuen",Eastern,22.27917047,114.23856157,0,OPEN,,
+tdc6p7,Po Shek Wu Estate,"Choi Yuen Road, Sheung Shui, N.T.",North,22.50333,114.1247,0,OPEN,,2739 0831
+tdstt15,San On Street,"San On Street, Area 12, Tuen Mun, New Territories",Tuen Mun,22.3934536,113.97033691,0,OPEN,,
+tdc20p1,Hong Kong Wetland Park Car Park,"Wetland Park Road, Tin Shui Wai, NT",Yuen Long,22.4692249,114.0045853,0,OPEN,https://www.wetlandpark.gov.hk/en/information/transport-driving,3152 2666
+tdstt12,Ping Ha Road,"Ping Ha Road, Ha Tsuen, Yuen Long, New Territories",Yuen Long,22.445961651,113.996367124,0,OPEN,,
+tdc10p2,Shatin Government Offices,"1 sheung wo che road, shatin",Sha Tin,22.385732692,114.186986002,2,OPEN,,98382046
+tdc10p3,Cheung Sha Wan Government Offices Car Park,"303 Cheung Sha Wan Road, Kowloon",Sham Shui Po,22.331759072,114.160364488,0,OPEN,,97916659 / 25705690
+tdstt17,Hoi Wah Road,"Hoi Wah Road, Tuen Mun",Tuen Mun,22.37989616,113.97042084,0,OPEN,https://www.wilsonparking.com.hk/en/car_parks/detail/100,28303845
+tdstt16,Tsing Yin Street,"Tsing Yin Street, Area 10, Tuen Mun, New Territories",Tuen Mun,22.39818382,113.97418213,0,OPEN,,
+tdc26p1,No.1 Lei Yue Mun Path Public Carpark,"No.1 Lei Yue Mun Path, Yau Tong, Kowloon",Kwun Tong,22.292694384,114.238817154,0,OPEN,,2791 1860
+tdc26p2,Pioneer Centre Car Park,NO.133 Sai Yeung Choi Street South,Yau Tsim Mong,22.32224464,114.16905212,0,OPEN,http://www.pioneer-centre.com.hk/en/parking,2399 8201
+tdc27p1,Kowloon Tsai Park Carpark,"13 Inverness Road, Kowloon City",Kowloon City,22.33398628,114.18489838,0,OPEN,,
+tdc10p1,Sai Kung Government Offices Carpark,"Man Nin Street No 24 ,Sai Kung",Sai Kung,22.382026,114.272443,2.45,OPEN,,
+tdc6p6,Po Heung Estate Car Park,"No.1 Po Heung Street, Tai Po, N.T",Tai Po,22.446862864,114.165271187,0,OPEN,,
+tdc45p1,Tuen Mun Government Offices,"No.1 Tuen Hi Road, Tuen Mun, New Territories",Tuen Mun,22.390339862263,113.97626659279,0,OPEN,,
+tdc48p3,Sham Shui Po Sports Ground,"3 Hing Wah Street, Cheung Sha Wan, Kowloon",Sham Shui Po,22.336909815977,114.1512314851,2.45,OPEN,,
+tdc48p2,Lung Cheung Road Lookout,Lung Cheung Road,Sham Shui Po,22.34304237,114.17129517,0,OPEN,,
+tdc136p1,Yung Ming Court Car Park,"5 Chi Shin Street, Tseung Kwan O,  New Territories",Sai Kung,22.304526711515,114.26395458928,0,CLOSED,,35425180
+tdc48p1,Lai Chi Kok Park,"1 Lai Wan Road, Lai Chi Kok, Kowloon",Sham Shui Po,22.33974648,114.13822174,2.45,OPEN,,
+tdc14p4259,Sha Kok Car Park 1,"Sha Kok Commercial Centre, 5 Sha Kok Street, Sha Tin,  New Territories",Sha Tin,22.377968246625,114.19400865491,1.7,OPEN,https://www.linkhk.com/en/parking/4259,5487 7944
+tdc14p4258,Sha Kok Car Park 2,"Sha Kok Commercial Centre, 5 Sha Kok Street, Sha Tin,  New Territories",Sha Tin,22.378064167255,114.19387896625,2,OPEN,https://www.linkhk.com/en/parking/4258,5487 7944
+tdc6p13,Kwai Chung Shopping Centre,"Sheung Kok Street, Kwai Chung, N.T.",Kwai Tsing,22.36791506499,114.12735734932,2.4,CLOSED,,
+tdc6p14,Choi Hung Estate Car Park,"2 Tse Wai Avenue, Choi Hung Estate. K.L.",Wong Tai Sin,22.3346329,114.2072296,2.1,CLOSED,,
+tdc6p15,Lei Yue Mun Estate,"33, KO Chiu Road, Yau Tong, KLN",Kwun Tong,22.2946053,114.2401428,2.2,CLOSED,https://www.housingauthority.gov.hk/en/global-elements/estate-locator/detail.html?propId=1&id=132134,96892858
+tdc286p1,Tung Tao Court Carpark,"No.33 Oi Shun Road, Shau Kei Wan, Hong Kong",Eastern,22.282057537767,114.22573972983,2.1,CLOSED,,31954305
+tdc6p17,Hung Fuk Estate Carpark,"Hung Fuk Shopping Centre Management Office, G/F, Ancillary Facilities Block, Hung Fuk Estate, Hung Shui Kiu, Yuen Long",Yuen Long,22.437348615892,113.99869676132,0,OPEN,,2377 9431
+tdc9p3,Tai Po Complex Car Park,"No. 8 Heung Sze Wui Street, Tai Po",Tai Po,22.44634819,114.16671753,0,OPEN,,2370 8881
+tdstt131,Tseung Kwan O To Lok Street Car Park,"To Lok Street 16, Tseung Kwan O",Sai Kung,22.321969876119,114.25443375299,3.8,CLOSED,,
+tdc14p8888,The Quayside Car Park,"The Quayside,77 Hoi Bun Road,Kwun Tong,Kowloon,Hong Kong",Kwun Tong,22.316532625,114.213428223,0,OPEN,https://www.thequayside.com.hk/en/location/parking/,
+tdc246p1,Fu Shan Estate Car Park,"Po Kong Village Rd, Diamond Hill",Wong Tai Sin,22.34268372261,114.20871312508,1.8,CLOSED,,
+tdstt24,Wo Hing Road,"WO HING ROAD ,FANLING,NEW TERRITORIES",North,22.485867345,114.146615066,0,OPEN,,
+tdstt22,SHEUNG FUNG STREET,"SHEUNG FUNG STREET, WONG TAI SIN",Wong Tai Sin,22.34658241,114.1974411,0,OPEN,,
+tdstt25,Wing Lai Road,"WING LAI ROAD, SAI KUNG",Sai Kung,22.32606316,114.2492065,0,OPEN,,
+tdstt26,Castle Peak Road - Castle Peak Bay,"Castle Peak Road – Castle Peak Bay, Area 41, Tuen Mun",Tuen Mun,22.38314629,113.97858429,0,OPEN,,
+tdstt28,Sam Shing Street 4,"Sam Shing Street, Area 27, Tuen Mun, N. T.",Tuen Mun,22.38125801,113.97698212,0,OPEN,,
+tdc6p18,Shui Chuen O Capark,"Shui Chuen O Plaza, 1 Pok Chuen Street, Shatin",Sha Tin,22.373125748647,114.1973237899,0,OPEN,https://www.housingauthority.gov.hk/en/global-elements/estate-locator/detail.html?propId=1&id=141887,2377 9431
+tdc10p4,Revenue TowerWanchai Tower Immigration Tower,"12 Harbour Road, 7 Gloucester Road and 5 Gloucester Road, Wan Chai, HK",Wan Chai,22.28018712,114.17260722,0,OPEN,,6676 3162/2912 3713
+tdc6p19,Hoi Lai Estate Car Park,"100 Sham Mong Road, Cheung Sha Wan, Kowloon, HK",Sham Shui Po,22.332850494976,114.14643668018,0,OPEN,https://www.housingauthority.gov.hk/en/global-elements/estate-locator/detail.html?propId=1&id=132134,3514 6415
+tdc6p20,Shek Pai Wan Estate Car Park,"Shek Pai Wan, Yue Kwong Road, Aberdeen, Hong Kong",Southern,22.24921036,114.1585693,0,OPEN,https://www.yuexiuaptparking.com/article-find-10.html?lang=en,3583 0248
+tdc6p21,Yue Wan Estate Car Park,"365 Chai Wan Road, Chai Wan, Hong Kong",Eastern,22.26508713,114.2402191,0,OPEN,https://www.yuexiuaptparking.com/article-find-16.html?lang=en,2505 1471 / 5281 0834
+tdc6p22,So Uk Estate (I) Car Park,"Cheung Sha Wan Cheung Fat Street, Kowloon",Sham Shui Po,22.34108161,114.1565667,0,OPEN,https://www.yuexiuaptparking.com/article-find-30.html?lang=en,2741 6968 / 5281 3274
+tdc32p1,Wah Fu (I) Estate,"Wah Fu Road, Aberdeen, Hong Kong",Southern,22.24977875,114.1370239,0,OPEN,,
+tdc32p2,Wah Fu (II) Estate,"Wah Fu Road, Aberdeen, Hong Kong",Southern,22.253110435796,114.13619550988,0,OPEN,,
+tdc32p3,Shek Kip Mei Estate,"Nam Cheong Street, Shek Kip Mei, Kowloon",Sham Shui Po,22.33297477106,114.16575700293,0,OPEN,,
+tdc32p4,Pok Hong Estate,"Sha Kok Street, Shatin, New Territories",Sha Tin,22.37539675,114.19316679,1.9,OPEN,https://www.yuexiuaptparking.com/article-find-59.html?lang=en,26353419
+tdc32p5,Shui Pin Wai Estate,"Shui Pin Wai Road, Yuen Long, N. T.",Yuen Long,22.445352110741,114.01967055294,0,OPEN,,
+tdc32p6,Mei Tin Estate,"Heung Fan Liu Street, Tai Wai, New Territories",Sha Tin,22.37602425,114.1718216,0,OPEN,,
+tdc33p1,Kowloon Bay Park,"11 Kai Lai Road, Kowloon Bay",Kwun Tong,22.32723236,114.20716095,0,OPEN,,
+tdc33p2,Jordan Valley Playground,"18 Choi Ha Road, Ngau Tau Kok",Kwun Tong,22.325073794484,114.2190872487,0,OPEN,,
+tdc113p1,Cyberport Carpark 1 & 2,"100 Cyberport Rd, Telegraph Bay, Southern District",Southern,22.26207563,114.1301711,0,OPEN,https://arcade.cyberport.hk/parkingoffers?l=en-us,
+tdc113p2,Cyberport Carpark 3,"100 Cyberport Rd, Telegraph Bay, Southern District",Southern,22.25959578,114.13169297,0,OPEN,https://arcade.cyberport.hk/parkingoffers?l=en-us,
+tdc30p1,Nina Tower,"No. 8 Yeung Uk Road,Tsuen Wan, N.T.",Tsuen Wan,22.368516229,114.11347198,0,OPEN,,2439 1618
+tdc34p1,On Tat Estate Car park,"3, On Chui Street, Kwun Tong",Kwun Tong,22.320588598494,114.23520632242,0,OPEN,,
+tdc31p1,Wong Tai Sin Car Park,Wong Tai Sin Road,Wong Tai Sin,22.343307087848,114.19536118427,0,OPEN,,
+tdc39p1,Siu Sai Wan Sports Ground,"8 Fu Hong Street, Siu Sai Wan",Eastern,22.26750976,114.24790753,0,OPEN,,
+tdc37p1,Tai Po Government Offices,"1 Ting Kok Road, Tai Po, New Territories",Tai Po,22.451241395257,114.16426012276,0,OPEN,,
+tdc38p1,Hong Kong Tennis Centre,"133, Wong Nai Chung Gap Road, Wan Chai, Hong Kong",Wan Chai,22.259786489659,114.19218684482,0,OPEN,,
+tdc38p2,The Jockey Club Tuen Mun Butterfly Beach Sports Centre,"No. 11 Wu Shan Road, Tuen Mun, N.T.",Tuen Mun,22.37870168,113.9647093,0,OPEN,,
+tdc38p3,Tuen Mun North West Swimming Pool,"95 Ming Kum Road, Tuen Mun, N.T.",Tuen Mun,22.4086647,113.9655685,0,OPEN,,
+tdc42p1,Chai Wan Municipal Services Building,338 Chai Wan Road,Eastern,22.26336479,114.23993683,2.1,OPEN,,2912 3700
+tdc166p3,Phase 3 Carpark of Tin Ching Estate,"Tin Ching Estate (Phase 3 Carpark), Yuen Long, New Territories",Yuen Long,22.463178278198,114.0047249815,4.5,CLOSED,,34018578
+tdc41p2,Deep Water Bay Carpark,"Island Road, Deep Water Bay",Southern,22.2443924,114.18841553,2.45,OPEN,,
+tdc35p1,Hing Wah II Estate Carpark,"18 Wan Tsui Road, Chai Wan",Eastern,22.263966957132,114.23356188562,0,OPEN,,
+tdc244p1,Hong Tin Court Car Park,"No.47 Kai Tin Road,Lam Tin, Kowloon",Kwun Tong,22.307497075258,114.23475509011,0,CLOSED,,6609 1980
+tdc14p5408,Un Chau Car Park,"Un Chau Shopping Centre, 303 Un Chau Street, Cheung Sha Wan,  Kowloon",Sham Shui Po,22.338187192705,114.15514550575,2.4,OPEN,https://www.linkhk.com/en/parking/5408,5487 7944
+tdc14p6603,Sau Mau Ping Phase 1 Car Park,"Sau Mau Ping Shopping Centre, 101 Sau Ming Road, Sau Mau Ping,  Kwun Tong, Kowloon",Kwun Tong,22.31571388,114.2334137,2,OPEN,https://www.linkhk.com/en/parking/6603,5487 7944
+tdc14p7543,Tsui Ping South Car Park,"Tsui Ping South Estate Car Park, 19 Tsui Ping Road, Kwun Tong,  Kowloon",Kwun Tong,22.312875896503,114.23090351146,2,OPEN,https://www.linkhk.com/en/parking/7543,5487 7944
+tdc14p3202,Ka Tin Car Park,"Ka Tin Court Car Park, 2-8 Hin Tin Street, Tai Wai,  Sha Tin, New Territories",Sha Tin,22.36025238,114.1733704,2.15,OPEN,https://www.linkhk.com/en/parking/3202,5487 7944
+tdc14p3514,Tin King Car Park,"Tin King Estate Car Park, 10 Tin King Road, Tuen Mun,  New Territories",Tuen Mun,22.40660477,113.9650879,1.9,OPEN,https://www.linkhk.com/en/parking/3514,2117 7076
+tdc14p7545,Po Pui Car Park,"Po Pui Court Car Park, Po Pui Street, Kwun Tong,  Kowloon",Kwun Tong,22.31707954,114.2279739,2,OPEN,https://www.linkhk.com/en/parking/7545,5487 7944
+tdc14p5718,Ning Fung Car Park,"Ning Fung Court Car Park, 99 Lei Muk Road, Kwai Chung,  New Territories",Kwai Tsing,22.37213898,114.1383057,2.4,OPEN,https://www.linkhk.com/en/parking/5718,2117 7076
+tdc14p5406,Wah Lai Car Park,"Wah Lai Estate Car Park, 282 Lai King Hill Road, Lai Chi Kok,  Kowloon",Kwai Tsing,22.34250832,114.1377182,2.4,OPEN,https://www.linkhk.com/en/parking/5406,2117 7076
+tdc14p5536,Lower Wong Tai Sin II (Phase 9) Car Park,"Temple Mall South, 103 Ching Tak Street, Wong Tai Sin,  Kowloon",Wong Tai Sin,22.33973312,114.1919022,2,OPEN,https://www.linkhk.com/en/parking/5536,5487 7944
+tdc14p7645,Fung Lai Car Park,"Fung Lai Court Car Park, 8 Fung Lai Road, Diamond Hill,  Kowloon",Wong Tai Sin,22.34441566,114.202179,2.2,OPEN,https://www.linkhk.com/en/parking/7645,5487 7944
+tdc14p6643,Upper Ngau Tau Kok Car Park,"Upper Ngau Tau Kok Estate Car Park, 15 On Tak Road, Ngau Tau Kwok,  Kwun Tong, Kowloon",Kwun Tong,22.318479858619,114.21753551429,2,OPEN,https://www.linkhk.com/en/parking/6643,5487 7944
+tdc14p7628,Tsz Man Car Park,"Tsz Man Estate Car Park, 55 Tsz Wan Shan Road, Tsz Wan Shan,  Kowloon",Wong Tai Sin,22.34815979,114.2028351,2,OPEN,https://www.linkhk.com/en/parking/7628,5487 7944
+tdc14p7646,King Lai Car Park,"King Lai Court Car Park, 36 - 38 Fung Shing Street, Wong Tai Sin,  Kowloon",Wong Tai Sin,22.34140205,114.2106857,1.9,OPEN,https://www.linkhk.com/en/parking/7646,5487 7944
+tdc14p6609,Ching Wang Court Car Park,"Ching Wang Court Car Park, 1 Nga Ying Chau Street, Tsing Yi,  New Territories",Kwai Tsing,22.361907230407,114.10442081999,2.4,OPEN,https://www.linkhk.com/en/parking/6609,2117 7076
+tdc14p4336,Hong Keung Car Park,"Hong Keung Court Car Park, 23 Heng Lam Street, Wang Tau Hom,  Kowloon",Wong Tai Sin,22.33724403,114.1900101,2.4,OPEN,https://www.linkhk.com/en/parking/4336,5487 7944
+tdc14p6713,Kwai Hong Car Park,"Kwai Hong Court Car Park, 150 Tai Wo Hau Road, Kwai Chung,  New Territories",Kwai Tsing,22.363403412736,114.13035419434,1.9,OPEN,https://www.linkhk.com/en/parking/6713,2117 7076
+tdstt39,"Junction of Luen Fat Street, Luen Fu Street and Luen Yick Street","J/O Luen Fat Street, Luen Fu Street and Luen Yick Street, Luen Wo Hui, Fanling, NT",North,22.49797821,114.14189911,0,OPEN,,
+tdc108p1,Kingston International Centre,"19 Wang Chiu Road, Kowloon Bay",Kwun Tong,22.32361496,114.20927848,0,OPEN,,
+tdstt41,Mei Yu Street,"Mei Yu Street, Sai Kung",Sai Kung,22.38482666,114.2720108,0,OPEN,,
+tdstt42,"Po Lam Road North, Area 10","Po Lam Road North, Area 10, Tseung Kwan O, NT",Sai Kung,22.32761765,114.25447083,0,OPEN,,
+tdstt43,Yuen Ching Road,"Yuen Ching Road, Shap Pat Heung, Yuen Long, New Territories",Yuen Long,22.44353676,114.03808594,0,OPEN,,
+tdc44p3,Waterfall Bay Park,"Waterfall Bay Road, Wah Fu Estate, Aberdeen, Hong Kong",Southern,22.25065422,114.1348877,2.45,OPEN,,
+tdc47p1,Tung Chung Municipal Services Building,"39 Man Tung Road, Tung Chung, Lantau Island",Islands,22.29058075,113.94390869,2.45,OPEN,,2912 3700 / 2912 3713 / 2912 3721
+tdc46p1,Papillons Square Car Park,"The Papillons, 21 Tong Chun Street, Tseung Kwan O, N.T.",Sai Kung,22.30326843,114.26262665,0,OPEN,https://www.papillonssquare.com.hk/mall/parking/,35592254
+tdstt32,Junction of Tai Chung Kiu Road and On Sum Street,"Junction of Tai Chung Kiu Road and On Sum Street, Sha Tin, New Territories",Sha Tin,22.3928544,114.208165,0,OPEN,,
+tdstt33,Junction of Oi Yee Street and Hing Man Street,"Junction of Oi Yee Street and Hing Man Street, Shau Kei Wan",Eastern,22.28152629,114.22363144,0,OPEN,,
+tdstt46,Hoi Shing Road NEVAS Smart Car Park,"At Junction of Hoi Shing Road and Hoi Kok Street, Tsuen Wan",Tsuen Wan,22.37155342,114.10810852,0,OPEN,https://kinwinghong.weebly.com/,5372 6225
+tdstt44,Hong Kin Road,"Hong Kin Road, Sai Kung",Sai Kung,22.37711143,114.27326965,0,OPEN,,
+tdstt47,Junction of Fat Kwong Street & Sheung Shing Street,"at the junction of Fat Kwong Street & Sheung Shing Street, Ho Man Tin",Kowloon City,22.31742246,114.1805973,0,OPEN,,
+tdc25p43,Tuen Mun Town Plaza Phase 2,"3 Tuen Lung Street, Tuen Mun, New Territories",Tuen Mun,22.393878121,113.976451912,0,OPEN,https://www.sino-propertyservices.com/en/parking-services/portfolio,24409757
+tdc25p44,Hewlett Centre,"54 Hoi Yuen Road, Kwun Tong, Kowloon",Kwun Tong,22.309622053,114.224255594,0,OPEN,https://www.sino-propertyservices.com/en/parking-services/portfolio,31051695
+tdc53p1,Jordan Valley Park,"No. 71, New Clear Water Bay Road, Kwun Tong, Kowloon",Kwun Tong,22.33004761,114.22187042,0,OPEN,,
+tdc53p2,Jordan Valley Swimming Pool,"6 Choi Ha Rd, Ngau Tau Kok",Kwun Tong,22.32359314,114.21828461,0,OPEN,,
+tdc53p3,Hong Ning Road Park,"Junction between Hong Ning Road and Wo Hong Path, Kwun Tong, KL",Kwun Tong,22.32036781,114.22460175,0,OPEN,,
+tdc55p1,North Point Government Offices,"No. 333 Java Road, North Point, Hong Kong",Eastern,22.29232597,114.20836639,0,OPEN,,
+tdc58p3,Shek Kip Mei Park Tennis Court,"270 Nam Cheong Street, Sham Shui Po",Sham Shui Po,22.33865166,114.16990662,2.45,OPEN,,
+tdc58p4,Cornwall Street Park,"17 Cornwall Street, Kowloon Tong",Sham Shui Po,22.339622499988,114.17360175363,2.45,OPEN,,
+tdc58p5,Ap Lei Chau Waterfront Promenade,"Wah Ting Street, Ap Lei Chau, Hong Kong.",Southern,22.244804953171,114.15503972289,2.45,OPEN,,
+tdc59p1,Yuen Long District Office Building,"269 Castle Peak Road, Yuen Long, New Territories",Yuen Long,22.44510841,114.02271271,0,OPEN,,
+tdc57p1,West Kowloon Government Offices,"No. 11 Hoi Ting Road, Yau Ma Tei, Kowloon",Yau Tsim Mong,22.31258215,114.1633103,0,OPEN,,
+tdc56p1,Car Park of North District Government Offices,"No. 3 Pik Fung Road, Fanling, New Territories, Hong Kong",North,22.49464226,114.13826752,2.45,OPEN,,
+tdc8p1,MTR Tsing Yi Station Car Park,"TSING TSUEN ROAD, Kwai Tsing District, New Territories",Kwai Tsing,22.358415316,114.107331183,2.1,OPEN,https://www.mtr.com.hk/en/customer/services/aestations_carpark.html,28818888
+tdc8p2,MTR Kowloon Station Car Park,"MTR Kowloon Station, Nga Cheung Road, Yau Ma Tei",Yau Tsim Mong,22.305013661,114.161918989,2.1,OPEN,https://www.mtr.com.hk/en/customer/services/aestations_carpark.html,28818888
+tdc8p14,MTR Tsuen Wan West Station Car Park,"MTR Tsuen Wan West Station, Tai Ho Road, Tsuen Wan",Tsuen Wan,22.369194653217,114.10887429569,0,OPEN,https://www.mtr.com.hk/en/customer/services/aestations_carpark.html,
+tdc8p15,Kam Sheung Road Station Car Park,"No. 29 Kam Ho Road, Kam Tin, Yuen Long, New Territories.",Yuen Long,22.434347164736,114.06288082468,0,OPEN,http://www.mtr.com.hk/en/customer/services/aestations_carpark.html,5222 6197
+tdc8p11,MTR Ocean Park Station Car Park,"Wong Chuk Hang Road, Southern District, Hong Kong",Southern,22.248763404,114.174499261,2.1,OPEN,https://www.mtr.com.hk/en/customer/services/aestations_carpark.html,28818888
+tdc8p10,ELEMENTS Carpark,"1 Austin Road West, Kowloon",Yau Tsim Mong,22.304932353,114.161579325,2.2,OPEN,https://www.elementshk.com/eng/elements/location/parking,27355234
+tdc8p8,Popcorn I Carpark,"9 TONG YIN STREET, Sai Kung District, New Territories",Sai Kung,22.308018675,114.259222808,2.2,OPEN,http://www.popcorntko.com.hk/eng/poc/about_us/parking_info.jsp,3543 1273
+tdc8p7,MTR Maritime Square Car Park,"33 TSING KING ROAD, Kwai Tsing District, New Territories",Kwai Tsing,22.358198306,114.106690521,2.1,OPEN,http://www.maritimesquare.com/eng/ms/about_us/parking.jsp,21867284
+tdc8p12,MTR Maritime Square 2 Car Park,Tsing King Road,Kwai Tsing,22.359986503149,114.1076886364,2.4,OPEN,http://www.maritimesquare.com/eng/ms/about_us/parking.jsp,21867284
+tdc8p9,Paradise Mall Carpark,"100 SHING TAI ROAD, Eastern District, Hong Kong",Eastern,22.278000914,114.238896615,1.8,OPEN,https://www.paradise-mall.com.hk/en/parking,2595 1978
+tdc8p16,The LOHAS,"1 LOHAS PARK ROAD, TSEUNG KWAN O, N.T. HONG KONG",Sai Kung,22.293984977,114.270114,0,OPEN,,
+tdstt48,Opposite to Ma Hang Estate at Carmel Road,"Opposite to Ma Hang Estate at Carmel Road, Stanley, Hong Kong",Southern,22.22223091,114.20754242,0,OPEN,,
+tdc58p1,Wong Nai Chung Gap Children Playground,"Tai Tam Reservoir Rd, Tai Tam",Wan Chai,22.257599490426,114.19379563741,0,OPEN,,
+tdc58p2,Lei Yue Mun Municipal Services Building,"6 Lei Yue Mun Path, Yau Tong",Kwun Tong,22.29226875,114.23883057,0,OPEN,,
+tdc60p1,Che Kung Temple Sports Centre,10 SHA TIN TAU ROAD,Sha Tin,22.37223061,114.18558905,0,OPEN,,29123713
+tdc61p1,Tai Po Lung Mei Beach,"Lung Mei Beach, Ting Kok Road, Tai Po, New Territories",Tai Po,22.47158876,114.22726332,0,OPEN,,
+tdc63p1,Ma On Shan Sports Ground,"No. 1 Hang Hong Street, Ma On Shan, Sha Tin",Sha Tin,22.420568596916,114.22912384117,2.45,OPEN,,
+tdc63p2,Ma On Shan Swimming Pool,"33 On Chun Street, Ma On Shan, Sha Tin",Sha Tin,22.426812193663,114.22879405235,2.45,OPEN,,
+tdc63p3,Siu Lek Yuen Road Playground,"No. 1 Siu Lek Yuen Road, Sha Tin",Sha Tin,22.386974409715,114.20578430851,2.45,OPEN,,
+tdc64p1,Ho Man Tin Park & Sports Centre Basement Carpark,"1 Chung Yee Street, Ho Man Tin, Kowloon",Kowloon City,22.312126014911,114.18070042762,0,OPEN,,
+tdc67p1,North District Sports Ground,"26 Tin Ping Road, Sheung Shui",North,22.50621223,114.13047028,0,OPEN,,
+tdc67p2,Wo Hing Sports Centre,"No.8 Wo Ming Lane, Fanling",North,22.48474503,114.14312744,0,OPEN,,
+tdc65p1,Fung Kam Street Sports Centre Car Park,"20 Fung Yau St N ,Yuen Long",Yuen Long,22.443071870661,114.03329017859,3.8,OPEN,,
+tdc65p2,Yuen Long Swimming Pool,"10 Tai Yuk Road, Yuen Long, N.T.",Yuen Long,22.441594836277,114.02192199678,0,OPEN,,9850 0267 / 2912 3700 / 2912 3719 / 2912 3713
+tdc65p3,Tin Shui Wai Sports Ground,"2 Tin Shui Rd, Tin Shui Wai, N.T.",Yuen Long,22.453814930397,114.00408590595,0,OPEN,,9549 9869  / 2912 3700 / 2912 3719 / 2912 3713
+tdc65p4,Tin Shui Wai Sports Centre and Tin Shui Wai Swimming Pool Car Park,"1 Tin Pak Road, Tin Shui Wai, N.T.",Yuen Long,22.455037687168,114.0069582894,0,OPEN,,9549 9947 / 2912 3700 / 2912 3719 / 2912 3713
+tdc65p5,Tin Yip Road Park Car Park,"Tin Yip Road Park , Tin Shui Wai",Yuen Long,22.46386909,114.00669098,3.8,OPEN,,
+tdc69p1,Fanling Swimming Pool,"73 San Wan Road, Fanling",North,22.495403160284,114.13568417766,0,OPEN,,
+tdc69p2,Po Wing Road Sports Centre,"19 Pak Wo Road, Sheung Shui",North,22.497283161694,114.12876376702,0,OPEN,,
+tdc69p3,Sheung Shui Swimming Pool,"38 Tin Ping Road, Sheung Shui",North,22.50596809,114.13158417,0,OPEN,,
+tdc66p1,Sha Tin Jockey Club Swimming Pool and Yuen Wo Road Sports Centre,"10 Yuen Wo Road, Sha Tin, N.T.",Sha Tin,22.383209157997,114.19308213001,0,OPEN,,53039347
+tdc70p1,Sha Tin Sports Ground & Yuen Wo Playground Car Park,"18 Yuen Wo Road, Sha Tin, N.T.",Sha Tin,22.38697624,114.19628143,2.45,OPEN,,
+tdc49p4,Citygate P1 Carpark,"18 Tat Tung Road, Tung Chung",Islands,22.29026581,113.94053167,0,OPEN,,
+tdc52p1,M+ Car Park,"West Kowloon Cultural District, No.38 Museum Drive, Kowloon, Hong Kong",Yau Tsim Mong,22.301577995352,114.15963747968,2.1,OPEN,https://www.westk.hk/en/visit/parking,22000367
+tdc62p1,Yuen Chau Kok Complex,"35 Ngan Shing Street, Sha Tin",Sha Tin,22.379338882823,114.20475722116,0,OPEN,https://www.impark.com.hk/carparkdetail/5d812f9b52bce44d030ef0bb?region=New+Territories&district=5d7,65030041
+tdc72p1,Lai Yiu Estate Car Park,"Lai Cho Road, Kwai Chung, N.T.",Kwai Tsing,22.35367393,114.13179016,1.9,OPEN,,
+tdc74p1,Tseung Kwan O Swimming Pool,"9 Wan Lung Road, Tseung Kwan O",Sai Kung,22.31791306,114.26012421,0,OPEN,,
+tdc74p2,Tseung Kwan O Sports Ground,"109 Po Hong Road, Tseung Kwan O",Sai Kung,22.311631895221,114.26262716339,0,OPEN,,
+tdc74p3,Hong Kong Velodrome,"107 Po Hong Road, Tseung Kwan O",Sai Kung,22.31275368,114.26148987,0,OPEN,,
+tdc74p4,Tiu Keng Leng Sports Centre,"2 Chui Ling Road, Tseung Kwan O",Sai Kung,22.30589104,114.25471497,0,OPEN,,
+tdc74p5,Wan Po Road Pet Garden,Wan Po Road,Sai Kung,22.305596233926,114.26918980476,0,OPEN,,
+tdc49p1,Citygate P3 Carpark,"39 Man Tung Road, Tung Chung",Islands,22.29098081,113.9433026,0,OPEN,,
+tdc49p2,Citygate P2 Carpark,"20 Tat Tung Road, Tung Chung",Islands,22.28994701,113.94115843,0,OPEN,,
+tdc243p1,Lei Muk Shue (1) Estate Car Park,389 Wo Yi Hop Rd,Tsuen Wan,22.377376498625,114.13483884468,0,CLOSED,,
+tdc76p2,Ngau Chi Wan Park,"No. 71 Fung Shing Street,Ngau Chi Wan,Wong Tai Sin, Kowloon",Wong Tai Sin,22.3361969,114.2160339,0,OPEN,,Office No.: 3594 8432Cell No.: 6754 1720
+tdc76p3,Po Kong Village Road Park,"140 Po Kong Village Road, Diamond Hill, Kowloon",Wong Tai Sin,22.34472004,114.2062486,0,OPEN,,Office No.: 3594 8432Cell No.: 6754 1720
+tdc71p1,To Kwa Wan Market and Government Offices,"165 Ma Tau Wai Road, To Kwa Wan, Kowloon, Hong Kong",Kowloon City,22.31724516,114.1880186,2,OPEN,,
+tdc25p46,Yue Man Square,"33 Hip Wo Street, Kwun Tong, Kowloon",Kwun Tong,22.31448297,114.22489295,0,OPEN,https://www.sino-propertyservices.com/en/parking-services/portfolio,
+tdc15p1,Hong Kong-Zhuhai-Macao Bridge Hong Kong Port car park 1,"Hong Kong-Zhuhai-Macao Bridge Hong Kong Port, Lantau Island, Hong Kong",Islands,22.31652419,113.9524538,0,OPEN,https://www.hzmbparking.com.hk/en-us/car-park-information,
+tdc15p2,Hong Kong-Zhuhai-Macao Bridge Hong Kong Port car park 2,"Hong Kong-Zhuhai-Macao Bridge Hong Kong Port, Lantau Island, Hong Kong",Islands,22.31588665,113.9527527,0,OPEN,https://www.hzmbparking.com.hk/en-us/car-park-information,
+tdc15p3,Hong Kong-Zhuhai-Macao Bridge Hong Kong Port car park 3,"Hong Kong-Zhuhai-Macao Bridge Hong Kong Port, Lantau Island, Hong Kong",Islands,22.31482517,113.9531751,0,OPEN,https://www.hzmbparking.com.hk/en-us/car-park-information,
+tdc15p4,Hong Kong-Zhuhai-Macao Bridge Hong Kong Port car park 4,"Hong Kong-Zhuhai-Macao Bridge Hong Kong Port, Lantau Island, Hong Kong",Islands,22.31377849,113.9524294,0,OPEN,https://www.hzmbparking.com.hk/en-us/car-park-information,
+tdc15p5,Hong Kong-Zhuhai-Macao Bridge Hong Kong Port car park 5,"Hong Kong-Zhuhai-Macao Bridge Hong Kong Port, Lantau Island, Hong Kong",Islands,22.313943660073,113.95289570039,0,OPEN,https://www.hzmbparking.com.hk/en-us/car-park-information,
+tdc51p2,Island East Sports Centre,"52 Lei King Road, Sai Wan Ho, Hong Kong",Eastern,22.28487015,114.2223587,2.45,OPEN,,
+tdc51p1,Kowloon Park,"22, Austin Road, Tsim Sha Tsui, Kowloon",Yau Tsim Mong,22.302712275206,114.17055939936,0,OPEN,,
+tdc81p2,Kwai Chung Sports Ground,"93 Hing Shing Road, Kwai Chung",Kwai Tsing,22.358719571895,114.12431849015,2.45,OPEN,,"2912 3713, 9445 2006"
+tdc81p1,Hing Fong Road Playground,"Hing Fong Road, Kwai Chung",Kwai Tsing,22.360846531643,114.12815362332,2.45,OPEN,,"2912 3713, 9446 4524"
+tdc81p3,Kwai Shing Swimming Pool,"306 Kwai Shing Circuit, Kwai Chung",Kwai Tsing,22.359614386077,114.12281933029,0,OPEN,,"2912 3713, 94451674"
+tdc81p7,Wo Yi Hop Road Sports Ground,"298 Wo Yi Hop Road, Kwai Chung",Kwai Tsing,22.373371744332,114.13748022995,2.45,OPEN,,
+tdc81p6,Tsing Yi Southwest Leisure Building,"70 Chung Mei Road, Tsing Yi",Kwai Tsing,22.35140038,114.10223389,2.45,OPEN,,"2912 3713, 9445 2054"
+tdc81p5,Tsing Yi Sports Ground and Swimming Pool Car Park,"51 Tsing King Road, Tsing Yi",Kwai Tsing,22.355739643672,114.10730966372,3.8,OPEN,,
+tdc81p4,Tsing Yi Northeast Park,"10 Tam Kon Shan Road, Tsing Yi",Kwai Tsing,22.36147499,114.09861755,3.8,OPEN,,
+tdc94p1,Sha Tin Town Hall Carpark,"Yuen Wo Road No1 ,Sha Tin",Sha Tin,22.380757013435,114.18952868316,2.45,OPEN,,
+tdc82p3,Wai Tsuen Sports Centre,"6 Miu Kong Street, Tsuen Wan",Tsuen Wan,22.372222774467,114.1227189143,0,OPEN,,2912 3713
+tdc82p2,Shing Mun Valley Swimming Pool,"21 Shing Mun Road, Tsuen Wan",Tsuen Wan,22.372604211179,114.12343782929,0,OPEN,,2912 3713
+tdc82p1,Shing Mun Valley Sports Ground,"21 Shing Mun Road, Tsuen Wan",Tsuen Wan,22.376622119727,114.12917592165,0,OPEN,,2912 3713
+tdc82p4,Tsuen Wan Sports Centre,"53 Wing Shun Street, Tsuen Wan",Tsuen Wan,22.36567116,114.11306763,0,OPEN,,2912 3713
+tdc74p13,Kwong Fuk Park,"Kwong Chun Street, Tai Po",Tai Po,22.44604240623,114.17306575723,2.45,OPEN,,
+tdc95p1,Queensway Government Offices,"No. 66 Queensway, Hong kong",Central & Western,22.27772141,114.16388702,0,OPEN,,
+tdc74p11,Kowloon Bay Sports Ground B,"No. 1 Kai Lok Street, Kowloon Bay",Kwun Tong,22.3265962239,114.2104590206,0,OPEN,,
+tdc74p10,Kowloon Bay Sports Ground A,"No. 1 Kai Lok Street, Kowloon Bay",Kwun Tong,22.3264784456,114.2091205636,0,OPEN,,
+tdc74p12,Tai Po Sports Ground,"21 Tai Po Tau Road, Tai Po",Tai Po,22.455510453498,114.16303435611,2.45,OPEN,,
+tdc74p8,Sai Tso Wan Recreation Ground,"90 Sin Fat Road, Lam Tin, Kowloon",Kwun Tong,22.30407524,114.23287964,0,OPEN,,
+tdc74p6,Tuen Mun Swimming Pool Car Park,"8 Hoi Wong RD, Tuen Mun, New Territories",Tuen Mun,22.383551183989,113.96913296341,0,OPEN,,
+tdc74p9,Ping Shek Playground,"20 New Clear Water Bay Road, Kowloon",Kwun Tong,22.33203697,114.21289063,0,OPEN,,
+tdc74p7,Yau Oi Sports Centre,"No. 3 Hing On Lane, Tuen Mun, New Territories",Tuen Mun,22.38510895,113.97131348,0,OPEN,,
+tdc242p1,Ko Cheung Court Car Park,"No.32 Ko Chiu Road, Yau Tong, Kowloon",Kwun Tong,22.296320545706,114.24045019434,0,CLOSED,,
+tdstt59,Pui To Road Car Park,"Pui To Road, Area 10A, Tuen Mun, New Territories",Tuen Mun,22.395068036909,113.97614608017,0,OPEN,,
+tdstt62,Shun Hing Street Car Park,"Shun Hing Street, Sha Tau Kok, New Territories",North,22.54512701,114.223743,0,OPEN,,
+tdc240p1,Shan Tsui Court Carpark,"No. 200, Tai Tam Road, Chai Wan Gap, Hong Kong",Eastern,22.269335739906,114.23335469741,1.8,CLOSED,,
+tdc74p14,Tai Po Tung Cheong Street Leisure Building Car Park,"B/F, Tai Po Tung Cheong Street Leisure Building, 25 Tung Cheong Street, Tai Po",Tai Po,22.449688011934,114.17030212348,2.4,OPEN,,
+tdc96p1,Nam Shan Estate Multi-storey Carpark,"111, Tai Hang Tung Road, Shek Kip Mei , Kowloon ,HK",Sham Shui Po,22.33354378,114.17003632,0,OPEN,,29941027
+tdc111p1,Trade and Industry Tower Car Park,"No. 3 Concords Road, Kai Tak, Kowloon, Hong Kong",Kowloon City,22.33266015,114.19793766,0,OPEN,,2431 8885
+tdstt72,Sai See Street Car Park,"Sai See Street, Kennedy Town, Hong Kong",Central & Western,22.28229181,114.1241909,0,OPEN,,
+tdc92p5,Yue Fai Court Carpark,YUE KWONG RD 45,Southern,22.24834581,114.15657001,0,OPEN,,
+tdstt77,Lok Wah Street Car Park,"Lok Wah Street, Tsz Wan Shan, Kowloon",Wong Tai Sin,22.34864224,114.20521292,0,OPEN,,
+tdc119,Queen Mary Hospital (Carpark),"102 Pok Fu Lam Road, Hong Kong",Southern,22.270550721067,114.1305846907,2.05,CLOSED,,22553263
+tdc118p1,Prince of Wales Hospital Hourly Car Park,"2/F Day Treatment Block and Children Wards, 30-32 Ngan Shing Street, Shatin, N.T., Hong Kong",Sha Tin,22.379338709456,114.20151306018,0,CLOSED,,35052786
+tdc239p1,Shek Kip Mei Estate (Phase 7) Car Park,"Mei Cheong House, Shep Kip Mei Estate, Sham Shui Po, Kowloon",Sham Shui Po,22.334836439523,114.16493578387,3.8,CLOSED,,27883120
+tdc238p1,"Shek Kip Mei Estate (Phase 2,5) Car Park","Mei Leong House, Shep Kip Mei Estate, Sham Shui Po, Kowloon",Sham Shui Po,22.33217478851,114.16792890475,3.8,CLOSED,,27883120
+tdstt83,Shek Kwu Lung Car Park,"TAI PO TAI WO ROAD, SHEK KWU LUNG VILLAGE, TAI PO, NT",Tai Po,22.44969055,114.15714738,0,OPEN,,64654389
+tdstt84,Dai Kwai Street Car Park,"Dai Kwai Street, TAI PO INDUSTRIAL ESTATE, TAI PO, NT",Tai Po,22.45510582,114.18989441,0,OPEN,,64654389
+tdc273p1,Lei Muk Shue Shopping Centre Carpark,389 Wo Yi Hop Rd,Tsuen Wan,22.377684365687,114.13581707862,0,CLOSED,,
+tdstt56,"Hoi Kwai Road, Tsuen Wan","1570 Tsuen Wan -
+Hoi Kwai Road, Tsuen Wan, New Territories",Tsuen Wan,22.36895144655,114.1102680488,0,OPEN,,
+tdstt65,Fo Shing Road Car Park,"Fo Shing Road,Tai Po, New Territories",Tai Po,22.430854039779,114.20316760188,0,OPEN,,91418379
+tdc117p1,Hong Kong Palace Museum Car Park,"8 Museum Drive, HKPM, WKCD, Kowloon, Hong Kong",Yau Tsim Mong,22.301592678119,114.15554258613,2.45,CLOSED,https://www.westk.hk/en/visit/parking,22000367
+tdstt82,Tin Chau Road Car Park,"Tin Chau Road, Area 109, Tseung Kwan O, New Territories",Sai Kung,22.31641327,114.27081239,0,OPEN,,9079 9992
+tdstt89,Shek Kok Road,"Shek Kok Road, Area 85, Tseung Kwan O, New Territories",Sai Kung,22.29731176668,114.2732165207,0,CLOSED,,24114888
+tdc285p1,Hang Tsui Court Carpark,"No.63 Wing Tai Road, Chai Wan, Hong Kong",Eastern,22.26755915591,114.24189721775,2.4,CLOSED,,25152696
+tdc236p1,Ko Shan Road Public Vehicle Parking,"Lower Ground Floor, 60, Ko Shan Road, To Kwa Wan",Kowloon City,22.313815659105,114.18677390164,2.4,CLOSED,,
+tdstt86,Tai Shu Ha Road East Car Park,"Junction of Ma Tong Road and Tai Shu Ha Road East, Yuen Long, New Territories",Yuen Long,22.440337270319,114.02616664551,0,CLOSED,,94150386
+tdstt50,Sai Kung Chui Tong Road,"Chui Tong Road, Tui Min Hoi, Sai Kung, New Territories",Sai Kung,22.37871826,114.2683492,0,OPEN,,9613 0781 / 5298 8933
+tdc122p1,Chak On Estate Car Park,"Chak On Estate, 1 Chak On Rd, Shek Kip Mei",Sham Shui Po,22.340746903229,114.16405557197,1.8,CLOSED,,27792436
+tdc126p1,Ping Yan Carpark,"Ping Yan Court, 65 Ping Ha Street, Tin Shui Wai, N.T.",Yuen Long,22.445990679579,114.0042638604,2.4,CLOSED,,23381993
+tdc134p1,Tuen Mun Hospital Main Block Visitor Carpark,"Tuen Mun Hospital, 23 Tsing Chung Koon Road, Tuen Mun, N.T.",Tuen Mun,22.408623818158,113.97635697956,0,CLOSED,,2468 5205
+tdc132p1,Yan Chai Hospital Visitor Carpark,"7-11 Yan Chai Street, Tsuen Wan, N.T.",Tsuen Wan,22.369859530535,114.11949000646,3.2,CLOSED,,24178143
+tdc103p1,Science Park Car Park P1,"3 Science and Technology West Ave, Tai Po",Sha Tin,22.4243412,114.21224976,0,OPEN,https://www.hkstp.org/en/visit/parking,
+tdc103p2,Science Park Car Park P2,"10 Science and Technology East Ave, Tai Po",Sha Tin,22.4264857526,114.2111949869,0,OPEN,https://www.hkstp.org/en/visit/parking,
+tdc103p3,Science Park Car Park P3,"12 Science Park West Avenue, Tai Po",Tai Po,22.427248042417,114.20936327164,0,OPEN,https://www.hkstp.org/en/visit/parking,
+tdc50p7,Prosperity Center Car Park,"25 Chong Yip Street, Kwun Tong, Kowloon",Kwun Tong,22.31414153,114.2195567,0,OPEN,,
+tdc73p1,Crocodile Centre,"79 Hoi Yuen Road, Kwun Tong, Kowloon",Kwun Tong,22.31173309,114.22570666,0,OPEN,http://crocodilecenter.com.hk/eng/leasing.html,35869963
+tdc50p8,Prosperity Place Car Park,"6 Shing Yip Street, Kwun Tong, Kowloon",Kwun Tong,22.31060791,114.2257385,0,OPEN,,
+tdstt75,Pok Chuen Street Car Park,"Pok Chuen Street, Sha Tin, New Territories",Sha Tin,22.36919672,114.19858266,0,OPEN,,
+tdstt57p1,Tsing Chin Street Car Park,"Tsing Chin Street, Tsing Yi, New Territories",Kwai Tsing,22.34859915,114.10284743,0,OPEN,,
+tdc121p1,Airside,"2 Concorde Road, Kai Tak, Kowloon, Hong Kong",Kowloon City,22.331170067138,114.19833954493,2.4,CLOSED,,2686 0300/ 2686 0333
+tdstt90,Tung Chau Street,"Tung Chau Street, Sham Shui Po",Sham Shui Po,22.328534642068,114.1574930919,0,CLOSED,,9790 5127 / 2117 7076
+tdc140p1,Hung Hom Estate Phase II Carpark,"HUNG HOM ESTATE PHASE II CARPARK, 28 DAI  WAN ROAD, HUNG HOM, KOWLOON",Kowloon City,22.308042369449,114.18955034342,0,CLOSED,,
+tdc115p1,Choi Wan (II) Estate Car Park,No. 55 Clear Water Bay Road Wong Tai Sin Kowloon,Wong Tai Sin,22.33333463,114.21682229,4,OPEN,,2117 7076
+tdc124p1,Chun Yeung Shopping Centre Car Park,"Chun Yeung Shopping Centre, 20 Kwei Tei Street, Fo Tan, N.T.",Sha Tin,22.399442437409,114.18907697257,2.4,CLOSED,,2638 8483 / 2330 5108
+tdc92p1,On Tai Estate Carpark,"G/F., Hang Tai House, On Tai Estate, Kwun Tong",Kwun Tong,22.327028006763,114.22859498193,2.4,OPEN,,23225244
+tdc153p1,New Territories (Shatin) Forensic Medicine Centre,"NO. 7 LOWER SHING MUN ROAD, TAI WAI, SHA TIN, NEW TERRITORIES",Sha Tin,22.373832468041,114.16967806447,2.45,CLOSED,,
+tdc146p1,Mong Kok Stadium,"37, Flower Market Road, Mong Kok, Kowloon",Yau Tsim Mong,22.326475853733,114.17377173271,2.45,CLOSED,,
+tdc139p1,Hong King Garden Parking,"No.26 Tsing Sin Street, Tuen Mun",Tuen Mun,22.385481008324,113.97999245857,2.45,CLOSED,,
+tdc144p1,Hoi Tat Estate carpark,Sham Mong Road  No.38,Sham Shui Po,22.329487958451,114.15005368844,3.8,CLOSED,,25129611
+tdc129p1,Choi Fook Estate Car Park,"58 Choi Wing Road, Ngau Tau Kok,Kowloon",Kwun Tong,22.327754800898,114.21740096113,2.4,CLOSED,,
+tdc129p2,Choi Hing Court Car Park,"1 CHOI SING LANE,Ngau Tau Kok,Kowloon",Kwun Tong,22.3315848311,114.21353453637,2.4,CLOSED,,60140874
+tdc129p3,Choi Ying Estate Car Park,"79 Choi Ha Road, Ngau Tau Kok,Kowloon",Sham Shui Po,22.328236445866,114.21439614949,0,CLOSED,,
+tdc129p4,On Kay Court Car Park,"20 On Wah Street, Ngau Tau Kok,Kowloon",Kwun Tong,22.321802575491,114.21695454833,1.5,CLOSED,,
+tdc102p1,Lei On Court Carpark,"Lei On Court, Lam Tin",Kwun Tong,22.30889511,114.23238373,0,OPEN,,
+tdc99p1,Ping Shek Estate Car Park,"2 Clear Water Bay Road, Ngau Tau Kok",Kwun Tong,22.333586721029,114.2091419401,0,OPEN,,
+tdc98p1,Yau Mei Court Carpark,"Yau Mei Court, Yau Tong",Kwun Tong,22.2960453,114.23962402,0,OPEN,,
+tdc130p1,Lower ngau tau kok estate Car Park,"120 Ngau Tau Kok Road , Ngau Tau Kok,Kowloon",Kwun Tong,22.321261262744,114.21489167983,2.4,CLOSED,,98688744
+tdc130p3,Wo Lok Estate CPB,"60, Yuet Wah Street, Kwong Tong, KLN",Kwun Tong,22.316802499834,114.22753459812,0,CLOSED,,96892858
+tdc130p2,Wo Lok Estate CPA,"60, Yuet Wah Street, Kwong Tong, KLN",Kwun Tong,22.315351903479,114.22805612093,0,CLOSED,,96892858
+tdc142p1,Yan Tin Estate Carpark,"39, Tsing Lun Road, Tuen Mun, New Territories",Tuen Mun,22.413749587751,113.97634661294,2.4,CLOSED,,23860297
+tdc151p1,Kai Chuen Court Carpark,"235 Choi Hung Road, San Po Kong, Kowloon",Wong Tai Sin,22.339000444946,114.20075786182,2.4,CLOSED,,
+tdc158p1,Shek Mun Estate Phase 1 Car park,"Shek Mun Estate, 18 On Muk St, Shatin",Sha Tin,22.385947645412,114.20986275751,4.6,CLOSED,,
+tdc158p2,Shek Mun Estate Phase 2 Car park,"Shek Mun Estate, 18 On Muk St, Shatin",Sha Tin,22.386098219251,114.20875345074,2.45,CLOSED,,
+tdc157p1,Ma Tau Wai Estate Car Park,"Ma Tau Wai Estate, 9 Shing Tak St, Ma Tau Wai",Kowloon City,22.323238787941,114.18670995167,2.45,CLOSED,,
+tdc93p1,Kai Ching Estate Car Park,"Kai Ching Estate, No.12 Muk Hung Street, Kowloon City, Kowloon",Kowloon City,22.331978240872,114.20276260295,2.4,OPEN,,
+tdc6p2,Tin Yan Estate Car Park,"Tin Yan Estate, Tin Shui Wai, New Territories",Yuen Long,22.46363021,113.9967863,0,OPEN,,
+tdc127p1,Tin Heng Estate Car Park,"Tin Heng Estate, 83 Tin Shui Rd, Tin Shui Wai",Yuen Long,22.469236458123,113.99935511287,1.8,CLOSED,,24482086
+tdc92p6,Ching Ho Estate Car Park A,"Ching Shing Road,Sheung Shui,New Territories",North,22.493428500702,114.12481557199,0,OPEN,,
+tdc92p7,Ching Ho Estate Car Park B,"Chiu Hiu Road, Sheung Shui, New Territories",North,22.495579823739,114.12894440995,0,OPEN,,
+tdc104p1,Pak Tin Estate (Shui Tin House) Carpark,"Shui Tin House,Pak Tin Estate, Kowloon",Sham Shui Po,22.33547182,114.16835252,0,OPEN,,
+tdc148p1,Wing Cheong Estate Car Park,"No.20, Sai Chuen Road, Sham Shui Po",Sham Shui Po,22.328807133943,114.15611114073,0,CLOSED,,
+tdc92p4,Model Housing Estate Carpark,770 King's Road,Eastern,22.290540857357,114.20869820866,0,OPEN,,
+tdc141p2,Tak Long Estate Carpark B,"Muk Chui Street, Kowloon City, Kowloon",Kowloon City,22.330872191006,114.20328783409,4.7,CLOSED,,22173556
+tdc141p1,Tak Long Estate Carpark A,"Shing Kai Road, Kowloon City, Kowloon",Kowloon City,22.328929824081,114.20429383865,2,CLOSED,,22173556
+tdc159p1,Shek Kip Mei Estate (Phase 6) Car Park,"Mei Hei House, Shep Kip Mei Estate, Sham Shui Po, Kowloon",Sham Shui Po,22.331489705814,114.16731203712,2.45,CLOSED,,27883120
+tdc173p1,Choi Po Court Car Park,"Po Shek Wu Road, Sheung Shui, New Territories",North,22.501944918449,114.12420788626,1.95,CLOSED,,
+tdc10p6,Shun Lee Disciplined Services Quarters,"No. 32 Lee On Road, Kwun Tong, Kowloon, H.K. ",Kwun Tong,22.332103098,114.221819268,2.45,CLOSED,,2912 3700 / 2912 3721 / 2912 3719 
+tdstt92,Junction of Hoi Wang Road and Lai Cheung Road,"Junction of Hoi Wang Road and Lai Cheung Road, Kowloon",Yau Tsim Mong,22.312334218027,114.16443189105,2.45,CLOSED,,
+tdc6p23,Kwai Shing West Estate Car Park,"Kwai Hau Street, Kwai Chung, N.T.",Kwai Tsing,22.363058249842,114.12440875203,1.8,CLOSED,,
+tdc6p24,Lai King Estate Car Park A,"Lai King Hill Road, Kwai Chung, N.T.",Kwai Tsing,22.350942861245,114.12692545612,0,CLOSED,,
+tdc6p25,Lai King Estate Car Park D,"Lai King Hill Road, Kwai Chung, N.T.",Kwai Tsing,22.345505515487,114.1262229738,0,CLOSED,,
+tdc149p1,Cheung Ching Estate Car Park,"CHING HONG ROAD, TSING YI",Kwai Tsing,22.34537379852,114.10828729042,0,CLOSED,,21177076
+tdc149p2,Cheung Ching Shopping Centre Car Park,"CHING HONG ROAD, TSING YI",Kwai Tsing,22.345519602624,114.10941998028,1.8,CLOSED,,21177076
+tdstt94,Hoi Yu Street Car Park No 2,Hoi Yu Street Quarry Bay,Eastern,22.291206697068,114.21233868906,0,CLOSED,,
+tdc183p1,Car Park at the park located east of Fan Kam Road,"No. 650 Fan Kam Road, Sheung Shui",North,22.494952785275,114.1213413157,0,CLOSED,https://www.lcsd.gov.hk/en/parks/fkrp/parking.html,2295 3118
+tdc150p1,Ying Tung Estate Carpark,12 YING TUNG ROAD,Islands,22.29692690363,113.95300473773,2.4,CLOSED,,2702 8911
+tdc168p1,The Twins Carpark Tower I,"12 Concorde Road, Kai Tak, San Po Kong, Kowloon",Kowloon City,22.332675440443,114.20084319549,2.4,CLOSED,,2833 8338
+tdstt100,Hoi Wah Road (II) Car Park,"Hoi Wah Road, Area 16, Tuen Mun, New Territories",Tuen Mun,22.381421100534,113.97392926407,0,CLOSED,,95428756
+tdc177p1,KTR350 Car Park,"350 Kwun Tong Road, Kwun Tong, Kowloon",Kwun Tong,22.315039030955,114.21800031701,2.4,CLOSED,,21168259
+tdc248p1,Ka Fu Fong Public Car Park,"186 San Wan Road, Sheung Shui, New Territories",North,22.505995904727,114.12346883116,0,CLOSED,,
+tdc147p1,Mun Tung Estate Car park,"Mun Tung Estate, Tung Chung",Islands,22.277360131343,113.93392025033,2.4,CLOSED,,
+tdc270p1,Lung Poon Court Car Park,"8 Lung Poon Street, Diamond Hill, Kowloon",Wong Tai Sin,22.341739366228,114.20029575255,1.8,CLOSED,,
+tdc271p1,Hammer Hill Road Sports Ground Car Park,"Wing Ting Road, Wong Tai Sin, Kowloon",Wong Tai Sin,22.337605995164,114.20745624701,2.45,CLOSED,,
+tdc272p1,Hammer Hill Road Swimming Pool Car Park,"Wing Ting Road, Wong Tai Sin, Kowloon",Wong Tai Sin,22.337424886966,114.20702955475,2.45,CLOSED,,
+tdc288p1,Cheung Sha Wan Estate Car Park,"9 Tung King Street, Cheung Sha Wan, Kowloon",Sham Shui Po,22.334695163597,114.15676490383,2.4,CLOSED,,23272775
+tdc257p1,May Shing Court Car Park,"32 Mei Tin Rd, Tai Wai",Sha Tin,22.378822844677,114.17480350431,0,CLOSED,,
+tdstt53,"Tin Wan Praya Road, Aberdeen, Hong Kong","Tin Wan Praya Road, Aberdeen, Hong Kong",Southern,22.24876785,114.14182281,0,OPEN,,
+tdstt45,Sunny Bay Road,"Sunny Bay Road, Lantau",Tsuen Wan,22.33502197,114.03074646,0,OPEN,,
+tdstt51,Junction of Ma Wo Road and Ma Chung Road,"Junction of Ma Wo Road and Ma Chung Road, Tai Po, New Territories",Tai Po,22.44188499,114.16423798,2.45,OPEN,,
+tdstt69,Chi Wa Lane Car Park,"Chi Wa Lane, Fanling, New Territories",North,22.49095748,114.1321767,0,OPEN,,
+tdstt66,Tin Shui Wai No 2 Car Park,"Tin Tan Street, Tin Shui Wai, Yuen Long, New Territories",Yuen Long,22.45948799,113.995628,0,OPEN,,
+tdstt95,Pinnacle Carpark Cheung Yip Street,"Junction of Cheung Yip Street and Hoi Bun Road, Kowloon Bay, Kowloon",Kwun Tong,22.317346631325,114.2121630992,2.45,CLOSED,,
+tdstt113,Container Port Road South,"Container Port Road South, Stonecutters Island, New Territories",Sham Shui Po,22.32094104299,114.12587221867,0,CLOSED,,
+tdstt115,Sha Ho Road,"Sha Ho Road, Sha Tau Kok",North,22.546160625979,114.22047608825,0,CLOSED,,9079 9992
+tdstt119,Miu Wo Ngan Shu Street," Ngan Sha Street ,Mui Wo ,Lantau , New Territories",Islands,22.265951725246,113.99537289282,2.45,CLOSED,,
+tdstt122,Shek O Road Car Park,"Shek O Road, Shek O, Hong Kong",Southern,22.23089529667,114.25059051974,0,CLOSED,,
+tdstt126,Tung Chung Ying Tung Road Car Park,"89 Ying Tung Road,Tung Chung",Islands,22.295690794686,113.95247369226,3.8,CLOSED,,
+tdstt127,Hoi Yu Street (GOLDWAY PARKING LIMITED),"Hoi Yu Street, Quarry Bay, Hong Kong",Eastern,22.290130749383,114.21470266267,0,CLOSED,,90799992
+tdstt132,Hoi Tou Car Park,"Hoi Wah Road, Tuen Mun, New Territories",Tuen Mun,22.381501234296,113.97599813222,2.45,CLOSED,,
+tdstt133,Pinnacle Carpark Tuen Yee Street,"Tuen Yee Street, Tuen Mun, New Territories",Tuen Mun,22.382428512718,113.96902605161,0,CLOSED,,
+tdstt74,Tai Shui Hang Car Park No.2,"Tai Shui Hang, Sha Tin, New Territories",Sha Tin,22.40544873,114.21859758,0,OPEN,,
+tdstt129,Whitehead Car Park 1,"Whitehead, Hong Kong, Ma On Shan, Hong Kong",Sha Tin,22.436406795383,114.24144786617,0,CLOSED,,
+tdstt116,Wan Po Road Car Park,"Wan Po Road, Area 85, Tseung Kwan O, New Territories",Sai Kung,22.292738899046,114.27409296467,2.45,CLOSED,,
+tdstt117,Chong San Road Car Park,"Chong San Road, Tai Po, New Territories",Tai Po,22.435145212657,114.20099119553,2.45,CLOSED,,
+tdstt118,Kwong Fuk Carpark Tai Po Dai Wah Street,"Dai Wah Street, Tai Po, New Territories",Tai Po,22.453461150895,114.17945292409,3.1,CLOSED,,
+tdstt128,Sai Kung Mei Fuk Street Car Park,Sai Kung Mei Fuk Street,Sai Kung,22.385443315754,114.27310129163,3.8,CLOSED,,
+tdstt130,Pinnacle Carpark Chui Shin Street,"Chui Shin Street, Area 72, Tseung Kwan O, New Territories",Sai Kung,22.304841424449,114.25513892943,2.45,CLOSED,,
+tdstt134,A1 Parking (Sha Tin),"The Junction of Yuen Hong St, and Yuen Shun Circuit, Sha Tin",Sha Tin,22.383873152291,114.20754342183,0,CLOSED,,90776990
+tdc287p1,Yee Tsui Court Carpark,"No.1 Yee Shing Street, Chai Wan, Hong Kong",Eastern,22.265126029649,114.23915174188,1.7,CLOSED,,28894877
+tdc304p1,Tai Po Mega Mall Multi-Storey Carpark,"No.2, On Pong Road, Tai Po, N.T.",Tai Po,22.453737892608,114.17111910853,3.45,CLOSED,,28303845
+tdc14p8900,Kin Ming Car Park B,"Kin Ming Estate Car Park, 1 Choi Ming Street, Tiu Keng Leng, Tseung Kwan O, New Territories",Sai Kung,22.306387254445,114.25018181168,0,CLOSED,https://www.linkhk.com/en/parking/1010,5487 7944
+tdc306p1,HomeSquare,"138, Sha Tin Rural Committee Road, Sha Tin, New Territories",Sha Tin,22.385755359597,114.18770281738,0,CLOSED,https://www.homesquare.com.hk/en/parking,2634 0666
+tdc280p1,New Town Plaza III,"2-8, Shatin Centre Street, Shatin",Sha Tin,22.379863530423,114.1875877013,1.95,CLOSED,https://www.newtownplaza.com.hk/parking/,26916576
+tdc279p1,New Town Plaza I,"18-19, Shatin Centre Street, Shatin",Sha Tin,22.38185273238,114.18894197661,1.95,CLOSED,https://www.newtownplaza.com.hk/parking/,26089329
+tdc312p1,Metroplaza,"223 Hing Fong Road, Kwai Fong, NT",Kwai Tsing,22.357749073861,114.12704148201,0,CLOSED,https://www.metroplaza.com.hk,2429 6500
+tdc292p1,Hang Chun Court Car Park,2 HANG CHEUNG STREET,Sham Shui Po,22.335755497409,114.15310939509,2.4,CLOSED,,52811457
+tdc315p1,Lok Man Sun Chuen,160 KAU PUI LUNG ROAD,Kowloon City,22.3176073561,114.18604661494,0,CLOSED,,
+tdstt140,nevas smart car park (Po Tai Street),"Po Tai  Street, Ma On Shan, New Territories",Sha Tin,22.413101832635,114.22355332901,0,CLOSED,https://kinwinghong.weebly.com/,51629974
+tdc307p1,Yip Wong Estate Phase 1 & 2 Car Park,"21&25 Tin Sau Road, Tuen Mun",Tuen Mun,22.387666768802,113.96966948951,0,CLOSED,,5702 5473
+tdc308p1,Yan On Estate carpark,No.3 Hang Chi street Yan On Estate carpark,Sha Tin,22.412962840358,114.22485350281,0,CLOSED,,
+tdc309p1,Fu Tip Estate Phase 1 carpark,"11 Chung Nga Road, Tai Po, N.T.",Tai Po,22.461516217413,114.17307285264,0,CLOSED,,2256 1288
+tdc310p1,Fu Tip Estate Phase 2 carpark,"11 Choi TIp Street, Tai PO, N.T.",Tai Po,22.464262844939,114.17611938767,2.4,CLOSED,,2256 1288
+tdc311p1,Ocean PopWalk,"28 Tong Chun Street, Tseung Kwan O, N.T.",Sai Kung,22.30341792595,114.26067606704,2.2,CLOSED,,
+tdc316p1,Mikiki,"No. 638, Prince Edward Road East, San Po Kong, Kowloon",Wong Tai Sin,22.333833923416,114.19707753824,2.4,CLOSED,https://www.mikiki-mall.com.hk/en/home.php,3980 9930
+tdstt142,Clear Water Bay Road (GOLDWAY PARKING LIMITED),"Clear Water Bay, Sai Kung, New Territories",Sai Kung,22.330745412528,114.26305124231,5,CLOSED,,9079 9992
+tdc318p1,Pak Shing Kok Road Public Car Park,"1 Pak Shing Kok Road, Tseung Kwan O, New Territories",Sai Kung,22.304311350228,114.27294953404,0,CLOSED,https://www.wilsonparking.com.hk/en/car_parks/detail/453,
+tdc314p1,THE CENDAS Carpark,"THE CENDAS, 15 Sheung Yuet Road, Kowloon Bay",Kwun Tong,22.322145511398,114.20993789706,0,CLOSED,,28177168
+tdc317p1,V Walk Carpark,"28 Sham Mong Rd, Sham Shui Po",Sham Shui Po,22.326832678779,114.15369006774,0,CLOSED,https://www.vwalk.com.hk/eng/access/parking,9852 6942
+tdc319p1,Uptown Plaza Car Park,"Carpark, Uptown Plaza, No.9 Nam Wan Road, Tai Po, N.T.",Tai Po,22.444315443084,114.16869950935,2.2,CLOSED,https://www.uptownplaza.com.hk/en/parking/,2653 8089
+tdc322p1,Park Central Shopping Arcade Car Park,"9 Tong Tak Street, Tseung Kwan O, N.T, Hong Kong",Sai Kung,22.307559153346,114.25779662979,2,CLOSED,https://www.park-central.com.hk/en/en-parking-service/,3417 4322
+tdc114p2,Sun Yat Sen Memorial Park Sports Centre,"18,Eastern Street North,Sai Ying Pun,Hong Kong ",Central & Western,22.28979738,114.14355262,2.45,OPEN,,
+tdc114p1,Sun Yat Sen Memorial Park,"16 Eastern Street North, Sai Ying Pun, Hong Kong",Central & Western,22.2894907,114.14446873,0,OPEN,,
+tdc325p1,Landmark North Car Park,"No. 39 Lung Sum Avenue, Sheung Shui, New Territories",North,22.502634302167,114.12782999956,2.1,CLOSED,https://www.landmarknorth.com.hk/,2672 9225
+tdc324p1,Sun Hung Kai Centre,"B1/F., Sun Hung Kai Centre, No.30 Harbour Road, Wan Chai, Hong Kong",Wan Chai,22.280349827386,114.17692315786,1.8,CLOSED,,28277247
+tdc320p1,YOHO MALL I,"9 Yuen Lung Street & 9 Long Yat Road, Yuen Long",Yuen Long,22.444987182169,114.03778131022,0,CLOSED,https://www.yohomall.hk/en/driving-info,2554 0023
+tdc321p1,YOHO MALL II,"8 Long Yat Road, Yuen Long",Yuen Long,22.445606271819,114.03513920464,2.1,CLOSED,https://www.yohomall.hk/en/driving-info,2479 2208
+tdc327p1,Tsuen Wan Plaza Car Park,"4-30 Tai Pa Street,Tsuen Wan",Tsuen Wan,22.370883040555,114.11155771357,0,CLOSED,https://www.tsuenwanplaza.com.hk/parking/,2417 1709
+tdc330p1,Vcity Commerical Carpark,"3/F, No. 83 Heung Sze Wui Road,Tuen Mun",Tuen Mun,22.39573105183,113.97413659093,0,CLOSED,https://www.vcity.com.hk/eng/parking/parking.jsp,2960 1800
+tdc331p1,Vcity Station Carpark,"3/F, No. 83 Heung Sze Wui Road,Tuen Mun",Tuen Mun,22.395651764291,113.97413601096,0,CLOSED,,2960 1800
+tdc332p1,apm Car Park,"418 Kwun Tong Road, Kwun Tong, Kowloon",Kwun Tong,22.312312273115,114.22514827149,2.2,CLOSED,https://www.hkapm.com.hk/index/,2267 0500
+tdc328p1,Harbour North Phase 2 & 3 B2/F Zone A,"133 Java Road, North North, Hong Kong",Eastern,22.293389324776,114.20217848926,2.1,CLOSED,https://www.harbournorth.com.hk,2830 3845
+tdc290p1,Hoi Ying Estate Car Park,1 LAI YING STREET,Sham Shui Po,22.3289921244,114.14790421245,0,CLOSED,,24879210
+tdc289p1,Hoi Lok Court Car Park,"3 Lai Ying Street, Cheung Sha Wan",Sham Shui Po,22.32788359478,114.14994098506,2.4,CLOSED,,52813945
+tdc335p1,Tseung Kwan O Government Offices Public Car Park,"30 Tong Yin Street, Tseung Kwan O, New Territories",Sai Kung,22.30417742476,114.25690216938,0,CLOSED,https://www.wilsonparking.com.hk/en/car_parks/detail/456,6468 7953

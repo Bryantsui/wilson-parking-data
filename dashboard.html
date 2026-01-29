@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HK Carpark Vacancy Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --bg-dark: #0a0a0f;
+            --bg-card: #12121a;
+            --bg-card-hover: #1a1a25;
+            --accent-green: #00ff88;
+            --accent-yellow: #ffcc00;
+            --accent-orange: #ff8800;
+            --accent-red: #ff4444;
+            --accent-blue: #00aaff;
+            --text-primary: #ffffff;
+            --text-secondary: #888899;
+            --border-color: #2a2a35;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(ellipse at 20% 20%, rgba(0, 255, 136, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(0, 170, 255, 0.05) 0%, transparent 50%);
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-green), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .data-source {
+            color: var(--accent-green);
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        .last-update {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .summary-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-green);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
+        }
+        
+        .summary-card.full { border-left: 4px solid var(--accent-red); }
+        .summary-card.low { border-left: 4px solid var(--accent-orange); }
+        .summary-card.moderate { border-left: 4px solid var(--accent-yellow); }
+        .summary-card.ok { border-left: 4px solid var(--accent-green); }
+        
+        .summary-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .summary-card.full .summary-value { color: var(--accent-red); }
+        .summary-card.low .summary-value { color: var(--accent-orange); }
+        .summary-card.moderate .summary-value { color: var(--accent-yellow); }
+        .summary-card.ok .summary-value { color: var(--accent-green); }
+        
+        .summary-label {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 20px;
+        }
+        
+        @media (max-width: 1200px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .carpark-list {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .list-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .list-header h2 {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+        }
+        
+        .search-box {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .search-box input, .search-box select {
+            background: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 15px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+        
+        .search-box input {
+            width: 250px;
+        }
+        
+        .search-box input:focus, .search-box select:focus {
+            outline: none;
+            border-color: var(--accent-green);
+        }
+        
+        .table-container {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        th {
+            background: var(--bg-dark);
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        tr {
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        
+        tr:hover {
+            background: var(--bg-card-hover);
+        }
+        
+        tr.selected {
+            background: rgba(0, 255, 136, 0.1);
+            border-left: 3px solid var(--accent-green);
+        }
+        
+        .carpark-name {
+            font-weight: 500;
+        }
+        
+        .carpark-district {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+        
+        .vacancy-cell {
+            text-align: center;
+        }
+        
+        .vacancy-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .vacancy-number.full { color: var(--accent-red); }
+        .vacancy-number.low { color: var(--accent-orange); }
+        .vacancy-number.moderate { color: var(--accent-yellow); }
+        .vacancy-number.ok { color: var(--accent-green); }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .status-badge.FULL { background: rgba(255, 68, 68, 0.2); color: var(--accent-red); }
+        .status-badge.LOW { background: rgba(255, 136, 0, 0.2); color: var(--accent-orange); }
+        .status-badge.MODERATE { background: rgba(255, 204, 0, 0.2); color: var(--accent-yellow); }
+        .status-badge.OK { background: rgba(0, 255, 136, 0.2); color: var(--accent-green); }
+        
+        .detail-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+        }
+        
+        .detail-header {
+            margin-bottom: 20px;
+        }
+        
+        .detail-header h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .detail-header .district {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .detail-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .detail-stat {
+            background: var(--bg-dark);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .detail-stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-green);
+        }
+        
+        .detail-stat-label {
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            margin-top: 5px;
+        }
+        
+        .chart-container {
+            background: var(--bg-dark);
+            border-radius: 8px;
+            padding: 15px;
+            height: 300px;
+        }
+        
+        .no-selection {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+        }
+        
+        .error {
+            text-align: center;
+            padding: 40px;
+            color: var(--accent-red);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚗 HK Carpark Vacancy Dashboard</h1>
+            <div class="data-source" id="dataSource">Loading...</div>
+            <div class="last-update" id="lastUpdate"></div>
+        </header>
+        
+        <div class="summary-grid" id="summaryGrid">
+            <div class="summary-card">
+                <div class="summary-value" id="totalCarparks">-</div>
+                <div class="summary-label">Total Carparks</div>
+            </div>
+            <div class="summary-card full">
+                <div class="summary-value" id="fullCount">-</div>
+                <div class="summary-label">Full (0 spaces)</div>
+            </div>
+            <div class="summary-card low">
+                <div class="summary-value" id="lowCount">-</div>
+                <div class="summary-label">Low (1-5 spaces)</div>
+            </div>
+            <div class="summary-card moderate">
+                <div class="summary-value" id="moderateCount">-</div>
+                <div class="summary-label">Moderate (6-20)</div>
+            </div>
+            <div class="summary-card ok">
+                <div class="summary-value" id="okCount">-</div>
+                <div class="summary-label">OK (>20 spaces)</div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="carpark-list">
+                <div class="list-header">
+                    <h2>All Carparks</h2>
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search carpark name...">
+                        <select id="districtFilter">
+                            <option value="">All Districts</option>
+                        </select>
+                        <select id="statusFilter">
+                            <option value="">All Status</option>
+                            <option value="FULL">Full</option>
+                            <option value="LOW">Low</option>
+                            <option value="MODERATE">Moderate</option>
+                            <option value="OK">OK</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Carpark</th>
+                                <th style="text-align:center">Available</th>
+                                <th>Status</th>
+                                <th>Last Update</th>
+                            </tr>
+                        </thead>
+                        <tbody id="carparkTable">
+                            <tr><td colspan="4" class="loading">Loading data...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="detail-panel" id="detailPanel">
+                <div class="no-selection">
+                    <p>👈 Select a carpark to view details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let dashboardData = null;
+        let selectedCarpark = null;
+        let chart = null;
+        
+        async function loadData() {
+            try {
+                const response = await fetch('dashboard_data.json');
+                if (!response.ok) throw new Error('Failed to load data');
+                dashboardData = await response.json();
+                renderDashboard();
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('carparkTable').innerHTML = 
+                    `<tr><td colspan="4" class="error">Error loading data. Make sure dashboard_data.json exists.</td></tr>`;
+            }
+        }
+        
+        function renderDashboard() {
+            const { summary, current_stats } = dashboardData;
+            
+            // Update header
+            document.getElementById('dataSource').textContent = summary.data_source || 'HK Government Open Data';
+            document.getElementById('lastUpdate').textContent = `Last updated: ${summary.last_update}`;
+            
+            // Update summary cards
+            document.getElementById('totalCarparks').textContent = summary.total_carparks;
+            document.getElementById('fullCount').textContent = summary.full_count;
+            document.getElementById('lowCount').textContent = summary.low_count;
+            document.getElementById('moderateCount').textContent = summary.moderate_count || 0;
+            document.getElementById('okCount').textContent = summary.ok_count;
+            
+            // Populate district filter
+            const districts = [...new Set(current_stats.map(c => c.district).filter(d => d))].sort();
+            const districtSelect = document.getElementById('districtFilter');
+            districts.forEach(d => {
+                const option = document.createElement('option');
+                option.value = d;
+                option.textContent = d;
+                districtSelect.appendChild(option);
+            });
+            
+            renderTable(current_stats);
+            
+            // Add event listeners
+            document.getElementById('searchInput').addEventListener('input', filterTable);
+            document.getElementById('districtFilter').addEventListener('change', filterTable);
+            document.getElementById('statusFilter').addEventListener('change', filterTable);
+        }
+        
+        function renderTable(carparks) {
+            const tbody = document.getElementById('carparkTable');
+            
+            if (carparks.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4" class="no-data">No carparks found</td></tr>';
+                return;
+            }
+            
+            tbody.innerHTML = carparks.map(cp => {
+                const vacancyClass = cp.status.toLowerCase();
+                const vacancy = cp.vacancy !== null ? cp.vacancy : '-';
+                
+                return `
+                    <tr data-id="${cp.id}" onclick="selectCarpark('${cp.id}')">
+                        <td>
+                            <div class="carpark-name">${cp.name}</div>
+                            <div class="carpark-district">${cp.district || ''}</div>
+                        </td>
+                        <td class="vacancy-cell">
+                            <div class="vacancy-number ${vacancyClass}">${vacancy}</div>
+                        </td>
+                        <td>
+                            <span class="status-badge ${cp.status}">${cp.status}</span>
+                        </td>
+                        <td style="color: var(--text-secondary); font-size: 0.85rem;">
+                            ${cp.last_update || '-'}
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+        
+        function filterTable() {
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const district = document.getElementById('districtFilter').value;
+            const status = document.getElementById('statusFilter').value;
+            
+            let filtered = dashboardData.current_stats;
+            
+            if (search) {
+                filtered = filtered.filter(cp => 
+                    cp.name.toLowerCase().includes(search) ||
+                    (cp.district && cp.district.toLowerCase().includes(search))
+                );
+            }
+            
+            if (district) {
+                filtered = filtered.filter(cp => cp.district === district);
+            }
+            
+            if (status) {
+                filtered = filtered.filter(cp => cp.status === status);
+            }
+            
+            renderTable(filtered);
+        }
+        
+        function selectCarpark(id) {
+            selectedCarpark = id;
+            
+            // Update selection highlight
+            document.querySelectorAll('tr').forEach(tr => tr.classList.remove('selected'));
+            document.querySelector(`tr[data-id="${id}"]`)?.classList.add('selected');
+            
+            const cp = dashboardData.current_stats.find(c => c.id === id);
+            if (!cp) return;
+            
+            const panel = document.getElementById('detailPanel');
+            
+            panel.innerHTML = `
+                <div class="detail-header">
+                    <h3>${cp.name}</h3>
+                    <div class="district">${cp.district || 'Unknown District'}</div>
+                </div>
+                <div class="detail-stats">
+                    <div class="detail-stat">
+                        <div class="detail-stat-value" style="color: ${getStatusColor(cp.status)}">${cp.vacancy !== null ? cp.vacancy : '-'}</div>
+                        <div class="detail-stat-label">Private Car</div>
+                    </div>
+                    <div class="detail-stat">
+                        <div class="detail-stat-value">${cp.motorcycle_vacancy || '-'}</div>
+                        <div class="detail-stat-label">Motorcycle</div>
+                    </div>
+                    <div class="detail-stat">
+                        <div class="detail-stat-value">${cp.lgv_vacancy || '-'}</div>
+                        <div class="detail-stat-label">LGV</div>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="detailChart"></canvas>
+                </div>
+            `;
+            
+            renderDetailChart(id);
+        }
+        
+        function getStatusColor(status) {
+            const colors = {
+                'FULL': '#ff4444',
+                'LOW': '#ff8800',
+                'MODERATE': '#ffcc00',
+                'OK': '#00ff88'
+            };
+            return colors[status] || '#ffffff';
+        }
+        
+        function renderDetailChart(id) {
+            const timeseries = dashboardData.timeseries[id];
+            if (!timeseries || timeseries.length === 0) return;
+            
+            const ctx = document.getElementById('detailChart').getContext('2d');
+            
+            if (chart) chart.destroy();
+            
+            const data = timeseries.slice(-48); // Last 48 data points
+            
+            chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.map(d => d.time),
+                    datasets: [{
+                        label: 'Available Spaces',
+                        data: data.map(d => d.vacancy),
+                        borderColor: '#00ff88',
+                        backgroundColor: 'rgba(0, 255, 136, 0.1)',
+                        fill: true,
+                        tension: 0.3,
+                        pointRadius: 3,
+                        pointBackgroundColor: '#00ff88'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                color: '#2a2a35'
+                            },
+                            ticks: {
+                                color: '#888899',
+                                maxTicksLimit: 8
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: '#2a2a35'
+                            },
+                            ticks: {
+                                color: '#888899'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Load data on page load
+        loadData();
+    </script>
+</body>
+</html>

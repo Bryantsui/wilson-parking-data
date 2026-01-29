@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Wilson Parking API Discovery</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 20px; line-height: 1.6; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #34495e; margin-top: 30px; }
+        h3 { color: #7f8c8d; }
+        pre { background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 4px; padding: 15px; overflow-x: auto; }
+        code { background: #f8f9fa; padding: 2px 6px; border-radius: 3px; font-family: Monaco, monospace; }
+        table { margin: 20px 0; }
+        th { background: #3498db; color: white; }
+        hr { border: none; border-top: 1px solid #bdc3c7; margin: 30px 0; }
+    </style>
+</head>
+<body>
+<h1>Wilson Parking API Discovery & Data Collection Setup</h1></p><p><strong>Date:</strong> January 28, 2026  
+<strong>Duration:</strong> ~1 hour  
+<strong>Outcome:</strong> Successfully discovered private API and set up automated 24/7 data collection</p><p><hr></p><p><h2>📋 Executive Summary</h2></p><p>Successfully reverse-engineered the Wilson Parking Hong Kong mobile app to discover their private API endpoints. Set up an automated data collection system running on GitHub Actions that scrapes parking availability every 30 minutes.</p><p><strong>Repository:</strong> https://github.com/Bryantsui/wilson-parking-data</p><p><hr></p><p><h2>🎯 Objective</h2></p><p>Find the private API of the Wilson Parking app to collect parking availability data in this format:
+<pre style="background:#f4f4f4;padding:10px;overflow-x:auto;"><code>{
+  "carpark_id": "00000000-0000-0000-000000000128",
+  "guest_available": 3,
+  "guest_available_display": "3",
+  "guest_total": 130,
+  "last_update": "2026-01-28T07:24:32Z",
+  "monthly_available": 0,
+  "monthly_is_full": true,
+  "total_available": 3
+}
+</code></pre></p><p><hr></p><p><h2>🔧 Tools & Methods Used</h2></p><p><h3>Hardware</h3>
+- Android phone: OPPO CPH2671 (Android 16)
+- MacBook connected via USB</p><p><h3>Software</h3>
+- <strong>ADB (Android Debug Bridge)</strong> - Connect to phone
+- <strong>mitmproxy</strong> - HTTPS traffic interception (attempted)
+- <strong>apktool</strong> - APK decompilation
+- <strong>GitHub CLI</strong> - Repository creation
+- <strong>GitHub Actions</strong> - Automated scheduling</p><p><h3>Approach</h3></p><p>1. <strong>Initial Attempt: MITM Proxy</strong> (Failed due to certificate pinning)
+   - Set up mitmproxy on port 8080
+   - Pushed CA certificate to phone via ADB
+   - Configured system-wide proxy
+   - ❌ Android 16 doesn't trust user certificates for apps</p><p>2. <strong>Alternative: Frida</strong> (Considered but not needed)
+   - Would have bypassed SSL pinning by hooking certificate validation
+   - Requires root access (phone wasn't rooted)</p><p>3. <strong>Successful Method: APK Reverse Engineering</strong>
+   - Pulled APK from phone: <code style="background:#f4f4f4;padding:2px 4px;">adb pull /data/app/.../base.apk</code>
+   - Decompiled with apktool: <code style="background:#f4f4f4;padding:2px 4px;">apktool d base.apk</code>
+   - Searched smali code for API patterns
+   - Found API URL and request format</p><p><hr></p><p><h2>🔍 API Discovery Process</h2></p><p><h3>Step 1: Extract APK</h3>
+<pre style="background:#f4f4f4;padding:10px;overflow-x:auto;"><code>adb shell pm path com.wilsonparking
+adb pull /data/app/.../base.apk /tmp/wilson_apk/
+</code></pre></p><p><h3>Step 2: Decompile</h3>
+<pre style="background:#f4f4f4;padding:10px;overflow-x:auto;"><code>apktool d base.apk -o decompiled/
+</code></pre></p><p><h3>Step 3: Search for API endpoints</h3>
+<pre style="background:#f4f4f4;padding:10px;overflow-x:auto;"><code>strings classes*.dex | grep -iE "https?://"
+</code></pre></p><p><strong>Found:</strong>
+- <code style="background:#f4f4f4;padding:2px 4px;">https://mobile-prod.wilsonparkingapp.com/</code> (Production API)
+- <code style="background:#f4f4f4;padding:2px 4px;">https://app.wilsonparkingapp.com.hk/</code></p><p><h3>Step 4: Find API operations</h3>
+<pre style="background:#f4f4f4;padding:10px;overflow-x:auto;"><code>grep -rh "const-string.*\"[a-z-]+:[a-z-]+\"" --include="*.smali"
+</code></pre></p><p><strong>Discovered operations:</strong>
+- <code style="background:#f4f4f4;padding:2px 4px;">carpark:available-bays</code>
+- <code style="background:#f4f4f4;padding:2px 4px;">carpark:query</code>
+- <code style="background:#f4f4f4;padding:2px 4px;">carpark:available-ev-bays</code>
+- <code style="background:#f4f4f4;padding:2px 4px;">bookmark:list</code>
+- <code style="background:#f4f4f4;padding:2px 4px;">user:profile-get</code>
+- And 30+ more</p><p><h3>Step 5: Determine request format</h3>
+Found <code style="background:#f4f4f4;padding:2px 4px;">action</code> and <code style="background:#f4f4f4;padding:2px 4px;">args</code> keys in the code, tested combinations until successful.</p><p><hr></p><p><h2>📡 API Documentation</h2></p><p><h3>Base URL</h3>
+<pre style="background:#f4f4f4;padding:10px;overflow-x:auto;"><code>POST https://mobile-prod.wilsonparkingapp.com/
+</code></pre></p><p><h3>Headers</h3>
+<pre style="background:#f4f4f4;padding:10px;overflow-x:auto;"><code>Content-Type: application/json
+Accept: application/json
+User-Agent: okhttp/4.9.0
+</code></pre></p><p><h3>Request Format</h3>
+<pre style="background:#f4f4f4;padding:10px;overflow-x:auto;"><code>{
+  "action": "carpark:available-bays",
+  "args": {
+    "request": {}
+  }
+}
+</code></pre></p><p><h3>Example cURL</h3>
+<pre style="background:#f4f4f4;padding:10px;overflow-x:auto;"><code>curl -s "https://mobile-prod.wilsonparkingapp.com/" -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"action":"carpark:available-bays","args":{"request":{}}}'
+</code></pre></p><p><hr></p><p><h2>📊 Available API Endpoints</h2></p><p><h3>Public (No Authentication Required)</h3></p><p><table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;"><tr><th>Endpoint</th><th>Description</th><th>Data Points</th></tr><tr><td><code style="background:#f4f4f4;padding:2px 4px;">carpark:available-bays</code></td><td>Real-time parking availability</td><td>guest_available (capped at 10), monthly_available, total</td></tr><tr><td><code style="background:#f4f4f4;padding:2px 4px;">carpark:query</code></td><td>Carpark master data</td><td>Name, address, lat/lng, pricing, services, photos</td></tr><tr><td><code style="background:#f4f4f4;padding:2px 4px;">carpark:available-ev-bays</code></td><td>EV charger availability</td><td>Exact counts (not capped!) for fast/medium/super-fast chargers</td></tr><tr><td><code style="background:#f4f4f4;padding:2px 4px;">carpark:carousel</code></td><td>Featured carparks</td><td>8 highlighted locations</td></tr><tr><td><code style="background:#f4f4f4;padding:2px 4px;">campaign-banner:fetch</code></td><td>Promotional banners</td><td>Marketing campaigns</td></tr><tr><td><code style="background:#f4f4f4;padding:2px 4px;">news:weather</code></td><td>Current weather</td><td>Temperature, conditions</td></tr><tr><td><code style="background:#f4f4f4;padding:2px 4px;">landmark:query</code></td><td>Nearby landmarks</td><td>Restaurants, attractions</td></tr></table><h3>Requires Authentication</h3></p><p><table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;"><tr><th>Endpoint</th><th>Description</th></tr><tr><td><code style="background:#f4f4f4;padding:2px 4px;">bookmark:list</code></td><td>User's saved carparks</td></tr><tr><td><code style="background:#f4f4f4;padding:2px 4px;">user:profile-get</code></td><td>User profile</td></tr><tr><td><code style="background:#f4f4f4;padding:2px 4px;">user:car-list</code></td><td>Registered vehicles</td></tr><tr><td><code style="background:#f4f4f4;padding:2px 4px;">order:create</code></td><td>Create booking</td></tr><tr><td><code style="background:#f4f4f4;padding:2px 4px;">order:pay</code></td><td>Process payment</td></tr></table><hr></p><p><h2>⚠️ Data Limitations</h2></p><p><h3>Availability Truncation</h3>
+The API has a truncation config that <strong>caps guest_available at 10</strong>:</p><p><pre style="background:#f4f4f4;padding:10px;overflow-x:auto;"><code>{
+  "display_as": "10+",
+  "min": 10,
+  "truncate_to": 10
+}
+</code></pre></p><p><table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;"><tr><th>Actual Availability</th><th>What API Returns</th></tr><tr><td>0-9 spots</td><td>✅ Exact count</td></tr><tr><td>10+ spots</td><td>⚠️ Returns "10" (displays "10+")</td></tr></table><strong>Implication:</strong> Precise utilization data only available during high-demand periods (< 10 spots).</p><p><h3>EV Chargers - NOT Capped</h3>
+The <code style="background:#f4f4f4;padding:2px 4px;">carpark:available-ev-bays</code> endpoint returns <strong>exact counts</strong> for EV chargers.</p><p><hr></p><p><h2>🚀 Data Collection System</h2></p><p><h3>Architecture</h3>
+<pre style="background:#f4f4f4;padding:10px;overflow-x:auto;"><code>GitHub Actions (scheduler)
+    ↓ Every 30 minutes
+Python Script (scraper_cloud.py)
+    ↓ API call
+CSV Files (data/availability_YYYY-MM-DD.csv)
+    ↓ Git commit
+GitHub Repository (storage)
+</code></pre></p><p><h3>Files Created</h3></p><p><table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;"><tr><th>File</th><th>Purpose</th></tr><tr><td><code style="background:#f4f4f4;padding:2px 4px;">scraper_cloud.py</code></td><td>Main scraper script</td></tr><tr><td><code style="background:#f4f4f4;padding:2px 4px;">analyze.py</code></td><td>Data analysis utilities</td></tr><tr><td><code style="background:#f4f4f4;padding:2px 4px;">schema.sql</code></td><td>Database schema (for local analysis)</td></tr><tr><td><code style="background:#f4f4f4;padding:2px 4px;">.github/workflows/scrape.yml</code></td><td>GitHub Actions workflow</td></tr><tr><td><code style="background:#f4f4f4;padding:2px 4px;">data/carparks.csv</code></td><td>Carpark metadata</td></tr><tr><td><code style="background:#f4f4f4;padding:2px 4px;">data/availability_*.csv</code></td><td>Daily availability snapshots</td></tr></table><h3>GitHub Actions Workflow</h3>
+<pre style="background:#f4f4f4;padding:10px;overflow-x:auto;"><code>name: Scrape Wilson Parking
+on:
+  schedule:
+    - cron: '0,30 * * * *'  # Every 30 minutes
+  workflow_dispatch:  # Manual trigger</p><p>jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+      - run: python scraper_cloud.py
+      - run: |
+          git add data/
+          git commit -m "Data update"
+          git push
+</code></pre></p><p><h3>Storage Estimates (1 Month)</h3>
+- Scrapes: 48/day × 30 days = 1,440 total
+- Records: 271 carparks × 1,440 = ~390,000 rows
+- File size: ~60 MB total</p><p><hr></p><p><h2>🔐 Why Frida Was Considered</h2></p><p><h3>The Problem: Certificate Pinning on Modern Android</h3></p><p>Starting with Android 7 (Nougat), Google changed certificate trust:</p><p><table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;"><tr><th>Certificate Type</th><th>Browser</th><th>Apps</th></tr><tr><td>System CA</td><td>✅ Trusted</td><td>✅ Trusted</td></tr><tr><td>User-installed CA</td><td>✅ Trusted</td><td>❌ Not trusted</td></tr></table>When we installed the mitmproxy certificate, apps ignored it.</p><p><h3>What Frida Does</h3>
+Frida is a dynamic instrumentation toolkit that can:
+1. Inject code into running apps at runtime
+2. Hook certificate validation functions
+3. Force the app to trust any certificate</p><p><h3>Why We Didn't Need It</h3>
+Found a shortcut: instead of intercepting live traffic, we:
+1. Pulled the APK from the phone
+2. Decompiled it to examine the code
+3. Found the API format by analyzing strings
+4. Called the API directly</p><p><hr></p><p><h2>📈 Analysis Commands</h2></p><p><pre style="background:#f4f4f4;padding:10px;overflow-x:auto;"><code>cd /Users/bryan/wilson_parking_scraper</p><p><h1>Current status</h1>
+python3 analyze.py --status</p><p><h1>High-demand analysis (where exact data exists)</h1>
+python3 analyze.py --demand</p><p><h1>Specific carpark profile</h1>
+python3 analyze.py --profile "Tsuen Wan"</p><p><h1>Data quality report</h1>
+python3 analyze.py --quality</p><p><h1>Export to CSV</h1>
+python3 analyze.py --export parking_data.csv --days 30
+</code></pre></p><p><hr></p><p><h2>🔗 Resources</h2></p><p>- <strong>GitHub Repository:</strong> https://github.com/Bryantsui/wilson-parking-data
+- <strong>Actions Dashboard:</strong> https://github.com/Bryantsui/wilson-parking-data/actions
+- <strong>Data Files:</strong> https://github.com/Bryantsui/wilson-parking-data/tree/main/data</p><p><hr></p><p><h2>⏹️ Stop Collection (After 1 Month)</h2></p><p><pre style="background:#f4f4f4;padding:10px;overflow-x:auto;"><code>gh workflow disable scrape.yml --repo Bryantsui/wilson-parking-data
+</code></pre></p><p>Or: GitHub → Actions → Scrape Wilson Parking → ⋯ → Disable workflow</p><p><hr></p><p><h2>📝 Key Learnings</h2></p><p>1. <strong>Modern Android security</strong> makes MITM interception difficult without root
+2. <strong>APK reverse engineering</strong> is often faster than traffic interception
+3. <strong>Skygear</strong> backend uses action/args JSON format
+4. <strong>API truncation</strong> is common for competitive/privacy reasons
+5. <strong>GitHub Actions</strong> provides free 24/7 scheduling for data collection</p><p><hr></p><p>*Document generated: January 28, 2026*
+
+</body>
+</html>
