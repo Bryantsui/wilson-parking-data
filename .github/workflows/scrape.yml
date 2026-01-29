@@ -1,4 +1,4 @@
-name: Scrape HK Carpark Vacancy
+name: Scrape HK Carpark Data
 
 on:
   schedule:
@@ -22,13 +22,16 @@ jobs:
       - name: Install dependencies
         run: pip install requests pandas
       
-      - name: Run scraper
+      - name: Run Government API scraper
         run: python scraper_cloud.py
+      
+      - name: Run Wilson Parking scraper
+        run: python scraper_wilson.py
       
       - name: Commit data
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add data/
+          git add data/ data_wilson/
           git diff --staged --quiet || git commit -m "Data update $(date -u +'%Y-%m-%d %H:%M') UTC"
           git push
