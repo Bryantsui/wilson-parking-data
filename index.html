@@ -232,6 +232,8 @@
         .badge.moderate { background: rgba(210, 153, 34, 0.2); color: var(--accent-yellow); }
         .badge.ok { background: rgba(63, 185, 80, 0.2); color: var(--accent-green); }
         .badge.capped { background: rgba(163, 113, 247, 0.2); color: var(--accent-purple); }
+        .badge.closed { background: rgba(125, 133, 144, 0.2); color: var(--text-secondary); }
+        .vacancy-num.closed { color: var(--text-secondary); font-size: 0.9rem; }
         
         .detail-panel { position: sticky; top: 20px; }
         
@@ -340,6 +342,7 @@
                                 <option value="LOW">Low</option>
                                 <option value="MODERATE">Moderate</option>
                                 <option value="OK">OK</option>
+                                <option value="CLOSED">Closed</option>
                             </select>
                         </div>
                     </div>
@@ -508,18 +511,26 @@
             govData.current_stats = Object.entries(latest).map(([id, record]) => {
                 const cp = govData.carparks[id] || {};
                 const vacancy = parseInt(record.private_car_vacancy);
-                const status = vacancy === 0 ? 'FULL' : vacancy <= 10 ? 'LOW' : vacancy <= 30 ? 'MODERATE' : 'OK';
+                const isClosed = vacancy === -1 || record.opening_status === 'CLOSED';
+                const status = isClosed ? 'CLOSED' : vacancy === 0 ? 'FULL' : vacancy <= 10 ? 'LOW' : vacancy <= 30 ? 'MODERATE' : 'OK';
                 
                 return {
                     id,
                     name: cp.name || record.name || id,
                     district: cp.district || record.district || '',
-                    vacancy: isNaN(vacancy) ? null : vacancy,
+                    vacancy: isClosed ? null : (isNaN(vacancy) ? null : vacancy),
+                    vacancy_display: isClosed ? 'CLOSED' : vacancy,
                     status,
                     is_capped: false,
+                    is_closed: isClosed,
                     last_update: formatTime(record.last_update || record.scraped_at)
                 };
-            }).sort((a, b) => (a.vacancy ?? 999) - (b.vacancy ?? 999));
+            }).sort((a, b) => {
+                // Sort: open carparks first (by vacancy), then closed ones
+                if (a.is_closed && !b.is_closed) return 1;
+                if (!a.is_closed && b.is_closed) return -1;
+                return (a.vacancy ?? 999) - (b.vacancy ?? 999);
+            });
             
             // Calculate summary
             const stats = govData.current_stats;
@@ -529,6 +540,7 @@
                 low: stats.filter(s => s.status === 'LOW').length,
                 moderate: stats.filter(s => s.status === 'MODERATE').length,
                 ok: stats.filter(s => s.status === 'OK').length,
+                closed: stats.filter(s => s.status === 'CLOSED').length,
                 records: govData.records.length
             };
         }
@@ -691,7 +703,7 @@
         
         function render() {
             // Update tab counts
-            document.getElementById('tab-btn-gov').textContent = `Government API (${govData.current_stats?.length || 0})`;
+            document.getElementById('tab-btn-gov').textContent = `General Parking Data (${govData.current_stats?.length || 0})`;
             document.getElementById('tab-btn-wilson').textContent = `Wilson Parking (${wilsonData.current_stats?.length || 0})`;
             
             // Government
@@ -760,10 +772,10 @@
             }
             
             tbody.innerHTML = stats.map(cp => {
-                const vacancyClass = cp.is_capped ? 'capped' : cp.status.toLowerCase();
-                const vacancyDisplay = isWilson ? (cp.vacancy_display || cp.vacancy || '-') : (cp.vacancy ?? '-');
-                const badge = cp.is_capped ? 'capped' : cp.status.toLowerCase();
-                const badgeText = cp.is_capped ? '10+' : cp.status;
+                const vacancyClass = cp.is_closed ? 'closed' : cp.is_capped ? 'capped' : cp.status.toLowerCase();
+                const vacancyDisplay = cp.vacancy_display ?? cp.vacancy ?? '-';
+                const badge = cp.is_closed ? 'closed' : cp.is_capped ? 'capped' : cp.status.toLowerCase();
+                const badgeText = cp.is_closed ? 'CLOSED' : cp.is_capped ? '10+' : cp.status;
                 
                 if (isWilson) {
                     return `
