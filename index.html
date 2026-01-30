@@ -351,12 +351,13 @@
                             <thead>
                                 <tr>
                                     <th>Carpark</th>
+                                    <th>District</th>
                                     <th style="text-align:center">Available</th>
                                     <th>Status</th>
                                     <th>Updated</th>
                                 </tr>
                             </thead>
-                            <tbody id="gov-table"><tr><td colspan="4" class="loading">Loading...</td></tr></tbody>
+                            <tbody id="gov-table"><tr><td colspan="5" class="loading">Loading...</td></tr></tbody>
                         </table>
                     </div>
                 </div>
@@ -477,7 +478,7 @@
             // Load today's vacancy data
             const vacancyData = await fetchCSV(`${RAW_BASE}/data/vacancy_${today}.csv`);
             if (!vacancyData) {
-                document.getElementById('gov-table').innerHTML = '<tr><td colspan="4" class="error">No data for today yet</td></tr>';
+                document.getElementById('gov-table').innerHTML = '<tr><td colspan="5" class="error">No data for today yet</td></tr>';
                 return;
             }
             govData.records = vacancyData;
@@ -767,7 +768,7 @@
             const isWilson = src === 'wilson';
             
             if (stats.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="${isWilson ? 5 : 4}" class="no-selection">No carparks found</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="5" class="no-selection">No carparks found</td></tr>`;
                 return;
             }
             
@@ -795,8 +796,8 @@
                         <tr data-id="${cp.id}" data-src="${src}">
                             <td>
                                 <div class="cp-name">${cp.name}</div>
-                                <div class="cp-district">${cp.district || ''}</div>
                             </td>
+                            <td style="color:var(--text-secondary);font-size:0.85rem">${cp.district || '-'}</td>
                             <td><div class="vacancy-num ${vacancyClass}">${vacancyDisplay}</div></td>
                             <td><span class="badge ${badge}">${badgeText}</span></td>
                             <td style="color:var(--text-secondary);font-size:0.8rem">${cp.last_update || '-'}</td>
