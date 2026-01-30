@@ -259,7 +259,7 @@
         
         .chart-section { padding: 15px 20px; }
         .chart-title { color: var(--text-secondary); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
-        .chart-wrap { background: var(--bg-dark); border-radius: 8px; padding: 15px; height: 250px; }
+        .chart-wrap { background: var(--bg-dark); border-radius: 8px; padding: 15px; height: 280px; }
         
         .no-selection { padding: 60px 20px; text-align: center; color: var(--text-secondary); }
         .loading { text-align: center; padding: 40px; color: var(--text-secondary); }
@@ -267,6 +267,44 @@
         
         .name-zh { color: var(--text-secondary); font-size: 0.9rem; margin-top: 3px; }
         .status-line { margin-top: 10px; }
+        
+        /* Time interval selector */
+        .time-selector {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .time-btn {
+            padding: 6px 12px;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.75rem;
+            transition: all 0.2s;
+        }
+        
+        .time-btn:hover { background: var(--bg-hover); color: var(--text-primary); }
+        .time-btn.active { background: var(--accent-blue); color: #fff; border-color: var(--accent-blue); }
+        
+        .chart-loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+        
+        .data-range-info {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            margin-top: 8px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -366,18 +404,32 @@
     </div>
     
     <script>
-        // Configuration - UPDATE THIS WITH YOUR GITHUB USERNAME
+        // Configuration
         const GITHUB_USER = 'Bryantsui';
         const GITHUB_REPO = 'wilson-parking-data';
         const GITHUB_BRANCH = 'main';
-        
         const RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/${GITHUB_BRANCH}`;
         
-        let govData = { carparks: {}, records: [], timeseries: {} };
-        let wilsonData = { carparks: {}, records: [], timeseries: {} };
+        let govData = { carparks: {}, records: [], timeseries: {}, historicalData: {} };
+        let wilsonData = { carparks: {}, records: [], timeseries: {}, historicalData: {} };
         let charts = { gov: null, wilson: null };
+        let currentTimeRange = { gov: '1D', wilson: '1D' };
+        let selectedCarpark = { gov: null, wilson: null };
         
-        // Get today's date in HKT
+        // Get dates for data fetching
+        function getDateRange(days) {
+            const dates = [];
+            const now = new Date();
+            for (let i = 0; i < days; i++) {
+                const d = new Date(now);
+                d.setDate(d.getDate() - i);
+                // Convert to HKT
+                const hkt = new Date(d.toLocaleString('en-US', { timeZone: 'Asia/Hong_Kong' }));
+                dates.push(hkt.toISOString().split('T')[0]);
+            }
+            return dates;
+        }
+        
         function getTodayHKT() {
             const now = new Date();
             const hkt = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Hong_Kong' }));
@@ -395,15 +447,15 @@
         });
         
         async function fetchCSV(url) {
-            const response = await fetch(url + '?t=' + Date.now()); // Cache bust
-            if (!response.ok) throw new Error(`Failed to fetch ${url}`);
+            const response = await fetch(url + '?t=' + Date.now());
+            if (!response.ok) return null;
             const text = await response.text();
-            return new Promise((resolve, reject) => {
+            return new Promise((resolve) => {
                 Papa.parse(text, {
                     header: true,
                     skipEmptyLines: true,
                     complete: results => resolve(results.data),
-                    error: err => reject(err)
+                    error: () => resolve(null)
                 });
             });
         }
@@ -413,12 +465,18 @@
             
             // Load carparks metadata
             const carparksData = await fetchCSV(`${RAW_BASE}/data/carparks.csv`);
-            carparksData.forEach(cp => {
-                govData.carparks[cp.park_Id || cp.id] = cp;
-            });
+            if (carparksData) {
+                carparksData.forEach(cp => {
+                    govData.carparks[cp.park_Id || cp.id] = cp;
+                });
+            }
             
             // Load today's vacancy data
             const vacancyData = await fetchCSV(`${RAW_BASE}/data/vacancy_${today}.csv`);
+            if (!vacancyData) {
+                document.getElementById('gov-table').innerHTML = '<tr><td colspan="4" class="error">No data for today yet</td></tr>';
+                return;
+            }
             govData.records = vacancyData;
             
             // Build timeseries and get latest
@@ -433,6 +491,7 @@
                 if (!govData.timeseries[id]) govData.timeseries[id] = [];
                 govData.timeseries[id].push({
                     time: formatTime(scraped),
+                    time_raw: scraped,
                     vacancy: vacancy,
                     is_capped: false
                 });
@@ -441,6 +500,9 @@
                     latest[id] = { ...record, scraped_at: scraped };
                 }
             });
+            
+            // Store for historical loading
+            govData.historicalData[today] = vacancyData;
             
             // Build current stats
             govData.current_stats = Object.entries(latest).map(([id, record]) => {
@@ -476,12 +538,18 @@
             
             // Load carparks metadata
             const carparksData = await fetchCSV(`${RAW_BASE}/data_wilson/carparks.csv`);
-            carparksData.forEach(cp => {
-                wilsonData.carparks[cp.id] = cp;
-            });
+            if (carparksData) {
+                carparksData.forEach(cp => {
+                    wilsonData.carparks[cp.id] = cp;
+                });
+            }
             
             // Load today's availability data
             const availData = await fetchCSV(`${RAW_BASE}/data_wilson/availability_${today}.csv`);
+            if (!availData) {
+                document.getElementById('wilson-table').innerHTML = '<tr><td colspan="5" class="error">No data for today yet</td></tr>';
+                return;
+            }
             wilsonData.records = availData;
             
             // Build timeseries and get latest
@@ -497,6 +565,7 @@
                 if (!wilsonData.timeseries[id]) wilsonData.timeseries[id] = [];
                 wilsonData.timeseries[id].push({
                     time: formatTime(scraped),
+                    time_raw: scraped,
                     vacancy: vacancy,
                     is_capped: isCapped
                 });
@@ -506,7 +575,10 @@
                 }
             });
             
-            // Build current stats (filter out closed carparks)
+            // Store for historical loading
+            wilsonData.historicalData[today] = availData;
+            
+            // Build current stats
             wilsonData.current_stats = Object.entries(latest)
                 .filter(([id, record]) => {
                     const total = parseInt(record.total) || 0;
@@ -550,12 +622,50 @@
             };
         }
         
+        // Load historical data for a specific date range
+        async function loadHistoricalData(src, days) {
+            const dates = getDateRange(days);
+            const srcData = src === 'gov' ? govData : wilsonData;
+            const folder = src === 'gov' ? 'data' : 'data_wilson';
+            const filePrefix = src === 'gov' ? 'vacancy_' : 'availability_';
+            
+            for (const date of dates) {
+                if (srcData.historicalData[date]) continue; // Already loaded
+                
+                const data = await fetchCSV(`${RAW_BASE}/${folder}/${filePrefix}${date}.csv`);
+                if (data) {
+                    srcData.historicalData[date] = data;
+                }
+            }
+            
+            return dates.filter(d => srcData.historicalData[d]);
+        }
+        
         function formatTime(isoString) {
             if (!isoString) return '-';
             try {
                 const d = new Date(isoString);
                 const hkt = new Date(d.toLocaleString('en-US', { timeZone: 'Asia/Hong_Kong' }));
                 return `${String(hkt.getMonth()+1).padStart(2,'0')}-${String(hkt.getDate()).padStart(2,'0')} ${String(hkt.getHours()).padStart(2,'0')}:${String(hkt.getMinutes()).padStart(2,'0')}`;
+            } catch {
+                return isoString;
+            }
+        }
+        
+        function formatTimeShort(isoString, range) {
+            if (!isoString) return '-';
+            try {
+                const d = new Date(isoString);
+                const hkt = new Date(d.toLocaleString('en-US', { timeZone: 'Asia/Hong_Kong' }));
+                
+                if (range === '1D') {
+                    return `${String(hkt.getHours()).padStart(2,'0')}:${String(hkt.getMinutes()).padStart(2,'0')}`;
+                } else if (range === '1W') {
+                    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+                    return `${days[hkt.getDay()]} ${String(hkt.getHours()).padStart(2,'0')}:00`;
+                } else {
+                    return `${String(hkt.getMonth()+1).padStart(2,'0')}/${String(hkt.getDate()).padStart(2,'0')}`;
+                }
             } catch {
                 return isoString;
             }
@@ -581,30 +691,38 @@
         
         function render() {
             // Update tab counts
-            document.getElementById('tab-btn-gov').textContent = `Government API (${govData.current_stats.length})`;
-            document.getElementById('tab-btn-wilson').textContent = `Wilson Parking (${wilsonData.current_stats.length})`;
+            document.getElementById('tab-btn-gov').textContent = `Government API (${govData.current_stats?.length || 0})`;
+            document.getElementById('tab-btn-wilson').textContent = `Wilson Parking (${wilsonData.current_stats?.length || 0})`;
             
             // Government
-            renderSummary('gov', govData.summary);
-            renderTable('gov', govData.current_stats, govData.timeseries);
-            populateDistricts('gov', govData.current_stats);
+            if (govData.summary) {
+                renderSummary('gov', govData.summary);
+                renderTable('gov', govData.current_stats, govData.timeseries);
+                populateDistricts('gov', govData.current_stats);
+            }
             
             // Wilson
-            renderSummary('wilson', wilsonData.summary);
-            renderTable('wilson', wilsonData.current_stats, wilsonData.timeseries);
-            populateDistricts('wilson', wilsonData.current_stats);
+            if (wilsonData.summary) {
+                renderSummary('wilson', wilsonData.summary);
+                renderTable('wilson', wilsonData.current_stats, wilsonData.timeseries);
+                populateDistricts('wilson', wilsonData.current_stats);
+            }
             
             // Filters
             ['gov', 'wilson'].forEach(src => {
-                document.getElementById(src + '-search').addEventListener('input', () => filterTable(src));
-                document.getElementById(src + '-status').addEventListener('change', () => filterTable(src));
-                const districtFilter = document.getElementById(src + '-district');
-                if (districtFilter) districtFilter.addEventListener('change', () => filterTable(src));
+                const searchEl = document.getElementById(src + '-search');
+                const statusEl = document.getElementById(src + '-status');
+                const districtEl = document.getElementById(src + '-district');
+                
+                if (searchEl) searchEl.oninput = () => filterTable(src);
+                if (statusEl) statusEl.onchange = () => filterTable(src);
+                if (districtEl) districtEl.onchange = () => filterTable(src);
             });
         }
         
         function renderSummary(src, summary) {
             const container = document.getElementById(src + '-summary');
+            if (!container) return;
             const isCapped = src === 'wilson';
             
             container.innerHTML = `
@@ -618,6 +736,7 @@
         }
         
         function populateDistricts(src, stats) {
+            if (!stats) return;
             const districts = [...new Set(stats.map(s => s.district).filter(d => d))].sort();
             const select = document.getElementById(src + '-district');
             if (select) {
@@ -632,6 +751,7 @@
         
         function renderTable(src, stats, timeseries) {
             const tbody = document.getElementById(src + '-table');
+            if (!tbody || !stats) return;
             const isWilson = src === 'wilson';
             
             if (stats.length === 0) {
@@ -680,12 +800,13 @@
         }
         
         function filterTable(src) {
-            const search = document.getElementById(src + '-search').value.toLowerCase();
-            const status = document.getElementById(src + '-status').value;
-            const districtEl = document.getElementById(src + '-district');
-            const district = districtEl ? districtEl.value : '';
+            const search = document.getElementById(src + '-search')?.value?.toLowerCase() || '';
+            const status = document.getElementById(src + '-status')?.value || '';
+            const district = document.getElementById(src + '-district')?.value || '';
             
             const srcData = src === 'gov' ? govData : wilsonData;
+            if (!srcData.current_stats) return;
+            
             let filtered = srcData.current_stats;
             
             if (search) {
@@ -701,10 +822,11 @@
             renderTable(src, filtered, srcData.timeseries);
         }
         
-        function selectCarpark(src, id) {
+        async function selectCarpark(src, id) {
             document.querySelectorAll(`tr[data-src="${src}"]`).forEach(tr => tr.classList.remove('selected'));
             document.querySelector(`tr[data-id="${id}"][data-src="${src}"]`)?.classList.add('selected');
             
+            selectedCarpark[src] = id;
             const srcData = src === 'gov' ? govData : wilsonData;
             const cp = srcData.current_stats.find(c => c.id === id);
             if (!cp) return;
@@ -749,12 +871,106 @@
                 </div>
                 ${infoSection}
                 <div class="chart-section">
-                    <div class="chart-title">Availability Over Time (Today)</div>
+                    <div class="chart-title">Availability Over Time</div>
+                    <div class="time-selector">
+                        <button class="time-btn ${currentTimeRange[src] === '1D' ? 'active' : ''}" onclick="changeTimeRange('${src}', '1D')">1D</button>
+                        <button class="time-btn ${currentTimeRange[src] === '1W' ? 'active' : ''}" onclick="changeTimeRange('${src}', '1W')">1W</button>
+                        <button class="time-btn ${currentTimeRange[src] === '1M' ? 'active' : ''}" onclick="changeTimeRange('${src}', '1M')">1M</button>
+                        <button class="time-btn ${currentTimeRange[src] === 'ALL' ? 'active' : ''}" onclick="changeTimeRange('${src}', 'ALL')">ALL</button>
+                    </div>
                     <div class="chart-wrap"><canvas id="${src}-chart"></canvas></div>
+                    <div class="data-range-info" id="${src}-range-info"></div>
                 </div>
             `;
             
-            renderChart(src, id, srcData.timeseries[id] || []);
+            // Load chart with current time range
+            await updateChart(src, id, currentTimeRange[src]);
+        }
+        
+        async function changeTimeRange(src, range) {
+            currentTimeRange[src] = range;
+            
+            // Update button states
+            document.querySelectorAll(`#${src}-detail .time-btn`).forEach(btn => {
+                btn.classList.toggle('active', btn.textContent === range);
+            });
+            
+            const id = selectedCarpark[src];
+            if (id) {
+                await updateChart(src, id, range);
+            }
+        }
+        
+        async function updateChart(src, id, range) {
+            const chartWrap = document.querySelector(`#${src}-detail .chart-wrap`);
+            const rangeInfo = document.getElementById(`${src}-range-info`);
+            
+            // Show loading
+            chartWrap.innerHTML = '<div class="chart-loading">Loading historical data...</div>';
+            
+            // Determine days to fetch
+            const daysMap = { '1D': 1, '1W': 7, '1M': 30, 'ALL': 60 };
+            const days = daysMap[range] || 1;
+            
+            // Load historical data
+            const loadedDates = await loadHistoricalData(src, days);
+            
+            // Rebuild timeseries from historical data
+            const srcData = src === 'gov' ? govData : wilsonData;
+            const allTimeseries = [];
+            
+            // Sort dates in chronological order
+            loadedDates.sort();
+            
+            for (const date of loadedDates) {
+                const dayData = srcData.historicalData[date];
+                if (!dayData) continue;
+                
+                dayData.forEach(record => {
+                    const recordId = src === 'gov' ? record.park_id : record.carpark_id;
+                    if (recordId !== id) return;
+                    
+                    const vacancy = src === 'gov' 
+                        ? parseInt(record.private_car_vacancy) || 0
+                        : parseInt(record.guest_available) || 0;
+                    const scraped = record.scraped_at;
+                    const isCapped = src === 'wilson' && record.guest_available_display === '10+';
+                    
+                    allTimeseries.push({
+                        time: formatTimeShort(scraped, range),
+                        time_raw: scraped,
+                        vacancy: vacancy,
+                        is_capped: isCapped
+                    });
+                });
+            }
+            
+            // Sort by timestamp
+            allTimeseries.sort((a, b) => new Date(a.time_raw) - new Date(b.time_raw));
+            
+            // Downsample if too many points
+            let displayData = allTimeseries;
+            if (range === '1W' && allTimeseries.length > 168) {
+                // ~168 points for 1 week at 30min intervals, downsample to hourly
+                displayData = allTimeseries.filter((_, i) => i % 2 === 0);
+            } else if (range === '1M' && allTimeseries.length > 720) {
+                // Downsample to every 2 hours
+                displayData = allTimeseries.filter((_, i) => i % 4 === 0);
+            } else if (range === 'ALL' && allTimeseries.length > 500) {
+                // Downsample to every 4 hours
+                displayData = allTimeseries.filter((_, i) => i % 8 === 0);
+            }
+            
+            // Update range info
+            if (rangeInfo) {
+                rangeInfo.textContent = `Showing ${displayData.length} data points from ${loadedDates.length} day(s)`;
+            }
+            
+            // Recreate canvas
+            chartWrap.innerHTML = `<canvas id="${src}-chart"></canvas>`;
+            
+            // Render chart
+            renderChart(src, id, displayData, range);
         }
         
         function getStatusColor(cp) {
@@ -763,37 +979,57 @@
             return colors[cp.status] || 'var(--text-primary)';
         }
         
-        function renderChart(src, id, timeseries) {
+        function renderChart(src, id, timeseries, range) {
             const ctx = document.getElementById(src + '-chart')?.getContext('2d');
             if (!ctx) return;
             
             if (charts[src]) charts[src].destroy();
             
-            const recent = timeseries.slice(-48);
-            const isCapped = recent.some(d => d.is_capped);
+            const isCapped = timeseries.some(d => d.is_capped);
             
             charts[src] = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: recent.map(d => d.time),
+                    labels: timeseries.map(d => d.time),
                     datasets: [{
                         label: 'Available Spaces',
-                        data: recent.map(d => d.vacancy),
+                        data: timeseries.map(d => d.vacancy),
                         borderColor: isCapped ? '#a371f7' : '#3fb950',
                         backgroundColor: isCapped ? 'rgba(163,113,247,0.1)' : 'rgba(63,185,80,0.1)',
                         fill: true,
                         tension: 0.3,
-                        pointRadius: 2,
-                        pointBackgroundColor: recent.map(d => d.is_capped ? '#a371f7' : '#3fb950')
+                        pointRadius: range === '1D' ? 2 : 1,
+                        pointBackgroundColor: timeseries.map(d => d.is_capped ? '#a371f7' : '#3fb950')
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: { legend: { display: false } },
+                    plugins: { 
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                title: (items) => {
+                                    const idx = items[0].dataIndex;
+                                    return formatTime(timeseries[idx].time_raw);
+                                }
+                            }
+                        }
+                    },
                     scales: {
-                        x: { grid: { color: '#30363d' }, ticks: { color: '#7d8590', maxTicksLimit: 8 } },
-                        y: { beginAtZero: true, grid: { color: '#30363d' }, ticks: { color: '#7d8590' } }
+                        x: { 
+                            grid: { color: '#30363d' }, 
+                            ticks: { 
+                                color: '#7d8590', 
+                                maxTicksLimit: range === '1D' ? 12 : range === '1W' ? 7 : 10,
+                                maxRotation: 45
+                            } 
+                        },
+                        y: { 
+                            beginAtZero: true, 
+                            grid: { color: '#30363d' }, 
+                            ticks: { color: '#7d8590' } 
+                        }
                     }
                 }
             });
