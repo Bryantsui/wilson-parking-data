@@ -7,3 +7,4 @@ __pycache__/
 
 # Keep data folder but ignore local test data
 # data/*.csv is tracked for cloud storage
+.vercel
