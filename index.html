@@ -605,10 +605,10 @@
                     
                     return {
                         id,
-                        name: cp.name_en || `Unknown (${id.slice(-8)})`,
+                        name: record.name || cp.name_en || `Unknown (${id.slice(-8)})`,
                         code: cp.code || '',
-                        district: cp.district || '',
-                        region: cp.region || '',
+                        district: record.district || cp.district || '',
+                        region: record.region || cp.region || '',
                         address: cp.address_en || '',
                         vacancy,
                         vacancy_display: record.guest_available_display || String(vacancy),

@@ -34,8 +34,56 @@ def call_api(action, args={}):
     return response.json()
 
 
+def extract_district(address):
+    """Extract district from address string"""
+    if not address or not isinstance(address, str):
+        return '', ''
+    
+    address_lower = address.lower()
+    
+    # Region detection
+    if 'kowloon' in address_lower or any(x in address_lower for x in ['kwun tong', 'mong kok', 'tsim sha tsui', 'yau ma tei', 'sham shui po', 'wong tai sin', 'kowloon bay', 'kowloon city', 'kowloon tong', 'diamond hill', 'lok fu', 'ngau tau kok', 'san po kong', 'to kwa wan', 'hung hom', 'cheung sha wan', 'lai chi kok', 'mei foo']):
+        region = 'Kowloon'
+    elif any(x in address_lower for x in ['new territories', 'sha tin', 'tai po', 'yuen long', 'tuen mun', 'tsuen wan', 'kwai chung', 'tseung kwan o', 'ma on shan', 'sai kung', 'fanling', 'sheung shui', 'tin shui wai', 'tung chung', 'lantau']):
+        region = 'New Territories'
+    elif any(x in address_lower for x in ['hong kong', 'central', 'wan chai', 'causeway bay', 'north point', 'quarry bay', 'tai koo', 'shau kei wan', 'chai wan', 'kennedy town', 'sai ying pun', 'sheung wan', 'admiralty', 'tin hau', 'fortress hill', 'aberdeen', 'repulse bay', 'stanley', 'happy valley', 'mid-levels']):
+        region = 'Hong Kong Island'
+    else:
+        region = ''
+    
+    # District detection
+    district_map = {
+        'Central': ['central', 'admiralty', 'sheung wan', 'mid-levels'],
+        'Wan Chai': ['wan chai', 'causeway bay', 'happy valley', 'tin hau', 'fortress hill'],
+        'Eastern': ['north point', 'quarry bay', 'tai koo', 'shau kei wan', 'chai wan', 'sai wan ho'],
+        'Southern': ['aberdeen', 'repulse bay', 'stanley', 'ap lei chau', 'wong chuk hang'],
+        'Yau Tsim Mong': ['tsim sha tsui', 'yau ma tei', 'mong kok', 'jordan', 'tai kok tsui'],
+        'Sham Shui Po': ['sham shui po', 'cheung sha wan', 'lai chi kok', 'mei foo'],
+        'Kowloon City': ['kowloon city', 'kowloon tong', 'ho man tin', 'hung hom', 'to kwa wan', 'ma tau wai'],
+        'Wong Tai Sin': ['wong tai sin', 'diamond hill', 'lok fu', 'tsz wan shan', 'san po kong'],
+        'Kwun Tong': ['kwun tong', 'ngau tau kok', 'kowloon bay', 'lam tin', 'yau tong', 'sau mau ping'],
+        'Kwai Tsing': ['kwai chung', 'tsing yi', 'kwai fong'],
+        'Tsuen Wan': ['tsuen wan'],
+        'Tuen Mun': ['tuen mun'],
+        'Yuen Long': ['yuen long', 'tin shui wai'],
+        'North': ['fanling', 'sheung shui'],
+        'Tai Po': ['tai po'],
+        'Sha Tin': ['sha tin', 'ma on shan', 'fo tan'],
+        'Sai Kung': ['sai kung', 'tseung kwan o', 'hang hau', 'po lam'],
+        'Islands': ['tung chung', 'lantau', 'discovery bay'],
+    }
+    
+    district = ''
+    for dist_name, keywords in district_map.items():
+        if any(kw in address_lower for kw in keywords):
+            district = dist_name
+            break
+    
+    return region, district
+
+
 def load_carparks():
-    """Load carparks from CSV"""
+    """Load carparks from CSV with district extraction"""
     carparks = {}
     
     # Try main file first, then backup
@@ -49,10 +97,16 @@ def load_carparks():
                 
                 for _, row in df.iterrows():
                     cp_id = str(row[id_col])
+                    address = row.get('address_en', '')
+                    region, district = extract_district(address)
+                    
                     carparks[cp_id] = {
                         'id': cp_id,
-                        'name': row.get(name_col, row.get('name', '')),
+                        'name_en': row.get(name_col, row.get('name', '')),
                         'code': row.get('code', ''),
+                        'address_en': address,
+                        'region': region,
+                        'district': district,
                     }
                 print(f"Loaded {len(carparks)} Wilson carparks from {filepath}")
                 break
@@ -114,6 +168,8 @@ def scrape_availability():
             'scraped_at': scraped_at,
             'carpark_id': carpark_id,
             'name': cp_info.get('name_en', ''),
+            'district': cp_info.get('district', ''),
+            'region': cp_info.get('region', ''),
             'guest_available': guest_available,
             'guest_available_display': guest_display,
             'guest_total': item.get('guest_total', ''),
