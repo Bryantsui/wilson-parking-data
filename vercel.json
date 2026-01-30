@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://www.hkdc.ai/$1",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "hkdc.ai"
+        }
+      ]
+    }
+  ]
+}
