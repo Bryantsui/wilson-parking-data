@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HK Carpark Monitor</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --bg-hover: #21262d;
+            --accent-green: #3fb950;
+            --accent-yellow: #d29922;
+            --accent-orange: #db6d28;
+            --accent-red: #f85149;
+            --accent-blue: #58a6ff;
+            --accent-purple: #a371f7;
+            --text-primary: #e6edf3;
+            --text-secondary: #7d8590;
+            --border: #30363d;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+        
+        .container { max-width: 1800px; margin: 0 auto; padding: 20px; }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 25px;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            margin-bottom: 10px;
+        }
+        
+        .meta { color: var(--text-secondary); font-size: 0.85rem; }
+        .live-badge { 
+            display: inline-block;
+            background: rgba(63, 185, 80, 0.2);
+            color: var(--accent-green);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-left: 10px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }
+        
+        .tab {
+            padding: 12px 24px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        
+        .tab:hover { background: var(--bg-hover); color: var(--text-primary); }
+        .tab.active { background: var(--accent-blue); color: #fff; border-color: var(--accent-blue); }
+        
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .summary-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .summary-value {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .summary-label { color: var(--text-secondary); font-size: 0.75rem; text-transform: uppercase; }
+        
+        .summary-card.full .summary-value { color: var(--accent-red); }
+        .summary-card.low .summary-value { color: var(--accent-orange); }
+        .summary-card.ok .summary-value { color: var(--accent-green); }
+        .summary-card.total .summary-value { color: var(--accent-blue); }
+        
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 450px;
+            gap: 20px;
+        }
+        
+        @media (max-width: 1200px) {
+            .main-grid { grid-template-columns: 1fr; }
+        }
+        
+        .panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .panel-header {
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .panel-header h2 { font-size: 1rem; font-weight: 600; }
+        
+        .search-row { display: flex; gap: 10px; flex-wrap: wrap; }
+        
+        .search-row input, .search-row select {
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 8px 12px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.85rem;
+        }
+        
+        .search-row input { width: 200px; }
+        .search-row input:focus, .search-row select:focus { outline: none; border-color: var(--accent-blue); }
+        
+        .refresh-btn {
+            background: var(--accent-blue);
+            border: none;
+            border-radius: 6px;
+            padding: 8px 16px;
+            color: #fff;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+        .refresh-btn:hover { opacity: 0.9; }
+        .refresh-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        
+        .table-wrap { max-height: 600px; overflow-y: auto; }
+        
+        table { width: 100%; border-collapse: collapse; }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        th {
+            background: var(--bg-dark);
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        tr { cursor: pointer; transition: background 0.15s; }
+        tr:hover { background: var(--bg-hover); }
+        tr.selected { background: rgba(88, 166, 255, 0.15); }
+        
+        .cp-name { font-weight: 500; }
+        .cp-district { color: var(--text-secondary); font-size: 0.75rem; }
+        
+        .vacancy-num {
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .vacancy-num.full { color: var(--accent-red); }
+        .vacancy-num.low { color: var(--accent-orange); }
+        .vacancy-num.moderate { color: var(--accent-yellow); }
+        .vacancy-num.ok { color: var(--accent-green); }
+        .vacancy-num.capped { color: var(--accent-purple); }
+        
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .badge.full { background: rgba(248, 81, 73, 0.2); color: var(--accent-red); }
+        .badge.low { background: rgba(219, 109, 40, 0.2); color: var(--accent-orange); }
+        .badge.moderate { background: rgba(210, 153, 34, 0.2); color: var(--accent-yellow); }
+        .badge.ok { background: rgba(63, 185, 80, 0.2); color: var(--accent-green); }
+        .badge.capped { background: rgba(163, 113, 247, 0.2); color: var(--accent-purple); }
+        
+        .detail-panel { position: sticky; top: 20px; }
+        
+        .detail-header { padding: 20px; border-bottom: 1px solid var(--border); }
+        .detail-header h3 { font-size: 1.1rem; margin-bottom: 5px; }
+        .detail-header .district { color: var(--text-secondary); font-size: 0.85rem; }
+        
+        .detail-info {
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .info-row:last-child { border-bottom: none; }
+        .info-label { color: var(--text-secondary); font-size: 0.8rem; flex-shrink: 0; }
+        .info-value { color: var(--text-primary); font-size: 0.85rem; text-align: right; margin-left: 15px; }
+        .info-divider { height: 1px; background: var(--accent-blue); margin: 10px 0; opacity: 0.3; }
+        
+        .chart-section { padding: 15px 20px; }
+        .chart-title { color: var(--text-secondary); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+        .chart-wrap { background: var(--bg-dark); border-radius: 8px; padding: 15px; height: 250px; }
+        
+        .no-selection { padding: 60px 20px; text-align: center; color: var(--text-secondary); }
+        .loading { text-align: center; padding: 40px; color: var(--text-secondary); }
+        .error { text-align: center; padding: 40px; color: var(--accent-red); }
+        
+        .name-zh { color: var(--text-secondary); font-size: 0.9rem; margin-top: 3px; }
+        .status-line { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚗 HK Carpark Monitor <span class="live-badge">● LIVE</span></h1>
+            <div class="meta">Real-time parking availability | Timezone: HKT (GMT+8)</div>
+            <div class="meta" id="lastUpdate">Loading data from GitHub...</div>
+            <div class="meta" style="margin-top:8px">
+                <button class="refresh-btn" onclick="refreshData()" id="refreshBtn">⟳ Refresh Now</button>
+                <span style="margin-left:10px;font-size:0.75rem">Auto-refresh every 5 min</span>
+            </div>
+        </header>
+        
+        <div class="tabs">
+            <button class="tab active" data-tab="gov" id="tab-btn-gov">Government API</button>
+            <button class="tab" data-tab="wilson" id="tab-btn-wilson">Wilson Parking</button>
+        </div>
+        
+        <!-- Government API Tab -->
+        <div class="tab-content active" id="tab-gov">
+            <div class="summary-grid" id="gov-summary"></div>
+            <div class="main-grid">
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>All Carparks</h2>
+                        <div class="search-row">
+                            <input type="text" id="gov-search" placeholder="Search...">
+                            <select id="gov-district"><option value="">All Districts</option></select>
+                            <select id="gov-status">
+                                <option value="">All Status</option>
+                                <option value="FULL">Full</option>
+                                <option value="LOW">Low</option>
+                                <option value="MODERATE">Moderate</option>
+                                <option value="OK">OK</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Carpark</th>
+                                    <th style="text-align:center">Available</th>
+                                    <th>Status</th>
+                                    <th>Updated</th>
+                                </tr>
+                            </thead>
+                            <tbody id="gov-table"><tr><td colspan="4" class="loading">Loading...</td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel detail-panel" id="gov-detail">
+                    <div class="no-selection">Select a carpark to view details</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Wilson Parking Tab -->
+        <div class="tab-content" id="tab-wilson">
+            <div class="summary-grid" id="wilson-summary"></div>
+            <div class="main-grid">
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>All Carparks (Active Only)</h2>
+                        <div class="search-row">
+                            <input type="text" id="wilson-search" placeholder="Search...">
+                            <select id="wilson-district"><option value="">All Districts</option></select>
+                            <select id="wilson-status">
+                                <option value="">All Status</option>
+                                <option value="FULL">Full</option>
+                                <option value="LOW">Low</option>
+                                <option value="OK">10+ Available</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Carpark</th>
+                                    <th>District</th>
+                                    <th style="text-align:center">Available</th>
+                                    <th>Status</th>
+                                    <th>Updated</th>
+                                </tr>
+                            </thead>
+                            <tbody id="wilson-table"><tr><td colspan="5" class="loading">Loading...</td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel detail-panel" id="wilson-detail">
+                    <div class="no-selection">Select a carpark to view details</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Configuration - UPDATE THIS WITH YOUR GITHUB USERNAME
+        const GITHUB_USER = 'Bryantsui';
+        const GITHUB_REPO = 'wilson-parking-data';
+        const GITHUB_BRANCH = 'main';
+        
+        const RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/${GITHUB_BRANCH}`;
+        
+        let govData = { carparks: {}, records: [], timeseries: {} };
+        let wilsonData = { carparks: {}, records: [], timeseries: {} };
+        let charts = { gov: null, wilson: null };
+        
+        // Get today's date in HKT
+        function getTodayHKT() {
+            const now = new Date();
+            const hkt = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Hong_Kong' }));
+            return hkt.toISOString().split('T')[0];
+        }
+        
+        // Tab switching
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+            });
+        });
+        
+        async function fetchCSV(url) {
+            const response = await fetch(url + '?t=' + Date.now()); // Cache bust
+            if (!response.ok) throw new Error(`Failed to fetch ${url}`);
+            const text = await response.text();
+            return new Promise((resolve, reject) => {
+                Papa.parse(text, {
+                    header: true,
+                    skipEmptyLines: true,
+                    complete: results => resolve(results.data),
+                    error: err => reject(err)
+                });
+            });
+        }
+        
+        async function loadGovData() {
+            const today = getTodayHKT();
+            
+            // Load carparks metadata
+            const carparksData = await fetchCSV(`${RAW_BASE}/data/carparks.csv`);
+            carparksData.forEach(cp => {
+                govData.carparks[cp.park_Id || cp.id] = cp;
+            });
+            
+            // Load today's vacancy data
+            const vacancyData = await fetchCSV(`${RAW_BASE}/data/vacancy_${today}.csv`);
+            govData.records = vacancyData;
+            
+            // Build timeseries and get latest
+            const latest = {};
+            govData.timeseries = {};
+            
+            vacancyData.forEach(record => {
+                const id = record.park_id;
+                const vacancy = parseInt(record.private_car_vacancy) || 0;
+                const scraped = record.scraped_at;
+                
+                if (!govData.timeseries[id]) govData.timeseries[id] = [];
+                govData.timeseries[id].push({
+                    time: formatTime(scraped),
+                    vacancy: vacancy,
+                    is_capped: false
+                });
+                
+                if (!latest[id] || scraped > latest[id].scraped_at) {
+                    latest[id] = { ...record, scraped_at: scraped };
+                }
+            });
+            
+            // Build current stats
+            govData.current_stats = Object.entries(latest).map(([id, record]) => {
+                const cp = govData.carparks[id] || {};
+                const vacancy = parseInt(record.private_car_vacancy);
+                const status = vacancy === 0 ? 'FULL' : vacancy <= 10 ? 'LOW' : vacancy <= 30 ? 'MODERATE' : 'OK';
+                
+                return {
+                    id,
+                    name: cp.name || record.name || id,
+                    district: cp.district || record.district || '',
+                    vacancy: isNaN(vacancy) ? null : vacancy,
+                    status,
+                    is_capped: false,
+                    last_update: formatTime(record.last_update || record.scraped_at)
+                };
+            }).sort((a, b) => (a.vacancy ?? 999) - (b.vacancy ?? 999));
+            
+            // Calculate summary
+            const stats = govData.current_stats;
+            govData.summary = {
+                total: stats.length,
+                full: stats.filter(s => s.status === 'FULL').length,
+                low: stats.filter(s => s.status === 'LOW').length,
+                moderate: stats.filter(s => s.status === 'MODERATE').length,
+                ok: stats.filter(s => s.status === 'OK').length,
+                records: govData.records.length
+            };
+        }
+        
+        async function loadWilsonData() {
+            const today = getTodayHKT();
+            
+            // Load carparks metadata
+            const carparksData = await fetchCSV(`${RAW_BASE}/data_wilson/carparks.csv`);
+            carparksData.forEach(cp => {
+                wilsonData.carparks[cp.id] = cp;
+            });
+            
+            // Load today's availability data
+            const availData = await fetchCSV(`${RAW_BASE}/data_wilson/availability_${today}.csv`);
+            wilsonData.records = availData;
+            
+            // Build timeseries and get latest
+            const latest = {};
+            wilsonData.timeseries = {};
+            
+            availData.forEach(record => {
+                const id = record.carpark_id;
+                const vacancy = parseInt(record.guest_available) || 0;
+                const scraped = record.scraped_at;
+                const isCapped = record.guest_available_display === '10+';
+                
+                if (!wilsonData.timeseries[id]) wilsonData.timeseries[id] = [];
+                wilsonData.timeseries[id].push({
+                    time: formatTime(scraped),
+                    vacancy: vacancy,
+                    is_capped: isCapped
+                });
+                
+                if (!latest[id] || scraped > latest[id].scraped_at) {
+                    latest[id] = { ...record, scraped_at: scraped };
+                }
+            });
+            
+            // Build current stats (filter out closed carparks)
+            wilsonData.current_stats = Object.entries(latest)
+                .filter(([id, record]) => {
+                    const total = parseInt(record.total) || 0;
+                    const guestTotal = parseInt(record.guest_total) || 0;
+                    return total > 0 || guestTotal > 0;
+                })
+                .map(([id, record]) => {
+                    const cp = wilsonData.carparks[id] || {};
+                    const vacancy = parseInt(record.guest_available) || 0;
+                    const isCapped = record.guest_available_display === '10+';
+                    const status = vacancy === 0 ? 'FULL' : (!isCapped && vacancy < 10) ? 'LOW' : 'OK';
+                    
+                    return {
+                        id,
+                        name: cp.name_en || `Unknown (${id.slice(-8)})`,
+                        code: cp.code || '',
+                        district: cp.district || '',
+                        region: cp.region || '',
+                        address: cp.address_en || '',
+                        vacancy,
+                        vacancy_display: record.guest_available_display || String(vacancy),
+                        guest_total: parseInt(record.guest_total) || 0,
+                        monthly_available: parseInt(record.monthly_available) || 0,
+                        monthly_total: parseInt(record.monthly_total) || 0,
+                        monthly_is_full: record.monthly_is_full === 'True',
+                        total_capacity: parseInt(record.total) || 0,
+                        status,
+                        is_capped: isCapped,
+                        last_update: formatTime(record.scraped_at)
+                    };
+                }).sort((a, b) => a.name.localeCompare(b.name));
+            
+            // Calculate summary
+            const stats = wilsonData.current_stats;
+            wilsonData.summary = {
+                total: stats.length,
+                full: stats.filter(s => s.status === 'FULL').length,
+                low: stats.filter(s => s.status === 'LOW').length,
+                capped: stats.filter(s => s.is_capped).length,
+                records: wilsonData.records.length
+            };
+        }
+        
+        function formatTime(isoString) {
+            if (!isoString) return '-';
+            try {
+                const d = new Date(isoString);
+                const hkt = new Date(d.toLocaleString('en-US', { timeZone: 'Asia/Hong_Kong' }));
+                return `${String(hkt.getMonth()+1).padStart(2,'0')}-${String(hkt.getDate()).padStart(2,'0')} ${String(hkt.getHours()).padStart(2,'0')}:${String(hkt.getMinutes()).padStart(2,'0')}`;
+            } catch {
+                return isoString;
+            }
+        }
+        
+        async function refreshData() {
+            const btn = document.getElementById('refreshBtn');
+            btn.disabled = true;
+            btn.textContent = 'Loading...';
+            
+            try {
+                await Promise.all([loadGovData(), loadWilsonData()]);
+                render();
+                document.getElementById('lastUpdate').textContent = `Last updated: ${new Date().toLocaleString('en-HK', { timeZone: 'Asia/Hong_Kong' })} HKT`;
+            } catch (e) {
+                console.error(e);
+                document.getElementById('lastUpdate').textContent = `Error: ${e.message}`;
+            } finally {
+                btn.disabled = false;
+                btn.textContent = '⟳ Refresh Now';
+            }
+        }
+        
+        function render() {
+            // Update tab counts
+            document.getElementById('tab-btn-gov').textContent = `Government API (${govData.current_stats.length})`;
+            document.getElementById('tab-btn-wilson').textContent = `Wilson Parking (${wilsonData.current_stats.length})`;
+            
+            // Government
+            renderSummary('gov', govData.summary);
+            renderTable('gov', govData.current_stats, govData.timeseries);
+            populateDistricts('gov', govData.current_stats);
+            
+            // Wilson
+            renderSummary('wilson', wilsonData.summary);
+            renderTable('wilson', wilsonData.current_stats, wilsonData.timeseries);
+            populateDistricts('wilson', wilsonData.current_stats);
+            
+            // Filters
+            ['gov', 'wilson'].forEach(src => {
+                document.getElementById(src + '-search').addEventListener('input', () => filterTable(src));
+                document.getElementById(src + '-status').addEventListener('change', () => filterTable(src));
+                const districtFilter = document.getElementById(src + '-district');
+                if (districtFilter) districtFilter.addEventListener('change', () => filterTable(src));
+            });
+        }
+        
+        function renderSummary(src, summary) {
+            const container = document.getElementById(src + '-summary');
+            const isCapped = src === 'wilson';
+            
+            container.innerHTML = `
+                <div class="summary-card total"><div class="summary-value">${summary.total}</div><div class="summary-label">Total Carparks</div></div>
+                <div class="summary-card full"><div class="summary-value">${summary.full}</div><div class="summary-label">Full (0)</div></div>
+                <div class="summary-card low"><div class="summary-value">${summary.low || 0}</div><div class="summary-label">Low (1-${isCapped ? '9' : '10'})</div></div>
+                ${isCapped ? `<div class="summary-card ok"><div class="summary-value">${summary.capped || 0}</div><div class="summary-label">10+ Available</div></div>` : 
+                `<div class="summary-card ok"><div class="summary-value">${summary.ok || 0}</div><div class="summary-label">OK (30+)</div></div>`}
+                <div class="summary-card"><div class="summary-value">${summary.records}</div><div class="summary-label">Data Points Today</div></div>
+            `;
+        }
+        
+        function populateDistricts(src, stats) {
+            const districts = [...new Set(stats.map(s => s.district).filter(d => d))].sort();
+            const select = document.getElementById(src + '-district');
+            if (select) {
+                select.innerHTML = '<option value="">All Districts</option>';
+                districts.forEach(d => {
+                    const opt = document.createElement('option');
+                    opt.value = d; opt.textContent = d;
+                    select.appendChild(opt);
+                });
+            }
+        }
+        
+        function renderTable(src, stats, timeseries) {
+            const tbody = document.getElementById(src + '-table');
+            const isWilson = src === 'wilson';
+            
+            if (stats.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="${isWilson ? 5 : 4}" class="no-selection">No carparks found</td></tr>`;
+                return;
+            }
+            
+            tbody.innerHTML = stats.map(cp => {
+                const vacancyClass = cp.is_capped ? 'capped' : cp.status.toLowerCase();
+                const vacancyDisplay = isWilson ? (cp.vacancy_display || cp.vacancy || '-') : (cp.vacancy ?? '-');
+                const badge = cp.is_capped ? 'capped' : cp.status.toLowerCase();
+                const badgeText = cp.is_capped ? '10+' : cp.status;
+                
+                if (isWilson) {
+                    return `
+                        <tr data-id="${cp.id}" data-src="${src}">
+                            <td>
+                                <div class="cp-name">${cp.name}</div>
+                                <div class="cp-district">${cp.code ? '(' + cp.code + ')' : ''}</div>
+                            </td>
+                            <td style="color:var(--text-secondary);font-size:0.85rem">${cp.district || '-'}</td>
+                            <td><div class="vacancy-num ${vacancyClass}">${vacancyDisplay}</div></td>
+                            <td><span class="badge ${badge}">${badgeText}</span></td>
+                            <td style="color:var(--text-secondary);font-size:0.8rem">${cp.last_update || '-'}</td>
+                        </tr>
+                    `;
+                } else {
+                    return `
+                        <tr data-id="${cp.id}" data-src="${src}">
+                            <td>
+                                <div class="cp-name">${cp.name}</div>
+                                <div class="cp-district">${cp.district || ''}</div>
+                            </td>
+                            <td><div class="vacancy-num ${vacancyClass}">${vacancyDisplay}</div></td>
+                            <td><span class="badge ${badge}">${badgeText}</span></td>
+                            <td style="color:var(--text-secondary);font-size:0.8rem">${cp.last_update || '-'}</td>
+                        </tr>
+                    `;
+                }
+            }).join('');
+            
+            // Add click handlers
+            tbody.querySelectorAll('tr').forEach(tr => {
+                tr.addEventListener('click', () => selectCarpark(tr.dataset.src, tr.dataset.id));
+            });
+        }
+        
+        function filterTable(src) {
+            const search = document.getElementById(src + '-search').value.toLowerCase();
+            const status = document.getElementById(src + '-status').value;
+            const districtEl = document.getElementById(src + '-district');
+            const district = districtEl ? districtEl.value : '';
+            
+            const srcData = src === 'gov' ? govData : wilsonData;
+            let filtered = srcData.current_stats;
+            
+            if (search) {
+                filtered = filtered.filter(cp => 
+                    cp.name.toLowerCase().includes(search) || 
+                    (cp.district || '').toLowerCase().includes(search) ||
+                    (cp.code || '').toLowerCase().includes(search)
+                );
+            }
+            if (status) filtered = filtered.filter(cp => cp.status === status || (status === 'OK' && cp.is_capped));
+            if (district) filtered = filtered.filter(cp => cp.district === district);
+            
+            renderTable(src, filtered, srcData.timeseries);
+        }
+        
+        function selectCarpark(src, id) {
+            document.querySelectorAll(`tr[data-src="${src}"]`).forEach(tr => tr.classList.remove('selected'));
+            document.querySelector(`tr[data-id="${id}"][data-src="${src}"]`)?.classList.add('selected');
+            
+            const srcData = src === 'gov' ? govData : wilsonData;
+            const cp = srcData.current_stats.find(c => c.id === id);
+            if (!cp) return;
+            
+            const panel = document.getElementById(src + '-detail');
+            const isWilson = src === 'wilson';
+            const vacancyDisplay = isWilson ? (cp.vacancy_display || cp.vacancy) : cp.vacancy;
+            
+            let infoSection = '';
+            if (isWilson) {
+                const monthlyStatus = cp.monthly_is_full ? 
+                    '<span style="color:var(--accent-red)">FULL</span>' : 
+                    `<span style="color:var(--accent-green)">${cp.monthly_available} available</span>`;
+                
+                infoSection = `
+                    <div class="detail-info">
+                        <div class="info-row"><span class="info-label">Code</span><span class="info-value">${cp.code || '-'}</span></div>
+                        <div class="info-row"><span class="info-label">District</span><span class="info-value">${cp.district || '-'}</span></div>
+                        <div class="info-row"><span class="info-label">Region</span><span class="info-value">${cp.region || '-'}</span></div>
+                        <div class="info-row"><span class="info-label">Address</span><span class="info-value">${cp.address || '-'}</span></div>
+                        <div class="info-divider"></div>
+                        <div class="info-row"><span class="info-label">Hourly Spaces</span><span class="info-value">${vacancyDisplay} / ${cp.guest_total || '-'}</span></div>
+                        <div class="info-row"><span class="info-label">Monthly Parking</span><span class="info-value">${monthlyStatus} (${cp.monthly_total || 0} total)</span></div>
+                        <div class="info-row"><span class="info-label">Total Capacity</span><span class="info-value">${cp.total_capacity || '-'} spaces</span></div>
+                        <div class="info-row"><span class="info-label">Last Update</span><span class="info-value">${cp.last_update || '-'}</span></div>
+                    </div>
+                `;
+            } else {
+                infoSection = `
+                    <div class="detail-info">
+                        <div class="info-row"><span class="info-label">District</span><span class="info-value">${cp.district || '-'}</span></div>
+                        <div class="info-row"><span class="info-label">Available</span><span class="info-value" style="color:${getStatusColor(cp)}">${vacancyDisplay ?? '-'} spaces</span></div>
+                        <div class="info-row"><span class="info-label">Last Update</span><span class="info-value">${cp.last_update || '-'}</span></div>
+                    </div>
+                `;
+            }
+            
+            panel.innerHTML = `
+                <div class="detail-header">
+                    <h3>${cp.name}</h3>
+                    <div class="status-line"><span class="badge ${cp.is_capped ? 'capped' : cp.status.toLowerCase()}">${cp.is_capped ? '10+' : cp.status}</span></div>
+                </div>
+                ${infoSection}
+                <div class="chart-section">
+                    <div class="chart-title">Availability Over Time (Today)</div>
+                    <div class="chart-wrap"><canvas id="${src}-chart"></canvas></div>
+                </div>
+            `;
+            
+            renderChart(src, id, srcData.timeseries[id] || []);
+        }
+        
+        function getStatusColor(cp) {
+            if (cp.is_capped) return 'var(--accent-purple)';
+            const colors = { FULL: 'var(--accent-red)', LOW: 'var(--accent-orange)', MODERATE: 'var(--accent-yellow)', OK: 'var(--accent-green)' };
+            return colors[cp.status] || 'var(--text-primary)';
+        }
+        
+        function renderChart(src, id, timeseries) {
+            const ctx = document.getElementById(src + '-chart')?.getContext('2d');
+            if (!ctx) return;
+            
+            if (charts[src]) charts[src].destroy();
+            
+            const recent = timeseries.slice(-48);
+            const isCapped = recent.some(d => d.is_capped);
+            
+            charts[src] = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: recent.map(d => d.time),
+                    datasets: [{
+                        label: 'Available Spaces',
+                        data: recent.map(d => d.vacancy),
+                        borderColor: isCapped ? '#a371f7' : '#3fb950',
+                        backgroundColor: isCapped ? 'rgba(163,113,247,0.1)' : 'rgba(63,185,80,0.1)',
+                        fill: true,
+                        tension: 0.3,
+                        pointRadius: 2,
+                        pointBackgroundColor: recent.map(d => d.is_capped ? '#a371f7' : '#3fb950')
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { grid: { color: '#30363d' }, ticks: { color: '#7d8590', maxTicksLimit: 8 } },
+                        y: { beginAtZero: true, grid: { color: '#30363d' }, ticks: { color: '#7d8590' } }
+                    }
+                }
+            });
+        }
+        
+        // Initial load
+        refreshData();
+        
+        // Auto-refresh every 5 minutes
+        setInterval(refreshData, 5 * 60 * 1000);
+    </script>
+</body>
+</html>
