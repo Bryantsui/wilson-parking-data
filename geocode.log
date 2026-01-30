@@ -1,0 +1,214 @@
+Loading Wilson carparks...
+Found 185 carparks
+
+Geocoding carparks (this may take a few minutes due to API rate limits)...
+  [1/185] EDGE: Kwai Tsing, New Territories
+  [2/185] Tin Hau Car Park: Wan Chai, Hong Kong
+  [3/185] Tsuen Wan Car Park: Tsuen Wan, Hong Kong
+  [4/185] Centre Parc: Kwun Tong, Kowloon
+  [5/185] Chelsea Heights Phase I: Tuen Mun, New Territories
+  [6/185] Mei Foo Sun Chuen Stage 4: Lai Chi Kok, Kowloon
+  [7/185] Mei Foo Sun Chuen Stage 7: Sham Shui Po, Kowloon
+  [8/185] Nan Fung Commercial Centre: Kwun Tong, Kowloon
+  [9/185] New Town Mansion: Tuen Mun, Hong Kong
+  [10/185] No. 8 Observatory Road: Tsim Sha Tsui, Kowloon
+  [11/185] Wang Kwong Road: Kowloon Bay, Kowloon
+  [12/185] KC100: Kwai Tsing, New Territories
+  [13/185] Brighton Place: Tsuen Wan, New Territories
+  [14/185] Wing Lung Street: Sham Shui Po, Kowloon
+  [15/185] Tsuen King Circuit: Tsuen Wan, New Territories
+  [16/185] Wu Shan Road: Tuen Mun, New Territories
+  [17/185] The ONE: Tsim Sha Tsui, Kowloon
+  [18/185] Tsan Yung Mansion: Ho Man Tin, Kowloon
+  [19/185] Hoi Wah Road: Tuen Mun, New Territories
+  [20/185] Capital Building: Sham Shui Po, Kowloon
+  [21/185] South Lane: Shek Tong Tsui, Hong Kong
+  [22/185] Venice Garden: North, New Territories
+  [23/185] Ho Fai Garden: Tsuen Wan, New Territories
+  [24/185] Bellagio: Sham Tseng, New Territories
+  [25/185] East Town Building: Wan Chai, Hong Kong
+  [26/185] AEON Lai Chi Kok Store: Sham Shui Po, Kowloon
+  [27/185] Two Sky Parc: Kwun Tong, Kowloon
+  [28/185] Kailey Industrial Centre: Eastern, Hong Kong
+  [29/185] Eightland Gardens: Tai Po, New Territories
+  [30/185] Chelsea Heights Phase II: Tuen Mun, New Territories
+  [31/185] Chi Fu Landmark: Pok Fu Lam, Hong Kong
+  [32/185] Western Wholesale Food Market : Shek Tong Tsui, Hong Kong
+  [33/185] Kwai Fong Terrace: Kwai Tsing, New Territories
+  [34/185] Grand Waterfront: Ma Tau Kok, Kowloon
+  [35/185] Shanghai Industrial Investment Building: Wan Chai, Hong Kong
+  [36/185] Hong Kong Plaza: Shek Tong Tsui, Hong Kong
+  [37/185] Wonderland Villas (Eastern): Kwai Tsing, New Territories
+  [38/185] Blossom Garden: Tuen Mun, New Territories
+  [39/185] HSBC Centre: Tai Kok Tsui, Kowloon
+  [40/185] Chinachem Century Tower: Wan Chai, Hong Kong
+  [41/185] Hilton Plaza: Sha Tin Central, Hong Kong
+  [42/185] Wealthy Garden: Tsuen Wan, New Territories
+  [43/185] Lun Fung Court: Shek Tong Tsui, Hong Kong
+  [44/185] Tsuen Kam Centre: Tsuen Wan, New Territories
+  [45/185] Tsuen Wan Centre : Tsuen Wan, New Territories
+  [46/185] Botania Villa: Tuen Mun, New Territories
+  [47/185] Wah Ming Centre: Shek Tong Tsui, Hong Kong
+  [48/185] K-Point: Tuen Mun, New Territories
+  [49/185] Castello: Siu Lek Yuen, New Territories
+  [50/185] Millennium Trade Centre: Kwai Tsing, New Territories
+  [51/185] Grand City Plaza: Tsuen Wan Town, New Territories
+  [52/185] Peninsula Tower: Sham Shui Po, Kowloon
+  [53/185] Millennium City 1 : Kwun Tong, Kowloon
+  [54/185] Millennium City 2 & 3: Kwun Tong, Kowloon
+  [55/185] Millennium City 6: Kwun Tong, Kowloon
+  [56/185] Fung Nam Road: North, New Territories
+  [57/185] San Shing Avenue: North, New Territories
+  [58/185] Sun Kwai Hing Plaza: Kwai Tsing, New Territories
+  [59/185] Metropolis Plaza: North, New Territories
+  [60/185] Yuen Long Plaza: Yuen Long, Hong Kong
+  [61/185] Thriving Industrial Centre: Tsuen Wan, New Territories
+  [62/185] The Chelsea : Sheung Wan, Hong Kong
+  [63/185] Admiralty Car Park: Admiralty, Hong Kong
+  [64/185] New Tech Plaza: San Po Kong, Kowloon
+  [65/185] Evergreen Court: Tai Po, New Territories
+  [66/185] Fanling Town Centre: North, New Territories
+  [67/185] Shatin Park Stage 1: Sha Tin, New Territories
+  [68/185] Shatin Park Stage 3: Sha Tin, New Territories
+  [69/185] Sheung Shui Town Centre: North, New Territories
+  [70/185] Tak Bo Garden: Jordan Valley, Kowloon
+  [71/185] 8 Commercial Tower: Eastern, Hong Kong
+  [72/185] Austin Tower: Tsim Sha Tsui, Kowloon
+  [73/185] Concord Square: Tsuen Wan, New Territories
+  [74/185] Grandway Garden: Sha Tin, New Territories
+  [75/185] Wai Wah Centre: Sha Tin, New Territories
+  [76/185] Cheung Sha Wan Wholesale Food Market: Sham Shui Po, Kowloon
+  [77/185] South Wave Court: Sham Wan, Hong Kong
+  [78/185] Sai Kung Garden: Sai Kung Town Centre, New Territories
+  [79/185] Harbour Pinnacle: Yau Tsim Mong, Kowloon
+  [80/185] Bedford Road: Tai Kok Tsui, Kowloon
+  [81/185] CCT Telecom Building: Sha Tin, New Territories
+  [82/185] Two Chinachem Exchange Square: North Point, Hong Kong
+  [83/185] Hop Yick Plaza: Yuen Long, New Territories
+  [84/185] Southmark: Wong Chuk Hang, Hong Kong
+  [85/185] Chinachem Tsuen Wan Plaza: Tsuen Wan, New Territories
+  [86/185] Cheong Shing Court: Kowloon City, Kowloon
+  [87/185] Siu On Centre: Wan Chai, Hong Kong
+  [88/185] New Mandarin Plaza: Yau Tsim Mong, Kowloon
+  [89/185] Sai Kung Town Centre: Sai Kung Town Centre, New Territories
+  [90/185] Peninsula Square: Hung Hom, Kowloon
+  [91/185] Sunway Gardens: Quarry Bay, Hong Kong
+  [92/185] Kam Tao Building: Wan Chai, Hong Kong
+  [93/185] Eldo Court: Tuen Mun, New Territories
+  [94/185] HK Sanatorium & Hospital: Wan Chai, Hong Kong
+  [95/185] Dragon Centre (Sham Shui Po): Sham Shui Po, Kowloon
+  [96/185] Lai Bo Garden: Sham Shui Po, Kowloon
+  [97/185] Fortune Plaza: Tai Po, New Territories
+  [98/185] Tsuen Wan Plaza: Tsuen Wan Town, Hong Kong
+  [99/185] Easy Tower: Sham Shui Po, Kowloon
+  [100/185] Harbour Heights O/A: Eastern, Hong Kong
+  [101/185] Hong Lai Gardens: Tuen Mun, New Territories
+  [102/185] YOHO PLUS: Yuen Long, New Territories
+  [103/185] The Sun Arcade: Yau Tsim Mong, Kowloon
+  [104/185] Onbury: Ho Man Tin, Kowloon
+  [105/185] Chinachem Golden Plaza: Yau Tsim Mong, Kowloon
+  [106/185] Ho Shun Tai Building: Yuen Long Town, New Territories
+  [107/185] Shun Fook Barn Car Park: Yuen Long Town, New Territories
+  [108/185] The Park Lane: Causeway Bay, Hong Kong
+  [109/185] Fu Shing Building: Yuen Long Town, New Territories
+  [110/185] Viking Gardens: Wan Chai, Hong Kong
+  [111/185] Po Sing Centre: Kwai Tsing, New Territories
+  [112/185] Kwai Sing Centre: Kwai Tsing, New Territories
+  [113/185] Victoria Centre: Wan Chai, Hong Kong
+  [114/185] Kwai Fong Car Park: Kwai Tsing, New Territories
+  [115/185] City Hall Car Park: Central, Hong Kong
+  [116/185] Star Ferry Car Park: Central, Hong Kong
+  [117/185] World Trade Centre: Causeway Bay, Hong Kong
+  [118/185] Verbena Heights: Po Lam, New Territories
+  [119/185] The Pinnacle: Po Lam, New Territories
+  [120/185] Lancashire Centre: Shau Kei Wan, Hong Kong
+  [121/185] Port 33: San Po Kong, Kowloon
+  [122/185] Hyatt Centric: North Point, Hong Kong
+  [123/185] HKIA Car Park 1: Chek Lap Kok, New Territories
+  [124/185] HKIA Car Park 4: Chek Lap Kok, New Territories
+  [125/185] HKIA Loading Dock 1: Chek Lap Kok, New Territories
+  [126/185] Coda Plaza: Mid-Levels, Hong Kong
+  [127/185] Car Park 1, HZMB Hong Kong Port : Chek Lap Kok, New Territories
+  [128/185] Car Park 2, HZMB Hong Kong Port : Chek Lap Kok, New Territories
+  [129/185] Car Park 3, HZMB Hong Kong Port : Chek Lap Kok, New Territories
+  [130/185] Car Park 4, HZMB Hong Kong Port : Chek Lap Kok, New Territories
+  [131/185] Car Park 5, HZMB Hong Kong Port : Chek Lap Kok, New Territories
+  [132/185] Tsuen Wan West Station: Tsuen Wan Town, New Territories
+  [133/185] One Sky Parc: Kwun Tong, Kowloon
+  [134/185] HKIA Prebooked Taxi Pick-up Zone/ LGV/ Taxi Long Term Parking Area: Chek Lap Kok, New Territories
+  [135/185] HKIA LGV (Hourly) Parking Area: Chek Lap Kok, New Territories
+  [136/185] Clague Garden Estate: Tsuen Wan Town, New Territories
+  [137/185] 909 Cheung Sha Wan Road: Sham Shui Po, Kowloon
+  [138/185] Cayman Rise: Kennedy Town, Hong Kong
+  [139/185] Yue Kwong Chuen: Aberdeen, Hong Kong
+  [140/185] Marina 8: Wong Chuk Hang, Hong Kong
+  [141/185] Mei Foo Sun Chuen Stage 8: Lai Chi Kok, Kowloon
+  [142/185] Yuk Yat Street : To Kwa Wan, Kowloon
+  [143/185] International Trade Centre: Tsuen Wan, New Territories
+  [144/185] Wetland Public Vehicle Park: Yuen Long, New Territories
+  [145/185] Lucky Plaza: Sha Tin, Hong Kong
+  [146/185] Tai Po Mega Mall Multi-Storey Car Park: Tai Po Town, New Territories
+  [147/185] Honour Industrial Centre: Eastern, Hong Kong
+  [148/185] New Commerce Centre: Shek Mun, New Territories
+  [149/185] New Trade Plaza: Shek Mun, Hong Kong
+  [150/185] West Gate Open Car Park, West Kowloon Cultural District: Yau Ma Tei, Kowloon
+  [151/185] Hong Kong Palace Museum Car Park, West Kowloon Cultural District: Yau Ma Tei, Kowloon
+  [152/185] Art Park Car Park, West Kowloon Cultural District: Yau Ma Tei, Kowloon
+  [153/185] M+ Car Park, West Kowloon Cultural District : Yau Ma Tei, Kowloon
+  [154/185] Brill Plaza: To Kwa Wan, Kowloon
+  [155/185] Scramble Hill: Kwun Tong, Kowloon
+  [156/185] Hi-Tech Industrial Centre: Tsuen Wan, New Territories
+  [157/185] Valiant Industrial Centre: Fo Tan, New Territories
+  [158/185] The Burrow: San Po Kong, Kowloon
+  [159/185] Mega Trade Centre: Tsuen Wan, New Territories
+  [160/185] Beauty Court: Hung Shui Kiu, New Territories
+  [161/185] Aster Court: Hung Shui Kiu, New Territories
+  [162/185] Tonic Industrial Centre: Kowloon Bay, Kowloon
+  [163/185] Eight Regency: Tuen Mun, New Territories
+  [164/185] SOHO West: Cheung Sha Wan, Kowloon
+  [165/185] Mayfair Gardens: Kwai Tsing, New Territories
+  [166/185] Kodak House II: Eastern, Hong Kong
+  [167/185] Hoi Wah Road (II): Tuen Mun, New Territories
+  [168/185] V Walk: Sham Shui Po, Kowloon
+  [169/185] GO PARK Sai Sha: Tai Po, New Territories
+  [170/185] Harbour North Phase 2-3: North Point, Hong Kong
+  [171/185] Ka Fu Fong Public Car Park: North, New Territories
+  [172/185] Technology Plaza: Eastern, Hong Kong
+  [173/185] S22: Wong Chuk Hang, Hong Kong
+  [174/185] GO PARK Aqua Public Car Park: Tai Po, New Territories
+  [175/185] Yue Ying Lau: Southern, Hong Kong
+  [176/185] One Causeway Bay: Causeway Bay, Hong Kong
+  [177/185] Wonderland Villas (Southern): Kwai Tsing, New Territories
+  [178/185] Wonderland Villas (Northern): Kwai Tsing, New Territories
+  [179/185] GO PARK 2: Tai Po, New Territories
+  [180/185] Pak Shing Kok Road Public Car Park: Pak Shing Kok, New Territories
+  [181/185] Heung Yuen Wai Boundary Control Point Public Car Park: Huangbei Sub-district, 
+  [182/185] Cullinan Sky Mall: Kowloon City, Kowloon
+  [183/185] Tseung Kwan O Government Offices Public Car Park: Sai Kung, New Territories
+  [184/185] International Gateway Centre (IGC) : Yau Ma Tei, Kowloon
+  [185/185] HKIA Loading Dock 2: Chek Lap Kok, New Territories
+
+Saved to data_wilson/carparks_geocoded.csv
+Updated data_wilson/carparks.csv
+
+=== District Summary ===
+  Tsuen Wan: 13
+  Kwai Tsing: 12
+  Tuen Mun: 12
+  Sham Shui Po: 11
+  Chek Lap Kok: 11
+  Wan Chai: 9
+  Kwun Tong: 8
+  North: 7
+  Sha Tin: 6
+  Eastern: 6
+  Tai Po: 6
+  Yau Ma Tei: 5
+  Shek Tong Tsui: 5
+  Yuen Long: 4
+  Yau Tsim Mong: 4
+  Tsuen Wan Town: 4
+  Causeway Bay: 3
+  Yuen Long Town: 3
+  San Po Kong: 3
+  Wong Chuk Hang: 3

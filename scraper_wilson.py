@@ -168,8 +168,6 @@ def scrape_availability():
             'scraped_at': scraped_at,
             'carpark_id': carpark_id,
             'name': cp_info.get('name_en', ''),
-            'district': cp_info.get('district', ''),
-            'region': cp_info.get('region', ''),
             'guest_available': guest_available,
             'guest_available_display': guest_display,
             'guest_total': item.get('guest_total', ''),
