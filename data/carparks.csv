@@ -8,6 +8,7 @@ park_id,name_en,address_en,district,latitude,longitude,height_limit,opening_stat
 75,Landmark East Carpark,"Landmark East, 100 How Ming Street, Kwun Tong, KLN",Kwun Tong District,22.31267152,114.22228396,,OPEN,http://www.landmarkeast.com.hk,3971 0203
 77,Kingston International Center,"19 Wang Chiu Road, Kowloon Bay, KLN",Kwun Tong District,22.32361547,114.20924917,,OPEN,,35895162
 78,Stelux House,"Stelux House, 698 Prince Edward Road East, San Po Kong, KLN",Wong Tai Sin District,22.33448116,114.1981709,3.8,OPEN,,2350 4501
+81,Manulife Place,"348 Kwun Tong Road, Kwun Tong, KLN",Kwun Tong District,22.3149246,114.21706438,4.7,OPEN,https://itt-hk.com/en/index.php,21543090
 88,"Public Vehicle Parking, 8 Yan Yue Wai, Yau Tong","Public Vehicle Parking, 8 Yan Yue Wai, Yau Tong, KLN",Kwun Tong District,22.292238,114.236683,2.4,OPEN,,2366 2823
 93,Hong Ning Road Park Car Park,"Junction of Hong Ning Road and Wo Hong Path, Kwun Tong, KLN",Kwun Tong District,22.32070104,114.22477841,2.45,OPEN,,
 100,Prosperity Place Car Park,"Prosperity Place Car Park, 6 Shing Yip Street, Kwun Tong, KLN",Kwun Tong District,22.31060791,114.2257385,4.1,OPEN,,67961400
@@ -19,8 +20,6 @@ park_id,name_en,address_en,district,latitude,longitude,height_limit,opening_stat
 118,Tak Long Estate Carpark A,"Shing Kai Road, Kowloon City, KLN",Kowloon City District,22.32879957,114.20429707,2,OPEN,,
 119,Tak Long Estate Carpark B,"Muk Chui Street, Kowloon City, KLN",Kowloon City District,22.3308936,114.20424879,4.7,OPEN,,
 123,KTR350 Car Park,"KWUN TONG ROAD 350, Kwun Tong, KLN",Kwun Tong District,22.3150437,114.2179817,,OPEN,,21168259
-124,Stadium Carpark,"Kai Tak Sport Park, 38-39 Shing Kai Road, Kowloon, Hong Kong, Kowloon City, KLN",Kowloon City District,22.32216993,114.1980958,,OPEN,https://www.kaitaksportspark.com.hk/car-park/2,
-125,Arena Carpark,"Kai Tak Sport Park, 38-39 Shing Kai Road, Kowloon, Hong Kong, Kowloon City, KLN",Kowloon City District,22.32545005,114.19669569,,OPEN,https://www.kaitaksportspark.com.hk/car-park/1,
 128,The Burrow (Wilson Parking),"15-17 Ng Fong Street, San Po Kong, KLN",Wong Tai Sin District,22.3381653,114.199945,,OPEN,https://www.wilsonparking.com.hk/zh/car_parks/detail/424,9737-0932
 tdc166p1,Phase 1 Carpark of Tin Ching Estate,"Tin Ching Estate (Phase 1 Carpark), Yuen Long, New Territories",Yuen Long,22.463276765818,114.00184446738,0,CLOSED,,34018578
 tdc6p11,Cheung Shan Estate Carpark,"Cheung Shan Estate Road West, Tsuen Wan, N.T.",Tsuen Wan,22.378225291103,114.12981855349,1.7,OPEN,,
