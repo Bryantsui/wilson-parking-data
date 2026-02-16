@@ -20,6 +20,8 @@ park_id,name_en,address_en,district,latitude,longitude,height_limit,opening_stat
 118,Tak Long Estate Carpark A,"Shing Kai Road, Kowloon City, KLN",Kowloon City District,22.32879957,114.20429707,2,OPEN,,
 119,Tak Long Estate Carpark B,"Muk Chui Street, Kowloon City, KLN",Kowloon City District,22.3308936,114.20424879,4.7,OPEN,,
 123,KTR350 Car Park,"KWUN TONG ROAD 350, Kwun Tong, KLN",Kwun Tong District,22.3150437,114.2179817,,OPEN,,21168259
+124,Stadium Carpark,"Kai Tak Sport Park, 38-39 Shing Kai Road, Kowloon, Hong Kong, Kowloon City, KLN",Kowloon City District,22.32216993,114.1980958,,OPEN,https://www.kaitaksportspark.com.hk/car-park/2,
+125,Arena Carpark,"Kai Tak Sport Park, 38-39 Shing Kai Road, Kowloon, Hong Kong, Kowloon City, KLN",Kowloon City District,22.32545005,114.19669569,,OPEN,https://www.kaitaksportspark.com.hk/car-park/1,
 128,The Burrow (Wilson Parking),"15-17 Ng Fong Street, San Po Kong, KLN",Wong Tai Sin District,22.3381653,114.199945,,OPEN,https://www.wilsonparking.com.hk/zh/car_parks/detail/424,9737-0932
 tdc166p1,Phase 1 Carpark of Tin Ching Estate,"Tin Ching Estate (Phase 1 Carpark), Yuen Long, New Territories",Yuen Long,22.463276765818,114.00184446738,0,CLOSED,,34018578
 tdc6p11,Cheung Shan Estate Carpark,"Cheung Shan Estate Road West, Tsuen Wan, N.T.",Tsuen Wan,22.378225291103,114.12981855349,1.7,OPEN,,
