@@ -9,7 +9,6 @@ park_id,name_en,address_en,district,latitude,longitude,height_limit,opening_stat
 77,Kingston International Center,"19 Wang Chiu Road, Kowloon Bay, KLN",Kwun Tong District,22.32361547,114.20924917,,OPEN,,35895162
 78,Stelux House,"Stelux House, 698 Prince Edward Road East, San Po Kong, KLN",Wong Tai Sin District,22.33448116,114.1981709,3.8,OPEN,,2350 4501
 81,Manulife Place,"348 Kwun Tong Road, Kwun Tong, KLN",Kwun Tong District,22.3149246,114.21706438,4.7,OPEN,https://itt-hk.com/en/index.php,21543090
-88,"Public Vehicle Parking, 8 Yan Yue Wai, Yau Tong","Public Vehicle Parking, 8 Yan Yue Wai, Yau Tong, KLN",Kwun Tong District,22.292238,114.236683,2.4,OPEN,,2366 2823
 93,Hong Ning Road Park Car Park,"Junction of Hong Ning Road and Wo Hong Path, Kwun Tong, KLN",Kwun Tong District,22.32070104,114.22477841,2.45,OPEN,,
 100,Prosperity Place Car Park,"Prosperity Place Car Park, 6 Shing Yip Street, Kwun Tong, KLN",Kwun Tong District,22.31060791,114.2257385,4.1,OPEN,,67961400
 101,Prosperity Center Car Park,"Prosperity Centre Car Park, 25 Chong Yip Street, Kwun Tong, KLN",Kwun Tong District,22.31414153,114.2195567,4.1,OPEN,,67961393
@@ -542,7 +541,7 @@ tdc328p1,Harbour North Phase 2 & 3 B2/F Zone A,"133 Java Road, North North, Hong
 tdc290p1,Hoi Ying Estate Car Park,1 LAI YING STREET,Sham Shui Po,22.3289921244,114.14790421245,0,CLOSED,,24879210
 tdc289p1,Hoi Lok Court Car Park,"3 Lai Ying Street, Cheung Sha Wan",Sham Shui Po,22.32788359478,114.14994098506,2.4,CLOSED,,52813945
 tdc335p1,Tseung Kwan O Government Offices Public Car Park,"30 Tong Yin Street, Tseung Kwan O, New Territories",Sai Kung,22.30417742476,114.25690216938,0,CLOSED,https://www.wilsonparking.com.hk/en/car_parks/detail/456,6468 7953
-tdc334p1,Kwai Chung Park Car Park,"18 Kwai Yue St, Kwai Chung",Kwai Tsing,22.354227462875,114.11748871477,3.8,CLOSED,,
+tdc334p1,Kwai Chung Park Car Park,"18 Kwai Yue St, Kwai Chung",Kwai Tsing,22.353894223552,114.11741849048,3.8,CLOSED,,
 tdc326p1,Yuen Long Swimming Pool Car Park,"Yuen Long Tai Yuk Road 10, Yuen Long",Yuen Long,22.441551440217,114.02192875539,3.8,CLOSED,,
 tdc291p1,CHING LAI COURT Car Park,264 LAI KING HILL ROAD,Sham Shui Po,22.338811309444,114.13524630689,1.7,CLOSED,,52810964
 tdc333p1,Hong Kong International School Car Park,690 Tai Tam Reservoir Road,Southern,22.237389504528,114.22354854059,2.2,CLOSED,,3149 7894 (08:00-15:30)
