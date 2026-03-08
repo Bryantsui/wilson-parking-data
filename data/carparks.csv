@@ -9,6 +9,7 @@ park_id,name_en,address_en,district,latitude,longitude,height_limit,opening_stat
 75,Landmark East Carpark,"Landmark East, 100 How Ming Street, Kwun Tong, KLN",Kwun Tong District,22.31267152,114.22228396,,OPEN,http://www.landmarkeast.com.hk,3971 0203
 77,Kingston International Center,"19 Wang Chiu Road, Kowloon Bay, KLN",Kwun Tong District,22.32361547,114.20924917,,OPEN,,35895162
 78,Stelux House,"Stelux House, 698 Prince Edward Road East, San Po Kong, KLN",Wong Tai Sin District,22.33448116,114.1981709,3.8,OPEN,,2350 4501
+81,Manulife Place,"348 Kwun Tong Road, Kwun Tong, KLN",Kwun Tong District,22.3149246,114.21706438,4.7,OPEN,https://itt-hk.com/en/index.php,21543090
 88,"Public Vehicle Parking, 8 Yan Yue Wai, Yau Tong","Public Vehicle Parking, 8 Yan Yue Wai, Yau Tong, KLN",Kwun Tong District,22.292238,114.236683,2.4,OPEN,,2366 2823
 93,Hong Ning Road Park Car Park,"Junction of Hong Ning Road and Wo Hong Path, Kwun Tong, KLN",Kwun Tong District,22.32070104,114.22477841,2.45,OPEN,,
 100,Prosperity Place Car Park,"Prosperity Place Car Park, 6 Shing Yip Street, Kwun Tong, KLN",Kwun Tong District,22.31060791,114.2257385,4.1,OPEN,,67961400
@@ -385,6 +386,7 @@ tdc74p11,Kowloon Bay Sports Ground B,"No. 1 Kai Lok Street, Kowloon Bay",Kwun To
 tdc74p10,Kowloon Bay Sports Ground A,"No. 1 Kai Lok Street, Kowloon Bay",Kwun Tong,22.3264784456,114.2091205636,0,OPEN,,
 tdc74p12,Tai Po Sports Ground,"21 Tai Po Tau Road, Tai Po",Tai Po,22.455510453498,114.16303435611,2.45,OPEN,,
 tdc74p8,Sai Tso Wan Recreation Ground,"90 Sin Fat Road, Lam Tin, Kowloon",Kwun Tong,22.30407524,114.23287964,0,OPEN,,
+tdc344p1,Tuen Mun Recreation and Sports Centre Car Park,"54 Lung Mun Road, Tuen Mun, N.T.",Tuen Mun,22.382328565911,113.96324170092,0,CLOSED,,
 tdc74p9,Ping Shek Playground,"20 New Clear Water Bay Road, Kowloon",Kwun Tong,22.33203697,114.21289063,0,OPEN,,
 tdc74p7,Yau Oi Sports Centre,"No. 3 Hing On Lane, Tuen Mun, New Territories",Tuen Mun,22.38510895,113.97131348,0,OPEN,,
 tdc242p1,Ko Cheung Court Car Park,"No.32 Ko Chiu Road, Yau Tong, Kowloon",Kwun Tong,22.296320545706,114.24045019434,0,CLOSED,,
