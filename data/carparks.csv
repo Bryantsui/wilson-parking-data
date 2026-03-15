@@ -254,7 +254,7 @@ tdc32p1,Wah Fu (I) Estate,"Wah Fu Road, Aberdeen, Hong Kong",Southern,22.2497787
 tdc32p2,Wah Fu (II) Estate,"Wah Fu Road, Aberdeen, Hong Kong",Southern,22.253110435796,114.13619550988,0,OPEN,,
 tdc32p3,Shek Kip Mei Estate,"Nam Cheong Street, Shek Kip Mei, Kowloon",Sham Shui Po,22.33297477106,114.16575700293,0,OPEN,,
 tdc32p4,Pok Hong Estate,"Sha Kok Street, Shatin, New Territories",Sha Tin,22.37539675,114.19316679,1.9,OPEN,https://www.yuexiuaptparking.com/article-find-59.html?lang=en,26353419
-tdc32p5,Shui Pin Wai Estate,"Shui Pin Wai Road, Yuen Long, N. T.",Yuen Long,22.445352110741,114.01967055294,0,OPEN,,
+tdc32p5,Shui Pin Wai Estate,"Shui Pin Wai Road, Yuen Long, N. T.",Yuen Long,22.445352110741,114.01967055294,2.9,OPEN,,
 tdc32p6,Mei Tin Estate,"Heung Fan Liu Street, Tai Wai, New Territories",Sha Tin,22.37602425,114.1718216,0,OPEN,,
 tdc33p1,Kowloon Bay Park,"11 Kai Lai Road, Kowloon Bay",Kwun Tong,22.32723236,114.20716095,0,OPEN,,
 tdc33p2,Jordan Valley Playground,"18 Choi Ha Road, Ngau Tau Kok",Kwun Tong,22.325073794484,114.2190872487,0,OPEN,,
@@ -341,7 +341,7 @@ tdc65p3,Tin Shui Wai Sports Ground,"2 Tin Shui Rd, Tin Shui Wai, N.T.",Yuen Long
 tdc65p4,Tin Shui Wai Sports Centre and Tin Shui Wai Swimming Pool Car Park,"1 Tin Pak Road, Tin Shui Wai, N.T.",Yuen Long,22.455037687168,114.0069582894,0,OPEN,,9549 9947 / 2912 3700 / 2912 3719 / 2912 3713
 tdc65p5,Tin Yip Road Park Car Park,"Tin Yip Road Park , Tin Shui Wai",Yuen Long,22.46386909,114.00669098,3.8,OPEN,,
 tdc69p1,Fanling Swimming Pool,"73 San Wan Road, Fanling",North,22.495403160284,114.13568417766,0,OPEN,,
-tdc69p2,Po Wing Road Sports Centre,"19 Pak Wo Road, Sheung Shui",North,22.497283161694,114.12876376702,0,OPEN,,
+tdc69p2,Po Wing Road Sports Centre,"19 Pak Wo Road, Sheung Shui",North,22.497283161694,114.12876376702,2.45,OPEN,,
 tdc69p3,Sheung Shui Swimming Pool,"38 Tin Ping Road, Sheung Shui",North,22.50596809,114.13158417,0,OPEN,,
 tdc66p1,Sha Tin Jockey Club Swimming Pool and Yuen Wo Road Sports Centre,"10 Yuen Wo Road, Sha Tin, N.T.",Sha Tin,22.383209157997,114.19308213001,0,OPEN,,53039347
 tdc70p1,Sha Tin Sports Ground & Yuen Wo Playground Car Park,"18 Yuen Wo Road, Sha Tin, N.T.",Sha Tin,22.38697624,114.19628143,2.45,OPEN,,
@@ -388,13 +388,13 @@ tdc74p12,Tai Po Sports Ground,"21 Tai Po Tau Road, Tai Po",Tai Po,22.45551045349
 tdc74p8,Sai Tso Wan Recreation Ground,"90 Sin Fat Road, Lam Tin, Kowloon",Kwun Tong,22.30407524,114.23287964,0,OPEN,,
 tdc344p1,Tuen Mun Recreation and Sports Centre Car Park,"54 Lung Mun Road, Tuen Mun, N.T.",Tuen Mun,22.382328565911,113.96324170092,0,CLOSED,,
 tdc74p9,Ping Shek Playground,"20 New Clear Water Bay Road, Kowloon",Kwun Tong,22.33203697,114.21289063,0,OPEN,,
-tdc74p7,Yau Oi Sports Centre,"No. 3 Hing On Lane, Tuen Mun, New Territories",Tuen Mun,22.38510895,113.97131348,0,OPEN,,
+tdc74p7,Yau Oi Sports Centre,"No. 3 Hing On Lane, Tuen Mun, New Territories",Tuen Mun,22.38510895,113.97131348,2.45,OPEN,,
 tdc242p1,Ko Cheung Court Car Park,"No.32 Ko Chiu Road, Yau Tong, Kowloon",Kwun Tong,22.296320545706,114.24045019434,0,CLOSED,,
 tdstt59,Pui To Road Car Park,"Pui To Road, Area 10A, Tuen Mun, New Territories",Tuen Mun,22.395068036909,113.97614608017,0,OPEN,,
 tdstt62,Shun Hing Street Car Park,"Shun Hing Street, Sha Tau Kok, New Territories",North,22.54512701,114.223743,0,OPEN,,
 tdc240p1,Shan Tsui Court Carpark,"No. 200, Tai Tam Road, Chai Wan Gap, Hong Kong",Eastern,22.269335739906,114.23335469741,1.8,CLOSED,,
 tdc74p14,Tai Po Tung Cheong Street Leisure Building Car Park,"B/F, Tai Po Tung Cheong Street Leisure Building, 25 Tung Cheong Street, Tai Po",Tai Po,22.449688011934,114.17030212348,2.4,OPEN,,
-tdc96p1,Nam Shan Estate Multi-storey Carpark,"111, Tai Hang Tung Road, Shek Kip Mei , Kowloon ,HK",Sham Shui Po,22.33354378,114.17003632,0,OPEN,,29941027
+tdc96p1,Nam Shan Estate Multi-storey Carpark,"111, Tai Hang Tung Road, Shek Kip Mei , Kowloon ,HK",Sham Shui Po,22.33354378,114.17003632,2,OPEN,,29941027
 tdc111p1,Trade and Industry Tower Car Park,"No. 3 Concords Road, Kai Tak, Kowloon, Hong Kong",Kowloon City,22.33266015,114.19793766,0,OPEN,,2431 8885
 tdstt72,Sai See Street Car Park,"Sai See Street, Kennedy Town, Hong Kong",Central & Western,22.28229181,114.1241909,0,OPEN,,
 tdc92p5,Yue Fai Court Carpark,YUE KWONG RD 45,Southern,22.24834581,114.15657001,0,OPEN,,
